@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asad Ali Sajjad | Software & AI Developer</title>
+  <meta name="description" content="Portfolio of Asad Ali Sajjad — Full-Stack Web, AI/ML, and Systems Developer." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            dark: '#090d16',
+            card: '#111827',
+            border: '#1f2937',
+            accent: '#38bdf8',
+            accent2: '#818cf8',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #090d16;
+      color: #f3f4f6;
+      overflow-x: hidden;
+    }
+    .glass-nav {
+      background: rgba(9, 13, 22, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.16), transparent 60%),
+                  radial-gradient(circle at 85% 25%, rgba(129, 140, 248, 0.14), transparent 50%);
+    }
+    .project-card {
+      background: linear-gradient(145deg, rgba(17, 24, 39, 0.92), rgba(15, 23, 42, 0.75));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(56, 189, 248, 0.45);
+      box-shadow: 0 20px 35px -15px rgba(56, 189, 248, 0.18);
+    }
+    .filter-btn.active {
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      color: #090d16;
+      font-weight: 600;
+      border-color: transparent;
+    }
+    .cursor-blink {
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-sky-400 selection:text-slate-950">
+
+  <!-- Navigation -->
+  <header class="fixed top-0 inset-x-0 z-50 glass-nav">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#" class="font-mono text-lg font-bold tracking-tight text-white flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-pulse"></span>
+        <span>asad-ali-sajjad<span class="text-sky-400">.me</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+        <a href="#skills" class="hover:text-sky-400 transition">Tech Stack</a>
+        <a href="#about" class="hover:text-sky-400 transition">About</a>
+        <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/asad-ali-sajjad" target="_blank" rel="noopener noreferrer"
+           class="px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 hero-glow">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+        <div class="flex-1 text-center md:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-400/25 text-sky-300 font-mono text-xs mb-6">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Available for Software & AI Projects
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-4">
+            Hi, I'm <span class="bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Asad Ali Sajjad</span>
+          </h1>
+
+          <div class="font-mono text-lg sm:text-xl text-slate-300 mb-6 h-8">
+            <span class="text-sky-400">&gt;</span> <span id="typed-role"></span><span class="cursor-blink text-sky-400">|</span>
+          </div>
+
+          <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed mb-8">
+            Developer passionate about building practical full-stack web platforms, AI-powered diagnostic assistants, database architectures, and clean command-line tools. Turning ideas into working code.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+            <a href="#projects"
+               class="px-6 py-3 rounded-xl font-semibold text-sm bg-gradient-to-r from-sky-400 to-indigo-500 text-slate-950 hover:opacity-95 transition shadow-lg shadow-sky-500/20">
+              Explore My Projects
+            </a>
+            <a href="#contact"
+               class="px-6 py-3 rounded-xl font-semibold text-sm bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 transition">
+              Get in Touch
+            </a>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="grid grid-cols-3 gap-4 max-w-md mx-auto md:mx-0 mt-10 pt-8 border-t border-slate-800/80">
+            <div>
+              <div class="text-2xl font-bold text-white">20+</div>
+              <div class="text-xs text-slate-400 font-mono">Repositories</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-sky-400">Full-Stack</div>
+              <div class="text-xs text-slate-400 font-mono">& AI Systems</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-indigo-400">C++ / SQL</div>
+              <div class="text-xs text-slate-400 font-mono">Core CS</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Card / Avatar -->
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-sky-400 to-indigo-500 rounded-3xl blur opacity-30 group-hover:opacity-55 transition duration-500"></div>
+          <div class="relative bg-slate-900 border border-slate-800 p-6 rounded-3xl w-72 sm:w-80 shadow-2xl">
+            <img
+              src="https://github.com/asad-ali-sajjad.png"
+              alt="Asad Ali Sajjad GitHub Avatar"
+              class="w-32 h-32 rounded-2xl mx-auto object-cover border-2 border-sky-400/40 shadow-lg mb-4"
+            />
+            <div class="text-center">
+              <h2 class="text-lg font-bold text-white">Asad Ali Sajjad</h2>
+              <p class="font-mono text-xs text-sky-400 mb-3">@asad-ali-sajjad</p>
+              <span class="inline-block px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs mb-4">
+                💻 Trying to Code
+              </span>
+              <div class="text-left bg-slate-950/90 rounded-xl p-3 font-mono text-xs text-slate-400 border border-slate-800/80 space-y-1">
+                <div><span class="text-emerald-400">const</span> domain = <span class="text-amber-300">"asad-ali-sajjad.me"</span>;</div>
+                <div><span class="text-emerald-400">const</span> focus = [<span class="text-sky-300">"AI"</span>, <span class="text-sky-300">"Web"</span>, <span class="text-sky-300">"Systems"</span>];</div>
+                <div><span class="text-emerald-400">const</span> status = <span class="text-purple-300">"Building..."</span>;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 border-t border-slate-800/70">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div>
+          <p class="font-mono text-xs uppercase tracking-widest text-sky-400 mb-2">// Featured Work</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">Pinned & Featured Projects</h2>
+        </div>
+
+        <!-- Interactive Category Filter -->
+        <div class="flex flex-wrap gap-2" id="filter-container">
+          <button data-filter="all" class="filter-btn active px-4 py-2 rounded-lg text-xs font-mono border border-slate-700 text-slate-300 hover:border-sky-400 transition">
+            All Projects
+          </button>
+          <button data-filter="ai" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono border border-slate-700 text-slate-300 hover:border-sky-400 transition">
+            AI & ML
+          </button>
+          <button data-filter="web" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono border border-slate-700 text-slate-300 hover:border-sky-400 transition">
+            Full-Stack Web
+          </button>
+          <button data-filter="systems" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono border border-slate-700 text-slate-300 hover:border-sky-400 transition">
+            C++ & SQL
+          </button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Cards injected by JavaScript for clean interactivity -->
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://github.com/asad-ali-sajjad?tab=repositories" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-mono text-sm bg-slate-900 hover:bg-slate-800 text-sky-400 border border-slate-700 transition">
+          <span>View All 20+ Repositories on GitHub</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section id="skills" class="py-20 border-t border-slate-800/70 bg-slate-950/50">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <p class="font-mono text-xs uppercase tracking-widest text-sky-400 mb-2">// Technical Arsenal</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-3">Languages & Technologies</h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Tools and frameworks used across my pinned healthcare, AI diagnostics, enterprise, and database engineering repositories.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="project-card p-6 rounded-2xl">
+          <div class="text-2xl mb-3">🌐</div>
+          <h3 class="font-bold text-white mb-2">Frontend & Web</h3>
+          <p class="text-xs text-slate-400 mb-4">Responsive interfaces, interactive study workspaces, and modern web apps.</p>
+          <div class="flex flex-wrap gap-2 font-mono text-xs">
+            <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-300 border border-sky-500/20">TypeScript</span>
+            <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-300 border border-sky-500/20">Next.js</span>
+            <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-300 border border-sky-500/20">JavaScript</span>
+            <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-300 border border-sky-500/20">HTML5 / CSS3</span>
+          </div>
+        </div>
+
+        <div class="project-card p-6 rounded-2xl">
+          <div class="text-2xl mb-3">🤖</div>
+          <h3 class="font-bold text-white mb-2">AI & Machine Learning</h3>
+          <p class="text-xs text-slate-400 mb-4">Deep learning computer vision, RAG assistants, and clinical screening AI.</p>
+          <div class="flex flex-wrap gap-2 font-mono text-xs">
+            <span class="px-2.5 py-1 rounded bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Python</span>
+            <span class="px-2.5 py-1 rounded bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">PyTorch</span>
+            <span class="px-2.5 py-1 rounded bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Streamlit</span>
+            <span class="px-2.5 py-1 rounded bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">RAG / LLMs</span>
+          </div>
+        </div>
+
+        <div class="project-card p-6 rounded-2xl">
+          <div class="text-2xl mb-3">🗄️</div>
+          <h3 class="font-bold text-white mb-2">Backend & Databases</h3>
+          <p class="text-xs text-slate-400 mb-4">Relational schema design, stored procedures, triggers, and REST APIs.</p>
+          <div class="flex flex-wrap gap-2 font-mono text-xs">
+            <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">PostgreSQL</span>
+            <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">MS SQL / T-SQL</span>
+            <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">PHP / MySQL</span>
+            <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">Express / MongoDB</span>
+          </div>
+        </div>
+
+        <div class="project-card p-6 rounded-2xl">
+          <div class="text-2xl mb-3">⚙️</div>
+          <h3 class="font-bold text-white mb-2">Systems & Core CS</h3>
+          <p class="text-xs text-slate-400 mb-4">Data structures, role-based access systems, and version control workflows.</p>
+          <div class="flex flex-wrap gap-2 font-mono text-xs">
+            <span class="px-2.5 py-1 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">C++</span>
+            <span class="px-2.5 py-1 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">Java</span>
+            <span class="px-2.5 py-1 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">Data Structures</span>
+            <span class="px-2.5 py-1 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">Git & GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Contact Section -->
+  <section id="about" class="py-20 border-t border-slate-800/70">
+    <div class="max-w-4xl mx-auto px-5">
+      <div class="project-card rounded-3xl p-8 sm:p-12 text-center" id="contact">
+        <p class="font-mono text-xs uppercase tracking-widest text-sky-400 mb-3">// Let's Connect</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Want to Collaborate or Discuss a Project?</h2>
+        <p class="text-slate-400 max-w-xl mx-auto mb-8 leading-relaxed">
+          Whether it's building full-stack web apps, integrating AI models, or optimizing database systems, feel free to reach out or explore my repositories on GitHub.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <a href="mailto:imasad789@gmail.com"
+             class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-sky-400 to-indigo-500 text-slate-950 hover:opacity-95 transition">
+            ✉️ imasad789@gmail.com
+          </a>
+          <button onclick="copyEmail()"
+                  id="copy-btn"
+                  class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-mono text-sm bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition">
+            📋 Copy Email Address
+          </button>
+          <a href="https://github.com/asad-ali-sajjad" target="_blank" rel="noopener noreferrer"
+             class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-semibold text-sm bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 transition">
+            🐙 github.com/asad-ali-sajjad
+          </a>
+        </div>
+
+        <p class="font-mono text-xs text-slate-500">
+          Hosted on GitHub Pages &bull; Custom Domain: asad-ali-sajjad.me
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-slate-800/70 text-center text-xs text-slate-500 font-mono">
+    <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>&copy; 2026 Asad Ali Sajjad. All rights reserved.</div>
+      <div class="flex items-center gap-5">
+        <a href="https://github.com/asad-ali-sajjad" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition">GitHub</a>
+        <a href="https://asad-ali-sajjad.me" class="hover:text-sky-400 transition">asad-ali-sajjad.me</a>
+        <a href="mailto:imasad789@gmail.com" class="hover:text-sky-400 transition">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Portfolio Data & Scripts -->
+  <script>
+    const projects = [
+      {
+        title: "medai-care",
+        badge: "Pinned",
+        category: "ai",
+        language: "TypeScript",
+        langColor: "#3178c6",
+        description: "A multi-clinic appointment and operations platform built with Next.js and PostgreSQL, extended with a calibrated, human-in-the-loop AI skin lesion screening system and RAG assistant.",
+        tags: ["Next.js", "PostgreSQL", "AI Screening", "RAG"],
+        repoUrl: "https://github.com/asad-ali-sajjad/medai-care"
+      },
+      {
+        title: "plant-disease-diagnostic-system",
+        badge: "Pinned",
+        category: "ai",
+        language: "Jupyter Notebook",
+        langColor: "#da5b0b",
+        description: "A deep learning web application built with PyTorch and Streamlit for real-time plant leaf disease detection and actionable agricultural health diagnostics.",
+        tags: ["PyTorch", "Streamlit", "Deep Learning", "Computer Vision"],
+        repoUrl: "https://github.com/asad-ali-sajjad/plant-disease-diagnostic-system"
+      },
+      {
+        title: "cs-mcq-hub",
+        badge: "Featured",
+        category: "web",
+        language: "HTML / JS",
+        langColor: "#e34c26",
+        description: "An interactive, browser-based MCQ workspace designed for Computer Science revision, structured study notes, and exam preparation.",
+        tags: ["Computer Science", "Interactive Quiz", "Study Guide"],
+        repoUrl: "https://github.com/asad-ali-sajjad/cs-mcq-hub"
+      },
+      {
+        title: "clinic-appointment-system",
+        badge: "Pinned",
+        category: "web",
+        language: "PHP",
+        langColor: "#4F5D95",
+        description: "Lightweight PHP/MySQL clinic booking and scheduling system engineered to reduce patient no-shows and streamline administrative workflows.",
+        tags: ["PHP", "MySQL", "Healthcare", "Booking"],
+        repoUrl: "https://github.com/asad-ali-sajjad/clinic-appointment-system"
+      },
+      {
+        title: "bank-management-system",
+        badge: "Pinned",
+        category: "systems",
+        language: "C++",
+        langColor: "#f34b7d",
+        description: "A C++ command-line banking application featuring secure role-based access, persistent transaction history, and efficient data structure implementations.",
+        tags: ["C++", "Data Structures", "CLI", "RBAC"],
+        repoUrl: "https://github.com/asad-ali-sajjad/bank-management-system"
+      },
+      {
+        title: "library-management-system-sql",
+        badge: "Pinned",
+        category: "systems",
+        language: "TSQL",
+        langColor: "#e38c00",
+        description: "Relational Library Management System built using MS SQL Server, covering normalized tables, views, stored procedures, functions, triggers, and transactions.",
+        tags: ["MS SQL Server", "T-SQL", "Triggers", "Stored Procedures"],
+        repoUrl: "https://github.com/asad-ali-sajjad/library-management-system-sql"
+      },
+      {
+        title: "glimpse",
+        badge: "Full-Stack",
+        category: "web",
+        language: "JavaScript",
+        langColor: "#f1e05a",
+        description: "Modern social post-sharing application built with Next.js and Supabase, featuring real-time feeds and responsive UI.",
+        tags: ["Next.js", "Supabase", "Social App"],
+        repoUrl: "https://github.com/asad-ali-sajjad/glimpse"
+      },
+      {
+        title: "business-nexus-frontend",
+        badge: "Full-Stack",
+        category: "web",
+        language: "JavaScript",
+        langColor: "#f1e05a",
+        description: "Web application connecting entrepreneurs and investors with role-based authentication, interactive dashboards, and real-time chat.",
+        tags: ["Frontend", "Dashboards", "Real-Time Chat"],
+        repoUrl: "https://github.com/asad-ali-sajjad/business-nexus-frontend"
+      },
+      {
+        title: "business-nexus-backend",
+        badge: "Backend API",
+        category: "web",
+        language: "JavaScript",
+        langColor: "#f1e05a",
+        description: "RESTful API powering Business Nexus, built with Express.js and leveraging MongoDB for scalable data persistence.",
+        tags: ["Express.js", "MongoDB", "REST API"],
+        repoUrl: "https://github.com/asad-ali-sajjad/business-nexus-backend"
+      }
+    ];
+
+    const grid = document.getElementById("projects-grid");
+    const filterBtns = document.querySelectorAll(".filter-btn");
+
+    function renderProjects(filter = "all") {
+      const filtered = filter === "all"
+        ? projects
+        : projects.filter(p => p.category === filter);
+
+      grid.innerHTML = filtered.map(project => `
+        <article class="project-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-sky-500/10 text-sky-300 border border-sky-500/20">
+                ${project.badge}
+              </span>
+              <span class="flex items-center gap-1.5 text-xs font-mono text-slate-400">
+                <span class="w-2.5 h-2.5 rounded-full" style="background-color: ${project.langColor}"></span>
+                ${project.language}
+              </span>
+            </div>
+
+            <h3 class="text-lg font-bold text-white mb-2 font-mono break-words">
+              <a href="${project.repoUrl}" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition">
+                ${project.title}
+              </a>
+            </h3>
+
+            <p class="text-sm text-slate-400 leading-relaxed mb-5">
+              ${project.description}
+            </p>
+          </div>
+
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-5">
+              ${project.tags.map(tag => `
+                <span class="px-2 py-0.5 rounded bg-slate-800/90 text-slate-300 font-mono text-[11px]">
+                  ${tag}
+                </span>
+              `).join("")}
+            </div>
+
+            <a href="${project.repoUrl}" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl text-xs font-mono font-semibold bg-slate-800/80 hover:bg-sky-400 hover:text-slate-950 text-white border border-slate-700 hover:border-sky-400 transition">
+              View Source on GitHub &nearr;
+            </a>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderProjects(btn.dataset.filter);
+      });
+    });
+
+    // Typewriter Effect
+    const roles = [
+      "Full-Stack Web Developer",
+      "AI & Machine Learning Builder",
+      "C++ & Database Engineer",
+      "Open-Source Problem Solver"
+    ];
+    let roleIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+    const typedEl = document.getElementById("typed-role");
+
+    function typeLoop() {
+      const current = roles[roleIdx];
+      typedEl.textContent = isDeleting
+        ? current.substring(0, charIdx--)
+        : current.substring(0, charIdx++);
+
+      let speed = isDeleting ? 45 : 85;
+
+      if (!isDeleting && charIdx === current.length + 1) {
+        isDeleting = true;
+        speed = 1600;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        roleIdx = (roleIdx + 1) % roles.length;
+        speed = 350;
+      }
+      setTimeout(typeLoop, speed);
+    }
+
+    // Copy Email Helper
+    function copyEmail() {
+      navigator.clipboard.writeText("imasad789@gmail.com");
+      const btn = document.getElementById("copy-btn");
+      btn.textContent = "✅ Email Copied!";
+      setTimeout(() => {
+        btn.textContent = "📋 Copy Email Address";
+      }, 2200);
+    }
+
+    renderProjects();
+    typeLoop();
+  </script>
+</body>
+</html>

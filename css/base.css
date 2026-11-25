@@ -1,0 +1,24 @@
+:root {
+  --bg-dark: #090d16;
+  --bg-card: #111827;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --text-primary: #f3f4f6;
+  --accent-primary: #38bdf8;
+  --accent-secondary: #818cf8;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

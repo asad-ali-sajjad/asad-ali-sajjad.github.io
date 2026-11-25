@@ -38,7 +38,7 @@
 
 ## 🛠️ Tech Stack & Deployment
 
-* **Frontend:** HTML5, Tailwind CSS (CDN), Vanilla JavaScript
+* **Frontend:** HTML5, Tailwind CSS (CDN), Modular CSS3, Vanilla JavaScript (ES Modules)
 * **Typography:** Inter & JetBrains Mono
 * **Hosting & SSL:** GitHub Pages with automated HTTPS
 * **Custom Domain:** `asad-ali-sajjad.me` via Namecheap Education
@@ -49,11 +49,23 @@
 
 ```text
 asad-ali-sajjad.github.io/
-├── index.html   # Complete responsive portfolio & interactive scripts
-├── CNAME        # Custom domain configuration (asad-ali-sajjad.me)
-└── README.md    # Repository documentation
-```
+├── index.html                  # Semantic HTML structure & layout
+├── CNAME                       # Custom domain configuration (asad-ali-sajjad.me)
+├── README.md                   # Repository documentation
+├── css/
+│   ├── base.css                # Theme variables, global reset, and keyframe animations
+│   └── components.css          # Glass navbar, hero glow, project cards, and filter states
+└── js/
+    ├── tailwind.config.js      # Tailwind CDN theme & font configuration
+    ├── main.js                 # Application entry point initializing all UI modules
+    ├── data/
+    │   └── portfolio-data.js   # Centralized projects array, typewriter roles, and contact info
+    └── modules/
+        ├── projects.js         # Project card rendering & category filtering
+        ├── typewriter.js       # Animated hero role typewriter effect
+        └── clipboard.js        # One-click email copy interaction
 
+```        
 ---
 
 ## 📬 Connect With Me

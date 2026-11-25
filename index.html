@@ -5,68 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Asad Ali Sajjad | Software & AI Developer</title>
   <meta name="description" content="Portfolio of Asad Ali Sajjad — Full-Stack Web, AI/ML, and Systems Developer." />
-  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            dark: '#090d16',
-            card: '#111827',
-            border: '#1f2937',
-            accent: '#38bdf8',
-            accent2: '#818cf8',
-          }
-        }
-      }
-    };
-  </script>
-  <style>
-    body {
-      background-color: #090d16;
-      color: #f3f4f6;
-      overflow-x: hidden;
-    }
-    .glass-nav {
-      background: rgba(9, 13, 22, 0.78);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .hero-glow {
-      background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.16), transparent 60%),
-                  radial-gradient(circle at 85% 25%, rgba(129, 140, 248, 0.14), transparent 50%);
-    }
-    .project-card {
-      background: linear-gradient(145deg, rgba(17, 24, 39, 0.92), rgba(15, 23, 42, 0.75));
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
-    }
-    .project-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(56, 189, 248, 0.45);
-      box-shadow: 0 20px 35px -15px rgba(56, 189, 248, 0.18);
-    }
-    .filter-btn.active {
-      background: linear-gradient(135deg, #38bdf8, #818cf8);
-      color: #090d16;
-      font-weight: 600;
-      border-color: transparent;
-    }
-    .cursor-blink {
-      animation: blink 1s step-end infinite;
-    }
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-  </style>
+
+  <!-- Tailwind CSS & Custom Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
 </head>
 <body class="antialiased selection:bg-sky-400 selection:text-slate-950">
 
@@ -200,7 +151,7 @@
 
       <!-- Projects Grid -->
       <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Cards injected by JavaScript for clean interactivity -->
+        <!-- Cards injected by js/modules/projects.js -->
       </div>
 
       <div class="text-center mt-12">
@@ -291,8 +242,8 @@
              class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-sky-400 to-indigo-500 text-slate-950 hover:opacity-95 transition">
             ✉️ imasad789@gmail.com
           </a>
-          <button onclick="copyEmail()"
-                  id="copy-btn"
+          <button id="copy-btn"
+                  type="button"
                   class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-mono text-sm bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition">
             📋 Copy Email Address
           </button>
@@ -321,202 +272,7 @@
     </div>
   </footer>
 
-  <!-- Interactive Portfolio Data & Scripts -->
-  <script>
-    const projects = [
-      {
-        title: "medai-care",
-        badge: "Pinned",
-        category: "ai",
-        language: "TypeScript",
-        langColor: "#3178c6",
-        description: "A multi-clinic appointment and operations platform built with Next.js and PostgreSQL, extended with a calibrated, human-in-the-loop AI skin lesion screening system and RAG assistant.",
-        tags: ["Next.js", "PostgreSQL", "AI Screening", "RAG"],
-        repoUrl: "https://github.com/asad-ali-sajjad/medai-care"
-      },
-      {
-        title: "plant-disease-diagnostic-system",
-        badge: "Pinned",
-        category: "ai",
-        language: "Jupyter Notebook",
-        langColor: "#da5b0b",
-        description: "A deep learning web application built with PyTorch and Streamlit for real-time plant leaf disease detection and actionable agricultural health diagnostics.",
-        tags: ["PyTorch", "Streamlit", "Deep Learning", "Computer Vision"],
-        repoUrl: "https://github.com/asad-ali-sajjad/plant-disease-diagnostic-system"
-      },
-      {
-        title: "cs-mcq-hub",
-        badge: "Featured",
-        category: "web",
-        language: "HTML / JS",
-        langColor: "#e34c26",
-        description: "An interactive, browser-based MCQ workspace designed for Computer Science revision, structured study notes, and exam preparation.",
-        tags: ["Computer Science", "Interactive Quiz", "Study Guide"],
-        repoUrl: "https://github.com/asad-ali-sajjad/cs-mcq-hub"
-      },
-      {
-        title: "clinic-appointment-system",
-        badge: "Pinned",
-        category: "web",
-        language: "PHP",
-        langColor: "#4F5D95",
-        description: "Lightweight PHP/MySQL clinic booking and scheduling system engineered to reduce patient no-shows and streamline administrative workflows.",
-        tags: ["PHP", "MySQL", "Healthcare", "Booking"],
-        repoUrl: "https://github.com/asad-ali-sajjad/clinic-appointment-system"
-      },
-      {
-        title: "bank-management-system",
-        badge: "Pinned",
-        category: "systems",
-        language: "C++",
-        langColor: "#f34b7d",
-        description: "A C++ command-line banking application featuring secure role-based access, persistent transaction history, and efficient data structure implementations.",
-        tags: ["C++", "Data Structures", "CLI", "RBAC"],
-        repoUrl: "https://github.com/asad-ali-sajjad/bank-management-system"
-      },
-      {
-        title: "library-management-system-sql",
-        badge: "Pinned",
-        category: "systems",
-        language: "TSQL",
-        langColor: "#e38c00",
-        description: "Relational Library Management System built using MS SQL Server, covering normalized tables, views, stored procedures, functions, triggers, and transactions.",
-        tags: ["MS SQL Server", "T-SQL", "Triggers", "Stored Procedures"],
-        repoUrl: "https://github.com/asad-ali-sajjad/library-management-system-sql"
-      },
-      {
-        title: "glimpse",
-        badge: "Full-Stack",
-        category: "web",
-        language: "JavaScript",
-        langColor: "#f1e05a",
-        description: "Modern social post-sharing application built with Next.js and Supabase, featuring real-time feeds and responsive UI.",
-        tags: ["Next.js", "Supabase", "Social App"],
-        repoUrl: "https://github.com/asad-ali-sajjad/glimpse"
-      },
-      {
-        title: "business-nexus-frontend",
-        badge: "Full-Stack",
-        category: "web",
-        language: "JavaScript",
-        langColor: "#f1e05a",
-        description: "Web application connecting entrepreneurs and investors with role-based authentication, interactive dashboards, and real-time chat.",
-        tags: ["Frontend", "Dashboards", "Real-Time Chat"],
-        repoUrl: "https://github.com/asad-ali-sajjad/business-nexus-frontend"
-      },
-      {
-        title: "business-nexus-backend",
-        badge: "Backend API",
-        category: "web",
-        language: "JavaScript",
-        langColor: "#f1e05a",
-        description: "RESTful API powering Business Nexus, built with Express.js and leveraging MongoDB for scalable data persistence.",
-        tags: ["Express.js", "MongoDB", "REST API"],
-        repoUrl: "https://github.com/asad-ali-sajjad/business-nexus-backend"
-      }
-    ];
-
-    const grid = document.getElementById("projects-grid");
-    const filterBtns = document.querySelectorAll(".filter-btn");
-
-    function renderProjects(filter = "all") {
-      const filtered = filter === "all"
-        ? projects
-        : projects.filter(p => p.category === filter);
-
-      grid.innerHTML = filtered.map(project => `
-        <article class="project-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-2 mb-4">
-              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-sky-500/10 text-sky-300 border border-sky-500/20">
-                ${project.badge}
-              </span>
-              <span class="flex items-center gap-1.5 text-xs font-mono text-slate-400">
-                <span class="w-2.5 h-2.5 rounded-full" style="background-color: ${project.langColor}"></span>
-                ${project.language}
-              </span>
-            </div>
-
-            <h3 class="text-lg font-bold text-white mb-2 font-mono break-words">
-              <a href="${project.repoUrl}" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition">
-                ${project.title}
-              </a>
-            </h3>
-
-            <p class="text-sm text-slate-400 leading-relaxed mb-5">
-              ${project.description}
-            </p>
-          </div>
-
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-5">
-              ${project.tags.map(tag => `
-                <span class="px-2 py-0.5 rounded bg-slate-800/90 text-slate-300 font-mono text-[11px]">
-                  ${tag}
-                </span>
-              `).join("")}
-            </div>
-
-            <a href="${project.repoUrl}" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl text-xs font-mono font-semibold bg-slate-800/80 hover:bg-sky-400 hover:text-slate-950 text-white border border-slate-700 hover:border-sky-400 transition">
-              View Source on GitHub &nearr;
-            </a>
-          </div>
-        </article>
-      `).join("");
-    }
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        filterBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        renderProjects(btn.dataset.filter);
-      });
-    });
-
-    // Typewriter Effect
-    const roles = [
-      "Full-Stack Web Developer",
-      "AI & Machine Learning Builder",
-      "C++ & Database Engineer",
-      "Open-Source Problem Solver"
-    ];
-    let roleIdx = 0;
-    let charIdx = 0;
-    let isDeleting = false;
-    const typedEl = document.getElementById("typed-role");
-
-    function typeLoop() {
-      const current = roles[roleIdx];
-      typedEl.textContent = isDeleting
-        ? current.substring(0, charIdx--)
-        : current.substring(0, charIdx++);
-
-      let speed = isDeleting ? 45 : 85;
-
-      if (!isDeleting && charIdx === current.length + 1) {
-        isDeleting = true;
-        speed = 1600;
-      } else if (isDeleting && charIdx === 0) {
-        isDeleting = false;
-        roleIdx = (roleIdx + 1) % roles.length;
-        speed = 350;
-      }
-      setTimeout(typeLoop, speed);
-    }
-
-    // Copy Email Helper
-    function copyEmail() {
-      navigator.clipboard.writeText("imasad789@gmail.com");
-      const btn = document.getElementById("copy-btn");
-      btn.textContent = "✅ Email Copied!";
-      setTimeout(() => {
-        btn.textContent = "📋 Copy Email Address";
-      }, 2200);
-    }
-
-    renderProjects();
-    typeLoop();
-  </script>
+  <!-- Modular JavaScript Entry Point -->
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

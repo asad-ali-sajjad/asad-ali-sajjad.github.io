@@ -36,6 +36,12 @@
 </head>
 <body class="antialiased selection:bg-sky-400 selection:text-slate-950">
 
+  <!-- Accessibility Skip Link -->
+  <a href="#projects"
+     class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-sky-400 focus:text-slate-950 focus:font-mono focus:text-xs focus:font-semibold">
+    Skip to content
+  </a>
+
   <!-- Navigation -->
   <header class="fixed top-0 inset-x-0 z-50 glass-nav">
     <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
@@ -146,6 +152,8 @@
             <img
               src="https://github.com/asad-ali-sajjad.png"
               alt="Asad Ali Sajjad GitHub Avatar"
+              width="112"
+              height="112"
               class="w-28 h-28 rounded-2xl mx-auto object-cover border-2 border-sky-400/40 shadow-lg mb-4"
             />
             <div class="text-center">
@@ -360,13 +368,41 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-8 border-t border-slate-800/70 text-center text-xs text-slate-500 font-mono">
-    <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>&copy; <span id="current-year">2026</span> Asad Ali Sajjad. All rights reserved.</div>
-      <div class="flex items-center gap-5">
-        <a href="https://github.com/asad-ali-sajjad" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition">GitHub</a>
-        <a href="https://asad-ali-sajjad.me" class="hover:text-sky-400 transition">asad-ali-sajjad.me</a>
-        <a href="mailto:imasad789@gmail.com" class="hover:text-sky-400 transition">Email</a>
+  <footer class="border-t border-slate-800/70 bg-slate-950/60 text-slate-400">
+    <div class="max-w-6xl mx-auto px-5 py-10">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-slate-800/70">
+        <div>
+          <a href="#" class="font-mono text-base font-bold text-white flex items-center gap-2 mb-1.5">
+            <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+            <span>asad-ali-sajjad<span class="text-sky-400">.me</span></span>
+          </a>
+          <p class="text-xs text-slate-500">
+            Full-Stack Web, AI/ML &amp; Systems Developer.
+          </p>
+        </div>
+
+        <nav aria-label="Footer Navigation" class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-mono">
+          <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+          <a href="#skills" class="hover:text-sky-400 transition">Tech Stack</a>
+          <a href="#about" class="hover:text-sky-400 transition">About</a>
+          <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4 text-xs font-mono">
+          <a href="https://github.com/asad-ali-sajjad" target="_blank" rel="noopener noreferrer"
+             class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-sky-400 border border-slate-800 transition">
+            GitHub
+          </a>
+          <a href="mailto:imasad789@gmail.com"
+             class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-sky-400 border border-slate-800 transition">
+            Email
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-slate-500">
+        <div>&copy; <span id="current-year">2026</span> Asad Ali Sajjad. All rights reserved.</div>
+        <div>Built with HTML5, Tailwind CSS &amp; Vanilla JS</div>
       </div>
     </div>
   </footer>

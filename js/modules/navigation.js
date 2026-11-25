@@ -28,6 +28,14 @@ export function initNavigation() {
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") setMenuOpen(false);
     });
+
+    const header = menuBtn.closest("header");
+    document.addEventListener("click", (event) => {
+      const isCurrentlyOpen = menuBtn.getAttribute("aria-expanded") === "true";
+      if (isCurrentlyOpen && header && !header.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    });
   }
 
   // Active Section Scroll-Spy

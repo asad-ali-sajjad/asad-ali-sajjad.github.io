@@ -1,5 +1,11 @@
 import { PROJECTS } from "../data/portfolio-data.js";
 
+function escapeHtml(value) {
+  const div = document.createElement("div");
+  div.textContent = value;
+  return div.innerHTML;
+}
+
 function createProjectCard(project) {
   const demoButton = project.demoUrl
     ? `<a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer"
@@ -96,10 +102,28 @@ export function initProjects() {
     if (filtered.length === 0) {
       grid.innerHTML = `
         <div class="col-span-full text-center py-12 px-4 rounded-2xl border border-slate-800 bg-slate-900/40">
-          <p class="font-mono text-sm text-slate-400 mb-2">No matching projects found for "${searchQuery}".</p>
-          <p class="text-xs text-slate-500">Try clearing the search box or switching category filters.</p>
+          <p class="font-mono text-sm text-slate-300 mb-2">
+            No matching projects found for "<span class="text-sky-400">${escapeHtml(searchQuery)}</span>".
+          </p>
+          <p class="text-xs text-slate-500 mb-5">Try another keyword or reset your active filters.</p>
+          <button id="reset-filters-btn" type="button"
+                  class="px-4 py-2 rounded-lg text-xs font-mono font-semibold bg-slate-800 hover:bg-sky-400 text-white hover:text-slate-950 border border-slate-700 hover:border-sky-400 transition">
+            Reset Filters
+          </button>
         </div>
       `;
+
+      document.getElementById("reset-filters-btn")?.addEventListener("click", () => {
+        activeCategory = "all";
+        searchQuery = "";
+        if (searchInput) searchInput.value = "";
+        filterBtns.forEach((b) => {
+          const isAll = b.dataset.filter === "all";
+          b.classList.toggle("active", isAll);
+          b.setAttribute("aria-pressed", String(isAll));
+        });
+        render();
+      });
       return;
     }
 

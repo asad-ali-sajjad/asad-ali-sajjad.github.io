@@ -61,10 +61,11 @@ asad-ali-sajjad.github.io/
     ├── data/
     │   └── portfolio-data.js   # Centralized projects array, typewriter roles, and contact info
     └── modules/
-        ├── projects.js         # Project card rendering & category filtering
-        ├── typewriter.js       # Animated hero role typewriter effect
-        └── clipboard.js        # One-click email copy interaction
-
+        ├── navigation.js       # Mobile menu drawer, scroll-spy active links & back-to-top button
+        ├── projects.js         # Category filtering, live keyword search & dynamic count badges
+        ├── typewriter.js       # Role typewriter (with reduced-motion fallback)
+        ├── clipboard.js        # One-click email copy with fallback feedback
+        └── animations.js       # IntersectionObserver scroll-reveal & dynamic copyright year
 ```        
 ---
 

@@ -49,24 +49,31 @@
 
 ```text
 asad-ali-sajjad.github.io/
-├── index.html                  # Semantic HTML structure & layout
-├── CNAME                       # Custom domain configuration (asad-ali-sajjad.me)
-├── README.md                   # Repository documentation
-├── css/
-│   ├── base.css                # Theme variables, global reset, and keyframe animations
-│   └── components.css          # Glass navbar, hero glow, project cards, and filter states
-└── js/
-    ├── tailwind.config.js      # Tailwind CDN theme & font configuration
-    ├── main.js                 # Application entry point initializing all UI modules
-    ├── data/
-    │   └── portfolio-data.js   # Centralized projects array, typewriter roles, and contact info
-    └── modules/
-        ├── navigation.js       # Mobile menu drawer, scroll-spy active links & back-to-top button
-        ├── projects.js         # Category filtering, live keyword search & dynamic count badges
-        ├── typewriter.js       # Role typewriter (with reduced-motion fallback)
-        ├── clipboard.js        # One-click email copy with fallback feedback
-        └── animations.js       # IntersectionObserver scroll-reveal & dynamic copyright year
-```        
+├── 404.html                      # Custom fallback page for missing routes
+├── CNAME                         # Custom domain configuration
+├── README.md                     # Project overview and documentation
+├── context.json                  # Project context and metadata
+├── index.html                    # Main portfolio landing page
+├── css/                          # Stylesheets
+│   ├── base.css                  # Base styles, variables, and resets
+│   └── components.css            # Component-specific styles
+├── data/                         # Structured JSON data sources
+│   └── github-profile.json       # Cached GitHub profile stats and details
+├── js/                           # Client-side JavaScript
+│   ├── tailwind.config.js        # Tailwind CSS configuration
+│   ├── main.js                   # Main script entry point
+│   ├── data/                     # Application data modules
+│   │   └── portfolio-data.js     # Portfolio items, roles, and site data
+│   └── modules/                  # Feature-specific UI modules
+│       ├── navigation.js         # Header/menu and scroll navigation logic
+│       ├── projects.js           # Project rendering, filtering, and search
+│       ├── typewriter.js         # Typed text effect
+│       ├── clipboard.js          # Copy-to-clipboard behavior
+│       └── animations.js         # Scroll and UI animations
+└── scripts/                      # Automation and build/sync scripts
+    └── sync_github.py            # Python script to sync GitHub profile data
+```
+
 ---
 
 ## 📬 Connect With Me

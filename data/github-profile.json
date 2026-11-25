@@ -1,0 +1,2078 @@
+{
+  "schema_version": "1.0.0",
+  "last_synced": "2026-11-26",
+  "profile": {
+    "username": "asad-ali-sajjad",
+    "display_name": "Asad Ali Sajjad",
+    "pronouns": "he/him",
+    "bio": "Midnight commits, Python scripts & C++ architecture. Powered by cinema, dark mode & prompt engineering. // JS · React · SQL",
+    "links": {
+      "github_url": "https://github.com/asad-ali-sajjad",
+      "portfolio_url": "https://asad-ali-sajjad.me",
+      "linkedin_url": "https://www.linkedin.com/in/asad-ali-sajjad",
+      "email": "imasad789@gmail.com"
+    },
+    "stats": {
+      "total_github_repositories": 21,
+      "extracted_repositories_count": 16,
+      "profile_stars": 3,
+      "contributions_last_year": 100
+    },
+    "pinned_repositories": [
+      "mediai-care",
+      "plant-disease-diagnostic-system",
+      "bank-management-system",
+      "clinic-appointment-system",
+      "library-management-system-sql"
+    ],
+    "repository_index": [
+      "cs-mcq-hub",
+      "mediai-care",
+      "plant-disease-diagnostic-system",
+      "clinic-appointment-system",
+      "glimpse",
+      "bank-management-system",
+      "library-management-system-sql",
+      "recipe-app",
+      "weather-app-vanilla-js",
+      "git-guide",
+      "docs",
+      "business-nexus-backend",
+      "business-nexus-frontend",
+      "ecommerce-frontend-design",
+      "todo-app",
+      "asad-ali-sajjad.github.io"
+    ],
+    "roles": [
+      "Full-Stack Web Developer",
+      "AI & Machine Learning Builder",
+      "C++ & Database Engineer",
+      "Open-Source Problem Solver"
+    ]
+  },
+  "repositories": [
+    {
+      "name": "cs-mcq-hub",
+      "full_name": "asad-ali-sajjad/cs-mcq-hub",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": false,
+      "status": "active",
+      "category": "EdTech / Web Application / Exam Preparation",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/cs-mcq-hub",
+        "live_demo_url": "https://asad-ali-sajjad.github.io/cs-mcq-hub/",
+        "docs_url": "https://github.com/asad-ali-sajjad/cs-mcq-hub#readme"
+      },
+      "overview": {
+        "tagline": "Study Smarter. Revise Faster. An interactive, offline-friendly MCQ workspace for Computer Science exam preparation.",
+        "description": "A fast, zero-backend interactive MCQ practice, mock exam, and mistake-review platform built with vanilla HTML, CSS, and JavaScript, designed to run seamlessly both locally (file://) and on static hosts like GitHub Pages.",
+        "problem_solved": "Eliminates backend and CORS friction in Computer Science exam revision by providing an offline-capable, browser-based testing, mock exam, and mistake-tracking workspace.",
+        "target_users": "Computer Science students preparing for semester exams and technical assessments."
+      },
+      "tech_stack": {
+        "primary_language": "JavaScript",
+        "languages": [
+          "JavaScript",
+          "HTML5",
+          "CSS3"
+        ],
+        "frameworks_and_libraries": [
+          "Vanilla JavaScript (classic scripts, zero external runtime dependencies)"
+        ],
+        "databases_and_storage": [
+          "Browser localStorage (isolated per-subject state)",
+          "Static JS/JSON question banks"
+        ],
+        "apis_and_services": [
+          "Web Storage API",
+          "FileReader API (custom bank upload)"
+        ],
+        "tools_and_deployment": [
+          "GitHub Pages",
+          "Git"
+        ]
+      },
+      "key_features": [
+        "Dynamic URL-driven multi-subject loading (quiz.html?subject=<id>) via classic script injection without CORS errors",
+        "Isolated per-subject localStorage persistence for progress, missed answers, and bookmarked questions",
+        "In-browser custom .json and .js question bank uploader with schema validation, syntax checking, and downloadable starter templates",
+        "Five study and exam modes: Study Bank, Sequential Quiz (with option shuffling and undoable reset), Mock Exam (10/25/50/100 questions, Instant Feedback vs. Exam Mode), Missed/Wrong Review (auto-clearing on retry), and Saved Review",
+        "Automatic difficulty classification (Easy, Medium, Hard) based on computational/structural complexity when explicit tags are omitted",
+        "Structured explanation callouts normalizing exp, explanation, and feedback fields",
+        "Comprehensive keyboard shortcuts (N/J/Down, K/Up, A-D/1-4, T, S, E, /, [, ?, Esc) and mobile floating quick-nav dock",
+        "Responsive collapsible sidebar with live completion/accuracy telemetry and persistent Light/Dark theme switching"
+      ],
+      "architecture": {
+        "pattern": "Zero-backend Multi-Page Application (MPA) with centralized global configuration (window.SITE_CONFIG) and dynamic script injection",
+        "folder_structure": [
+          "index.html (Subject catalog & semester filter hub)",
+          "quiz.html (Universal interactive quiz, mock exam & review workspace)",
+          "coming-soon.html (Placeholder view for upcoming subjects)",
+          "README.md (Project documentation)",
+          "assets/css/global.css (Shared design tokens, typography, themes & ambient background)",
+          "assets/css/home.css (Subject catalog grid & card styles)",
+          "assets/css/quiz.css (Sidebar, MCQ cards, modals & floating dock styles)",
+          "assets/css/coming-soon.css (Coming-soon page styles)",
+          "assets/js/config.js (Central site branding, links, catalog & quiz settings)",
+          "assets/js/subjects-data.js (Central subject registry with IDs, metadata, readiness & file paths)",
+          "assets/js/home.js (Catalog rendering, search & semester filtering)",
+          "assets/js/quiz-engine.js (Universal quiz engine, mock generator, upload validator & shortcuts)",
+          "assets/js/coming-soon.js (Dynamic metadata loader for unreleased subjects)",
+          "assets/js/theme.js (Persistent Light/Dark theme switcher)",
+          "data/core-cs/ (Core Computer Science subject banks)",
+          "data/sem-7/ (automata.js, cloud-computing.js, deep-learning.js, pdc.js)",
+          "data/sem-8/ (8th Semester subject banks)"
+        ],
+        "entry_points": [
+          "index.html",
+          "quiz.html",
+          "coming-soon.html",
+          "assets/js/config.js"
+        ],
+        "database_models_or_schema": [
+          "Subject Registry Item: { id, title, semester, status, icon, description, ready, dataFile }",
+          "MCQ Question Item: { num, q, A, B, C, D, ans, exp, difficulty?, topic?, week? }"
+        ]
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Any modern web browser (no build tools, server, or runtime dependencies required)"
+        ],
+        "env_variables": [],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/cs-mcq-hub.git"
+        ],
+        "run_commands": [
+          "Open index.html directly in a browser (file://) or host statically via GitHub Pages"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [
+          "computer-science",
+          "exam-preparation",
+          "github-pages",
+          "html-css-javascript",
+          "interactive-learning",
+          "mcq",
+          "quiz-app",
+          "study-guide",
+          "study-notes",
+          "study-tool"
+        ],
+        "license": null,
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 9,
+        "latest_version": null,
+        "last_updated": "2026-11-25"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Eliminated browser file:// CORS issues without a bundler or server by using classic script injection and a global window.SITE_CONFIG registry",
+          "Prevented cross-course state collisions in browser storage via versioned, per-subject localStorage namespacing",
+          "Built heuristic auto-difficulty tagging to classify untagged MCQ banks into Easy, Medium, and Hard tiers"
+        ],
+        "resume_bullets": [
+          "Engineered a zero-backend, offline-compatible Computer Science MCQ and mock exam web platform using vanilla JavaScript, HTML5, and CSS3, deployed on GitHub Pages.",
+          "Architected a dynamic script-injection loader and schema-validated local file uploader supporting custom .json and .js question banks without CORS dependencies.",
+          "Built five interactive study workflows—including timed mock exams, mistake-tracking review, keyboard-driven navigation, and isolated localStorage persistence—for multi-semester CS coursework."
+        ]
+      },
+      "portfolio": {
+        "featured": true,
+        "order": 3,
+        "badge": "Featured",
+        "category": "web",
+        "language": "HTML / JS",
+        "langColor": "#e34c26",
+        "tags": [
+          "Computer Science",
+          "Interactive Quiz",
+          "Study Guide"
+        ]
+      }
+    },
+    {
+      "name": "mediai-care",
+      "full_name": "asad-ali-sajjad/mediai-care",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": true,
+      "status": "active",
+      "category": "HealthTech / SaaS / Multi-Clinic & Telemedicine Platform",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/mediai-care",
+        "live_demo_url": "https://mediai-care-gamma.vercel.app",
+        "docs_url": "https://github.com/asad-ali-sajjad/mediai-care#readme"
+      },
+      "overview": {
+        "tagline": "Enterprise Multi-Clinic & Telemedicine Platform with Calibrated Human-in-the-Loop AI Screening.",
+        "description": "A multi-clinic appointment, operations, and clinical decision-support healthcare platform built with Next.js 15 and PostgreSQL, extended with a FastAPI AI sidecar for explainable skin-lesion screening and RAG health assistance.",
+        "problem_solved": "Digitizes traditional medical center workflows—replacing manual phone bookings, walk-in queues, and fragmented doctor schedules—while enforcing strict multi-tenant data isolation and double-booking prevention at the database layer.",
+        "target_users": "Multi-branch clinics, clinic administrators, doctors, receptionists, and patients."
+      },
+      "tech_stack": {
+        "primary_language": "TypeScript",
+        "languages": [
+          "TypeScript",
+          "SQL (PostgreSQL)",
+          "Python"
+        ],
+        "frameworks_and_libraries": [
+          "Next.js 15 (App Router)",
+          "React (Server Components & Server Actions)",
+          "Tailwind CSS",
+          "Prisma 6",
+          "Auth.js (NextAuth v5 Beta)",
+          "Zod",
+          "Bcryptjs",
+          "FastAPI",
+          "PyTorch / ONNX"
+        ],
+        "databases_and_storage": [
+          "PostgreSQL (Supabase)",
+          "pgvector & PostgreSQL Trigram Search"
+        ],
+        "apis_and_services": [
+          "Supabase",
+          "Auth.js",
+          "FastAPI AI Sidecar Service"
+        ],
+        "tools_and_deployment": [
+          "Vercel",
+          "Docker (docker-compose)",
+          "Git & Git Hooks (.githooks)",
+          "tsx"
+        ]
+      },
+      "key_features": [
+        "Multi-tenant SaaS architecture with strict database-level clinic isolation (clinicId scoping and appt_tenant_guard trigger)",
+        "Global patient identity portal allowing patients to manage visits across multiple clinics while keeping clinical records isolated",
+        "Database-level security guards (1_db_guards): partial unique index (uniq_active_slot) double-booking shield, immutable append-only AuditLog trigger, E.164 phone & email CHECK constraints, and Row-Level Security (RLS)",
+        "Hardened authentication supporting dual email/phone login, dummy-bcrypt timing-attack protection, brute-force account lockouts (5 failed attempts -> 15-min lock), and Edge middleware RBAC across 5 roles (SUPER_ADMIN, CLINIC_ADMIN, RECEPTIONIST, DOCTOR, PATIENT)",
+        "Dynamic booking slot engine, appointment state transitions, and responsive clinic/doctor dashboards",
+        "Deterministic multi-clinic database seeding (prisma/seed.ts) and automated SQL constraint attack verification suite (scripts/verify-db.ts)",
+        "Monorepo FastAPI AI service architecture designed for calibrated skin-lesion screening (Grad-CAM overlays, abstention gates) and vector-based RAG assistance"
+      ],
+      "architecture": {
+        "pattern": "Full-Stack Monorepo (Next.js 15 App Router + FastAPI Python AI Sidecar) backed by Multi-Tenant PostgreSQL with DB-Level Triggers and RLS",
+        "folder_structure": [
+          ".githooks/ (Git workflow hooks)",
+          ".vscode/ (Editor configuration)",
+          "ai-service/ (FastAPI Python AI microservice for skin-lesion screening and RAG)",
+          "prisma/schema.prisma (Master database datamodel with 25 entities)",
+          "prisma/migrations/0_init/ (Baseline PostgreSQL table definitions)",
+          "prisma/migrations/1_db_guards/ (Custom SQL triggers, partial unique indexes, and CHECK constraints)",
+          "prisma/seed.ts (Deterministic multi-clinic demo dataset generator)",
+          "public/ (Static assets)",
+          "scripts/verify-db.ts (Automated database security guard verification runner)",
+          "src/app/api/auth/[...nextauth]/ (Auth.js API catch-all endpoint)",
+          "src/app/api/health/ (System ping and DB connectivity health monitor)",
+          "src/app/dashboard/ (Role-shared authenticated dashboard view)",
+          "src/app/forbidden/ (403 Security exception view)",
+          "src/app/login/ (Interactive authentication interface)",
+          "src/lib/db.ts (PrismaClient singleton)",
+          "src/lib/phone.ts (E.164 international phone normalizer)",
+          "src/lib/rbac.ts (Route permission mapping)",
+          "src/lib/session.ts (Server action permission validator)",
+          "src/types/next-auth.d.ts (Auth.js type augmentations for Role and ClinicId)",
+          "src/auth.config.ts (Edge-compatible authentication rules)",
+          "src/auth.ts (Node.js server authentication engine)",
+          "src/middleware.ts (Edge route protection guardian)",
+          ".env.example (Environment variable template)",
+          "docker-compose.yml (Local PostgreSQL container configuration)",
+          "README.md (System architecture and setup documentation)"
+        ],
+        "entry_points": [
+          "src/app/page.tsx",
+          "src/middleware.ts",
+          "src/auth.ts",
+          "src/app/api/auth/[...nextauth]/route.ts",
+          "src/app/api/health/route.ts",
+          "ai-service/"
+        ],
+        "database_models_or_schema": [
+          "25-entity relational schema in prisma/schema.prisma (Users, Clinics, Doctors, Patients, Appointments, QueueCounters, AuditLogs)",
+          "SQL Guard: uniq_active_slot (partial unique index preventing overlapping active bookings)",
+          "SQL Guard: appt_tenant_guard (trigger rejecting cross-clinic doctor/patient appointment links)",
+          "SQL Guard: Append-only AuditLog trigger blocking UPDATE/DELETE operations"
+        ]
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Node.js v20 or higher",
+          "npm v10+",
+          "Managed Supabase PostgreSQL project or local Docker PostgreSQL instance"
+        ],
+        "env_variables": [
+          "DATABASE_URL",
+          "DIRECT_URL",
+          "BETTER_AUTH_SECRET",
+          "NEXT_PUBLIC_APP_URL",
+          "ALLOW_SEED"
+        ],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/mediai-care.git",
+          "cd mediai-care",
+          "npm install",
+          "npx prisma migrate deploy",
+          "npx tsx prisma/seed.ts",
+          "npx tsx scripts/verify-db.ts"
+        ],
+        "run_commands": [
+          "npm run dev"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": "MIT",
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 12,
+        "latest_version": null,
+        "last_updated": "2026-11-10"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Eliminated race-condition double-bookings and cross-tenant data leaks directly at the PostgreSQL engine level using partial unique indexes, triggers, and Row-Level Security",
+          "Mitigated credential-stuffing and timing-enumeration attacks via dummy bcrypt hashing, brute-force account lockouts, and Edge JWT middleware RBAC",
+          "Built an automated security verification harness (verify-db.ts) that simulates SQL constraint attacks against the database to guarantee invariant enforcement"
+        ],
+        "resume_bullets": [
+          "Architected a multi-tenant healthcare appointment and operations platform using Next.js 15, TypeScript, Prisma 6, and PostgreSQL (Supabase), deployed on Vercel.",
+          "Engineered database-level security invariants—including partial unique indexes for double-booking prevention, tenant-isolation triggers, immutable audit logs, and Row-Level Security—validated via an automated attack-simulation test suite.",
+          "Implemented Edge-enforced Role-Based Access Control (Auth.js v5) supporting 5 distinct clinical roles, dual email/E.164-phone authentication, brute-force lockouts, and a FastAPI sidecar architecture for human-in-the-loop AI skin-lesion screening."
+        ]
+      },
+      "portfolio": {
+        "featured": true,
+        "order": 1,
+        "badge": "Pinned",
+        "category": "systems",
+        "language": "TypeScript",
+        "langColor": "#3178c6",
+        "tags": [
+          "Next.js 15 (App Router)",
+          "React (Server Components & Server Actions)",
+          "Tailwind CSS",
+          "Prisma 6"
+        ]
+      }
+    },
+    {
+      "name": "plant-disease-diagnostic-system",
+      "full_name": "asad-ali-sajjad/plant-disease-diagnostic-system",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": true,
+      "status": "completed",
+      "category": "AI / Computer Vision / AgriTech Web Application",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/plant-disease-diagnostic-system",
+        "live_demo_url": "https://florascan-ai.vercel.app",
+        "docs_url": "https://florascan-ai.vercel.app/"
+      },
+      "overview": {
+        "tagline": "FloraScan AI — A dual-engine computer vision dashboard that classifies tomato leaf health in seconds, and refuses to guess when it is unsure.",
+        "description": "An end-to-end deep learning web application built with PyTorch and Streamlit for real-time tomato leaf disease diagnosis across five classes (Healthy, Bacterial Spot, Early Blight, Late Blight, and Not Leaf), featuring side-by-side model benchmarking, confidence abstention gates, and downloadable diagnostic reports.",
+        "problem_solved": "Provides rapid, accessible plant pathology diagnostics while preventing overconfident false-positive predictions on uncertain or non-leaf images via a 65% confidence safety threshold and synthetic out-of-distribution rejection.",
+        "target_users": "Farmers, agronomists, agricultural researchers, and home gardeners."
+      },
+      "tech_stack": {
+        "primary_language": "Python",
+        "languages": [
+          "Python",
+          "Jupyter Notebook",
+          "HTML",
+          "CSS"
+        ],
+        "frameworks_and_libraries": [
+          "PyTorch",
+          "Torchvision",
+          "Streamlit (1.27+)"
+        ],
+        "databases_and_storage": [
+          "Streamlit Session State",
+          "Git LFS & Hugging Face Hub (.pth model checkpoints)"
+        ],
+        "apis_and_services": [
+          "Streamlit Community Cloud",
+          "Vercel (project showcase site)",
+          "Hugging Face Hub",
+          "Google Colab"
+        ],
+        "tools_and_deployment": [
+          "Git & Git LFS",
+          "GitHub Actions (keep_alive.yml)",
+          "Dev Containers (.devcontainer)"
+        ]
+      },
+      "key_features": [
+        "Multi-engine inference switcher supporting Custom 3-Block CNN (96.53% test accuracy, 724/750) and ResNet-18 transfer learning (94.13% test accuracy, 706/750)",
+        "Dual Benchmark Mode running both models simultaneously on a single leaf image to compare agreement, disagreement, or uncertainty",
+        "Safety confidence threshold (65%) that flags low-confidence predictions as 'Unrecognized' instead of guessing",
+        "Out-of-distribution (OOD) rejection trained on a 1,000-image synthetic 'Not Leaf' class (noise, gradients, checkerboards, shapes)",
+        "Visual confidence gauge and 5-class probability distribution bars with a built-in Disease Library (symptoms, severity, and care plans)",
+        "Session scan history log, built-in sample leaf selector, and downloadable plain-text diagnosis reports",
+        "Cached inference with automatic model hot-reloading whenever .pth checkpoint files are updated"
+      ],
+      "architecture": {
+        "pattern": "Modular Python/Streamlit ML Web Application with dual PyTorch inference engines and centralized configuration (config.py)",
+        "folder_structure": [
+          "app.py (Streamlit interface: sidebar, tabs, and page flow)",
+          "config.py (Class labels, paths, 65% confidence threshold, UI metadata, and diagnostic guide)",
+          "model.py (PyTorch model builders, checkpoint loader, and cached inference)",
+          "ui.py (Custom HTML components: result cards, confidence gauge, probability bars, and report generator)",
+          "styles.css (Application visual styling)",
+          "Plant_Disease_Detection_V2.ipynb (Data preprocessing, training, and evaluation notebook)",
+          "best_custom_cnn_5class.pth (Custom 3-Block CNN weights, 196 MB via Git LFS)",
+          "best_resnet18_5class.pth (ResNet-18 weights, 42.7 MB via Git LFS)",
+          ".streamlit/config.toml (Streamlit theme settings)",
+          ".devcontainer/ (Development container setup)",
+          ".github/workflows/keep_alive.yml (Automated uptime workflow)",
+          ".gitattributes (Git LFS tracking rules for .pth files)",
+          "assets/ (UI screenshots and training/validation accuracy curves)",
+          "docs/ (FloraScan_AI_Project_Report.pdf and FloraScan_AI_Presentation.pptx)",
+          "samples/ (Sample test images)",
+          "site/ (Static project landing page deployed on Vercel)",
+          "requirements.txt (Python dependencies)",
+          "LICENSE (MIT License)",
+          "README.md (Project documentation)"
+        ],
+        "entry_points": [
+          "app.py",
+          "Plant_Disease_Detection_V2.ipynb",
+          "site/index.html"
+        ],
+        "database_models_or_schema": [
+          "Target Classes (ImageFolder order): ['Not_Leaf', 'Tomato_Bacterial_spot', 'Tomato_Early_blight', 'Tomato_Late_blight', 'Tomato_healthy']",
+          "CustomPlantCNN: 3x [Conv2d -> BatchNorm -> ReLU -> MaxPool2d] + Dropout(0.25) -> Linear(100352->512) -> BatchNorm -> ReLU -> Dropout(0.25) -> Linear(512->5) (~51.5M trainable params)",
+          "ResNet-18 Baseline: Frozen ImageNet convolutional backbone + trainable Linear(512->5) classifier head (2,565 trainable params)"
+        ]
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Python 3.8 or higher",
+          "Streamlit 1.27 or newer",
+          "Git LFS (or manual download of .pth weights from Hugging Face Hub: asadalisajjad/FloraScan-AI-Weights)"
+        ],
+        "env_variables": [],
+        "install_commands": [
+          "git lfs install",
+          "git clone https://github.com/asad-ali-sajjad/plant-disease-diagnostic-system.git",
+          "cd plant-disease-diagnostic-system",
+          "pip install -r requirements.txt"
+        ],
+        "run_commands": [
+          "streamlit run app.py"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": "MIT",
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 37,
+        "latest_version": null,
+        "last_updated": "2026-11-03"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Prevented overconfident false diagnoses on ambiguous or non-leaf uploads by combining a 65% confidence abstention gate with a 1,000-image synthetic 'Not Leaf' OOD class",
+          "Built a side-by-side Dual Benchmark pipeline comparing a custom 3-block CNN (96.53% test accuracy) against a frozen ResNet-18 baseline (94.13% test accuracy) with cached execution and automatic checkpoint hot-reloading",
+          "Managed large PyTorch weight files (196 MB and 42.7 MB) cleanly using Git LFS with a Hugging Face Hub mirror and automated Streamlit uptime via GitHub Actions"
+        ],
+        "resume_bullets": [
+          "Developed FloraScan AI, an end-to-end computer vision web application built with PyTorch and Streamlit achieving 96.53% test accuracy across 5 tomato leaf health classes on a balanced 5,000-image PlantVillage dataset.",
+          "Engineered a dual-engine inference and benchmarking dashboard comparing a custom 3-block CNN against a transfer-learned ResNet-18 model, complete with a 65% confidence abstention threshold and synthetic out-of-distribution rejection.",
+          "Architected a modular, hot-reloadable ML inference pipeline with Git LFS and Hugging Face Hub weight distribution, downloadable diagnostic reports, and an accompanying Vercel showcase site."
+        ]
+      },
+      "portfolio": {
+        "featured": true,
+        "order": 2,
+        "badge": "Pinned",
+        "category": "ai",
+        "language": "Jupyter Notebook",
+        "langColor": "#da5b0b",
+        "tags": [
+          "PyTorch",
+          "Streamlit",
+          "Deep Learning",
+          "Computer Vision"
+        ]
+      }
+    },
+    {
+      "name": "clinic-appointment-system",
+      "full_name": "asad-ali-sajjad/clinic-appointment-system",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": true,
+      "status": "completed",
+      "category": "HealthTech / Web Application / Clinic Management System",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/clinic-appointment-system",
+        "live_demo_url": null,
+        "docs_url": "https://github.com/asad-ali-sajjad/clinic-appointment-system#readme"
+      },
+      "overview": {
+        "tagline": "Reduce no-shows and admin time with a lightweight PHP/MySQL clinic booking system.",
+        "description": "A multi-role online clinic appointment and management platform built with PHP 8, MySQL 8, and Bootstrap 5 that streamlines real-time slot scheduling, doctor availability and leave management, printable appointment tickets, and automated email notifications.",
+        "problem_solved": "Replaces manual clinic scheduling and reduces patient no-shows through real-time conflict-free slot booking, automated booking/cancellation emails, and scheduled 24-hour appointment reminders.",
+        "target_users": "Healthcare clinics, clinic administrators, doctors, and patients."
+      },
+      "tech_stack": {
+        "primary_language": "PHP",
+        "languages": [
+          "PHP",
+          "SQL (MySQL)",
+          "HTML5",
+          "CSS3",
+          "JavaScript"
+        ],
+        "frameworks_and_libraries": [
+          "Bootstrap 5.0",
+          "PHPMailer",
+          "Font Awesome"
+        ],
+        "databases_and_storage": [
+          "MySQL 8.0 (MySQLi)"
+        ],
+        "apis_and_services": [
+          "SMTP / Gmail App Passwords (via PHPMailer)"
+        ],
+        "tools_and_deployment": [
+          "Composer",
+          "Apache / Nginx / PHP Built-in Server",
+          "Cron (scheduled 24-hour reminder jobs)",
+          "Git"
+        ]
+      },
+      "key_features": [
+        "Role-based multi-panel dashboards for Patients, Doctors, and Administrators",
+        "Real-time appointment slot availability engine that prevents double-booking against weekly doctor schedules and approved leaves",
+        "Doctor schedule and leave management (doctor/schedule.php, doctor/leaves.php) with appointment completion tracking",
+        "Automated transactional email notifications via PHPMailer for booking confirmations (to both patient and doctor) and cancellations",
+        "Cron-scheduled 24-hour automated appointment reminder workflow (cron/)",
+        "Printable formatted patient appointment tickets (patient/print_ticket.php) and appointment history/cancellation tracking",
+        "SQL injection prevention via MySQLi prepared statements, session-based authentication middleware, and input sanitization"
+      ],
+      "architecture": {
+        "pattern": "Procedural/Modular Multi-Page PHP & MySQL Web Application with Role-Separated Directories and Shared Core Includes",
+        "folder_structure": [
+          "index.php (Public clinic landing page)",
+          "includes/header.php (Shared layout header)",
+          "includes/footer.php (Shared layout footer)",
+          "includes/auth.php (Session & role-based authentication middleware)",
+          "includes/db_connect.php (MySQLi database connection configuration)",
+          "includes/mailer.php (PHPMailer SMTP configuration and dispatch helpers)",
+          "auth/login.php (User login endpoint)",
+          "auth/register.php (Patient registration endpoint)",
+          "auth/logout.php (Session termination endpoint)",
+          "patient/dashboard.php (Patient overview dashboard)",
+          "patient/book_appointment.php (Doctor and slot selection interface)",
+          "patient/process_booking.php (Booking validation and persistence handler)",
+          "patient/my_appointments.php (Patient booking history)",
+          "patient/cancel_appointment.php (Appointment cancellation handler)",
+          "patient/profile.php (Patient profile and password management)",
+          "patient/print_ticket.php (Printable appointment ticket generator)",
+          "doctor/dashboard.php (Doctor daily appointments overview)",
+          "doctor/schedule.php (Weekly availability schedule editor)",
+          "doctor/leaves.php (Doctor leave request and management)",
+          "doctor/mark_complete.php (Appointment completion status updater)",
+          "admin/dashboard.php (Administrative metrics and system overview)",
+          "admin/doctors.php (Doctor directory listing)",
+          "admin/add_doctor.php (New doctor onboarding form)",
+          "admin/edit_doctor.php (Doctor record editor)",
+          "admin/view_doctor.php (Detailed doctor profile view)",
+          "cron/ (Scheduled 24-hour email reminder scripts)",
+          "database/ (SQL schema dump clinic_db.sql)",
+          "assets/ (Frontend stylesheets, scripts, and UI screenshots)",
+          "vendor/ (Composer packages including PHPMailer)",
+          "README.md (Project setup and documentation)"
+        ],
+        "entry_points": [
+          "index.php",
+          "auth/login.php",
+          "auth/register.php",
+          "patient/dashboard.php",
+          "doctor/dashboard.php",
+          "admin/dashboard.php"
+        ],
+        "database_models_or_schema": [
+          "users (User accounts, roles, credentials, and profile info)",
+          "specializations (Medical specialties)",
+          "doctors (Doctor profiles linked to users and specializations)",
+          "doctor_schedule (Recurring weekly availability slots per doctor)",
+          "doctor_leaves (Date-based leave periods blocking slot availability)",
+          "appointments (Booking records with status tracking: pending/completed/cancelled and cancelled_by: patient/doctor)"
+        ]
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "PHP 8.0 or higher",
+          "MySQL 8.0 or higher",
+          "Composer",
+          "Apache/Nginx web server or PHP CLI built-in server",
+          "SMTP email credentials (e.g., Gmail with 2FA and App Password)"
+        ],
+        "env_variables": [
+          "DB_HOST / DB_USER / DB_PASS / DB_NAME (configured in includes/db_connect.php)",
+          "SMTP Username & App Password (configured in includes/mailer.php)"
+        ],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/clinic-appointment-system.git",
+          "cd clinic-appointment-system",
+          "composer install",
+          "mysql -u root -p -e \"CREATE DATABASE clinic_appointment_db;\"",
+          "mysql -u root -p clinic_appointment_db < database/clinic_db.sql"
+        ],
+        "run_commands": [
+          "php -S localhost:8000"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": "MIT",
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 16,
+        "latest_version": null,
+        "last_updated": "2025-12-10"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Implemented conflict-free slot calculation that cross-references recurring weekly doctor schedules, approved leave windows, and active appointments to prevent double-bookings",
+          "Built an automated transactional email pipeline using PHPMailer and scheduled cron jobs for instant booking/cancellation alerts and 24-hour patient reminders",
+          "Enforced strict role-based access separation across Patient, Doctor, and Admin panels backed by MySQLi prepared statements"
+        ],
+        "resume_bullets": [
+          "Developed a full-stack Clinic Appointment Management System using PHP 8, MySQL 8, and Bootstrap 5 featuring separate portals for Patients, Doctors, and Administrators.",
+          "Engineered a conflict-free appointment slot engine accounting for weekly doctor schedules, leave periods, and active bookings, paired with printable patient appointment tickets.",
+          "Integrated PHPMailer and automated cron jobs for instant booking/cancellation notifications and 24-hour appointment reminders, securing database operations with MySQLi prepared statements."
+        ]
+      },
+      "portfolio": {
+        "featured": true,
+        "order": 4,
+        "badge": "Pinned",
+        "category": "web",
+        "language": "PHP",
+        "langColor": "#4F5D95",
+        "tags": [
+          "PHP",
+          "MySQL",
+          "Healthcare",
+          "Booking"
+        ]
+      }
+    },
+    {
+      "name": "glimpse",
+      "full_name": "asad-ali-sajjad/glimpse",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": false,
+      "status": "wip",
+      "category": "Social Media / Full-Stack Web Application",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/glimpse",
+        "live_demo_url": "https://glimpse-tawny.vercel.app",
+        "docs_url": "https://github.com/asad-ali-sajjad/glimpse#readme"
+      },
+      "overview": {
+        "tagline": "Modern social post-sharing platform built with Next.js and Supabase.",
+        "description": "A full-stack social media web application built with Next.js (App Router), Supabase, and Tailwind CSS that enables users to authenticate, upload multimedia posts (captions, photos, and videos), and browse a chronologically sorted community feed.",
+        "problem_solved": "Provides a lightweight, serverless social media publishing and media-sharing experience with secure Row-Level Security (RLS) and cloud object storage without managing custom backend infrastructure.",
+        "target_users": "Everyday social media users and online communities sharing photos, videos, and status updates."
+      },
+      "tech_stack": {
+        "primary_language": "JavaScript",
+        "languages": [
+          "JavaScript",
+          "HTML5",
+          "CSS3",
+          "SQL (PostgreSQL)"
+        ],
+        "frameworks_and_libraries": [
+          "Next.js (App Router)",
+          "React",
+          "Tailwind CSS",
+          "Supabase JS Client"
+        ],
+        "databases_and_storage": [
+          "PostgreSQL (Supabase)",
+          "Supabase Storage Buckets"
+        ],
+        "apis_and_services": [
+          "Supabase Auth (Email/Password)",
+          "Supabase Database & Storage",
+          "Vercel"
+        ],
+        "tools_and_deployment": [
+          "Vercel",
+          "ESLint",
+          "PostCSS",
+          "npm",
+          "Git"
+        ]
+      },
+      "key_features": [
+        "Email/password user registration, login, and logout flows powered by Supabase Auth",
+        "Chronologically sorted public Community Feed displaying user posts in real time",
+        "Multimedia post creation supporting text captions, photos, and videos stored in Supabase Storage Buckets",
+        "Database access protection enforced via PostgreSQL Row-Level Security (RLS) policies",
+        "Responsive UI layout with global navigation bar and active route highlighting",
+        "Planned roadmap features: detailed post views with interactive comment threads, post likes/engagement counters, and user profile pages"
+      ],
+      "architecture": {
+        "pattern": "Serverless Full-Stack Next.js App Router Application backed by Supabase BaaS (Auth, PostgreSQL with RLS, and Storage)",
+        "folder_structure": [
+          "src/app/layout.js (Root layout with global Navbar)",
+          "src/app/page.js (Main chronological Community Feed page)",
+          "src/app/create/ (Post creation page with photo/video upload)",
+          "src/app/login/ (User login page)",
+          "src/app/signup/ (User registration page)",
+          "src/components/Navbar.js (Responsive navigation bar with active route state)",
+          "src/lib/supabase.js (Supabase client initialization)",
+          "public/ (Static public assets)",
+          "next.config.mjs (Next.js configuration)",
+          "postcss.config.mjs (PostCSS / Tailwind CSS configuration)",
+          "eslint.config.mjs (ESLint configuration)",
+          "jsconfig.json (JavaScript path/compiler configuration)",
+          "package.json (Project scripts and dependencies)",
+          "README.md (Project documentation)"
+        ],
+        "entry_points": [
+          "src/app/layout.js",
+          "src/app/page.js",
+          "src/app/create/",
+          "src/app/login/",
+          "src/app/signup/"
+        ],
+        "database_models_or_schema": [
+          "Posts table in Supabase PostgreSQL (storing captions, media URLs, user references, and timestamps protected by RLS policies)",
+          "Supabase Auth users & Supabase Storage Buckets for user-uploaded images and videos"
+        ]
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Node.js v18 or higher",
+          "npm",
+          "Git",
+          "A Supabase project with Auth, PostgreSQL, and Storage Buckets configured"
+        ],
+        "env_variables": [
+          "NEXT_PUBLIC_SUPABASE_URL",
+          "NEXT_PUBLIC_SUPABASE_ANON_KEY"
+        ],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/glimpse.git",
+          "cd glimpse",
+          "npm install"
+        ],
+        "run_commands": [
+          "npm run dev"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": null,
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 10,
+        "latest_version": null,
+        "last_updated": "2026-08-30"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Integrated direct client-to-cloud photo and video uploads into Supabase Storage Buckets paired with chronological PostgreSQL feed rendering",
+          "Secured user-generated posts and storage access using Supabase Row-Level Security (RLS) policies and session-aware navigation redirects"
+        ],
+        "resume_bullets": [
+          "Built Glimpse, a full-stack social media post-sharing web application using Next.js (App Router), React, Tailwind CSS, and Supabase, deployed on Vercel.",
+          "Implemented email/password authentication, multimedia post creation (captions, images, and videos) with Supabase Storage Buckets, and Row-Level Security (RLS) policies."
+        ]
+      },
+      "portfolio": {
+        "featured": true,
+        "order": 7,
+        "badge": "Full-Stack",
+        "category": "web",
+        "language": "JavaScript",
+        "langColor": "#f1e05a",
+        "tags": [
+          "Next.js",
+          "Supabase",
+          "Social App"
+        ]
+      }
+    },
+    {
+      "name": "bank-management-system",
+      "full_name": "asad-ali-sajjad/bank-management-system",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": true,
+      "status": "completed",
+      "category": "FinTech / CLI Application / Data Structures & Algorithms",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/bank-management-system",
+        "live_demo_url": null,
+        "docs_url": "https://github.com/asad-ali-sajjad/bank-management-system#readme"
+      },
+      "overview": {
+        "tagline": "A modular, role-based banking system with data persistence, built with C++ and data structures.",
+        "description": "A C++17 command-line banking application featuring role-based access control (Admin and User), flat-file data persistence, input validation, and custom implementations of Linked Lists, Binary Search Trees (BST), and Stacks.",
+        "problem_solved": "Demonstrates structured financial account management, sorted customer lookups, and chronological transaction tracking in C++ without relying on external database engines.",
+        "target_users": "Computer Science students, instructors, and developers studying applied C++ data structures and modular CLI software design."
+      },
+      "tech_stack": {
+        "primary_language": "C++",
+        "languages": [
+          "C++"
+        ],
+        "frameworks_and_libraries": [
+          "C++17 Standard Library"
+        ],
+        "databases_and_storage": [
+          "Flat-file text persistence (accounts.txt, transactions.txt)"
+        ],
+        "apis_and_services": [],
+        "tools_and_deployment": [
+          "g++ / MinGW (C++17 Compiler)",
+          "Git"
+        ]
+      },
+      "key_features": [
+        "Role-based access control separating Admin operations (create/modify/delete accounts, view raw or sorted customer records) from User operations (deposit/withdraw funds, balance inquiries, transaction history)",
+        "Custom Linked List (AccountNode) for dynamic in-memory account management and CRUD operations",
+        "Custom Binary Search Tree (AccountsBST) for alphabetically sorted account display by customer name",
+        "Custom LIFO Stack (TransactionStack) for tracking and displaying user transaction history",
+        "File-based data persistence automatically serializing and loading state from accounts.txt and transactions.txt",
+        "Built-in input validation guarding against invalid password lengths, negative balances/amounts, and malformed menu selections"
+      ],
+      "architecture": {
+        "pattern": "Modular Object-Oriented C++17 CLI Application with Custom Data Structure Modules and File-Backed Persistence",
+        "folder_structure": [
+          "src/Main.cpp (Application entry point)",
+          "src/Bank.h / src/Bank.cpp (Core banking business logic and file I/O persistence)",
+          "src/Menu.h / src/Menu.cpp (Role-based CLI menus for Admin and User workflows)",
+          "src/AccountNode.h / src/AccountNode.cpp (Linked list node structure for account management)",
+          "src/AccountsBST.h / src/AccountsBST.cpp (Binary Search Tree for name-sorted account traversal)",
+          "src/TransactionStack.h / src/TransactionStack.cpp (LIFO stack for transaction history tracking)",
+          "src/Utils.h / src/Utils.cpp (Helper utilities including timestamp generation and validation)",
+          "data/accounts_sample.txt (Sample account dataset)",
+          "data/transactions_sample.txt (Sample transaction dataset)",
+          "output/ (Compiled binary output directory, gitignored)",
+          "accounts.txt (Runtime account storage file, gitignored)",
+          "transactions.txt (Runtime transaction storage file, gitignored)",
+          "LICENSE (MIT License)",
+          "README.md (Build, usage, and architecture documentation)"
+        ],
+        "entry_points": [
+          "src/Main.cpp"
+        ],
+        "database_models_or_schema": [
+          "AccountNode (Linked List node storing account credentials, holder name, and balance)",
+          "AccountsBST (Binary Search Tree indexed by account holder name for sorted O(n) in-order display)",
+          "TransactionStack (LIFO stack storing timestamped deposit and withdrawal records)",
+          "Flat-file schemas: accounts.txt and transactions.txt"
+        ]
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "C++17 compatible compiler (e.g., g++ on Linux/macOS or MinGW on Windows)"
+        ],
+        "env_variables": [],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/bank-management-system.git",
+          "cd bank-management-system",
+          "g++ src/*.cpp -o output/Main -std=c++17"
+        ],
+        "run_commands": [
+          "./output/Main",
+          "output\\Main.exe"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": "MIT",
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 3,
+        "latest_version": null,
+        "last_updated": "2025-07-29"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Designed and integrated three custom data structures—a Linked List, Binary Search Tree, and Stack—into a cohesive multi-file C++17 codebase without external database libraries",
+          "Engineered reliable flat-file serialization and deserialization across accounts.txt and transactions.txt while keeping sensitive runtime data gitignored"
+        ],
+        "resume_bullets": [
+          "Engineered a modular, role-based Bank Management System in C++17 featuring separate Admin and User workflows, input validation, and flat-file data persistence.",
+          "Implemented custom Linked List, Binary Search Tree (BST), and LIFO Stack modules from scratch to manage dynamic account CRUD operations, alphabetical account sorting, and timestamped transaction histories."
+        ]
+      },
+      "portfolio": {
+        "featured": true,
+        "order": 5,
+        "badge": "Pinned",
+        "category": "systems",
+        "language": "C++",
+        "langColor": "#f34b7d",
+        "tags": [
+          "C++",
+          "Data Structures",
+          "CLI",
+          "RBAC"
+        ]
+      }
+    },
+    {
+      "name": "library-management-system-sql",
+      "full_name": "asad-ali-sajjad/library-management-system-sql",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": true,
+      "status": "completed",
+      "category": "Database Engineering / Relational Database / Library Management System",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/library-management-system-sql",
+        "live_demo_url": null,
+        "docs_url": "https://github.com/asad-ali-sajjad/library-management-system-sql#readme"
+      },
+      "overview": {
+        "tagline": "A complete relational Library Management System engineered in MS SQL Server using T-SQL.",
+        "description": "An end-to-end relational database design and implementation project built with Microsoft SQL Server and T-SQL, covering normalized schema modeling, DDL & DML operations, reporting views, scalar and table-valued functions, stored procedures, automated triggers, and ACID transactions.",
+        "problem_solved": "Automates core library workflows—including book borrowing, returns, overdue tracking, fine calculations, and audit logging—directly at the database engine level while enforcing strict referential integrity and transactional consistency.",
+        "target_users": "Database administrators, backend engineers, and Computer Science students studying enterprise T-SQL and MS SQL Server database design."
+      },
+      "tech_stack": {
+        "primary_language": "T-SQL",
+        "languages": [
+          "T-SQL (Transact-SQL)",
+          "SQL"
+        ],
+        "frameworks_and_libraries": [],
+        "databases_and_storage": [
+          "Microsoft SQL Server"
+        ],
+        "apis_and_services": [],
+        "tools_and_deployment": [
+          "SQL Server Management Studio (SSMS)",
+          "Git"
+        ]
+      },
+      "key_features": [
+        "Normalized multi-table relational schema enforcing data integrity with primary keys, foreign keys, constraints, and identity columns",
+        "Reusable reporting Views (04_Views.sql) for tracking overdue books and category-wise book inventories",
+        "Parameter-based Scalar and Table-Valued Functions (05_Functions.sql) for modular business calculations and queries",
+        "Stored Procedures (06_Procedures.sql) encapsulating core operations such as book borrowing, returns, and book/member registration",
+        "Automated DML Triggers (07_Triggers.sql) handling event-driven workflows such as automatic late-fine calculation and activity logging",
+        "Explicit ACID transaction management (08_Transactions.sql) utilizing BEGIN, COMMIT, and ROLLBACK to guarantee data consistency"
+      ],
+      "architecture": {
+        "pattern": "Modular Sequential SQL Script Pipeline (Schema DDL -> Seed DML -> Views -> Functions -> Stored Procedures -> Triggers -> Transactions)",
+        "folder_structure": [
+          "LMS-SQL-Project/01_Create_Database.sql (Database creation and context selection)",
+          "LMS-SQL-Project/02_Create_Tables.sql (DDL table definitions for Books, Authors, Members, and relationships)",
+          "LMS-SQL-Project/03_Insert_Data.sql (Sample DML seed records across all tables)",
+          "LMS-SQL-Project/04_Views.sql (Reporting views including overdue books and category-wise listings)",
+          "LMS-SQL-Project/05_Functions.sql (Scalar and Table-Valued Functions)",
+          "LMS-SQL-Project/06_Procedures.sql (Stored procedures for borrowing, returning, and inserting books/members)",
+          "LMS-SQL-Project/07_Triggers.sql (Automated triggers for fine calculation and logging)",
+          "LMS-SQL-Project/08_Transactions.sql (Transaction control demonstrations with BEGIN, COMMIT, and ROLLBACK)",
+          "LMS-SQL-Project/images/ (SSMS execution and schema screenshots)",
+          "README.md (Project overview, script breakdown, and execution guide)"
+        ],
+        "entry_points": [
+          "LMS-SQL-Project/01_Create_Database.sql",
+          "LMS-SQL-Project/02_Create_Tables.sql"
+        ],
+        "database_models_or_schema": [
+          "Core Entities: Books, Authors, Members, and borrowing/circulation tables linked via foreign keys and constraints",
+          "Programmability Objects: Reporting Views, Scalar & Table-Valued Functions, CRUD/Workflow Stored Procedures, and Automated Triggers"
+        ]
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Microsoft SQL Server instance",
+          "SQL Server Management Studio (SSMS)"
+        ],
+        "env_variables": [],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/library-management-system-sql.git"
+        ],
+        "run_commands": [
+          "Execute scripts sequentially in SSMS from 01_Create_Database.sql through 08_Transactions.sql"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": null,
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 1,
+        "latest_version": null,
+        "last_updated": "2025-06-16"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Encapsulated complex library circulation rules—borrowing, returns, and overdue fine calculations—inside database-level stored procedures, functions, and triggers",
+          "Guaranteed multi-step data consistency and rollback safety across concurrent circulation operations using explicit T-SQL transaction blocks"
+        ],
+        "resume_bullets": [
+          "Designed and implemented a relational Library Management System in Microsoft SQL Server using T-SQL, structured into an 8-stage modular deployment pipeline.",
+          "Engineered normalized tables with foreign-key constraints, reporting views, scalar/table-valued functions, stored procedures, automated fine-calculation triggers, and ACID-compliant transactions."
+        ]
+      },
+      "portfolio": {
+        "featured": true,
+        "order": 6,
+        "badge": "Pinned",
+        "category": "systems",
+        "language": "TSQL",
+        "langColor": "#e38c00",
+        "tags": [
+          "MS SQL Server",
+          "T-SQL",
+          "Triggers",
+          "Stored Procedures"
+        ]
+      }
+    },
+    {
+      "name": "recipe-app",
+      "full_name": "asad-ali-sajjad/recipe-app",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": false,
+      "status": "completed",
+      "category": "Frontend Web Application / Food & Lifestyle",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/recipe-app",
+        "live_demo_url": "https://asad-ali-sajjad.github.io/recipe-app/",
+        "docs_url": "https://github.com/asad-ali-sajjad/recipe-app#readme"
+      },
+      "overview": {
+        "tagline": "A clean, responsive web application for finding and exploring recipes with smooth animations and detailed views.",
+        "description": "A responsive frontend web application built with HTML5, CSS3, and ES6+ JavaScript that integrates with TheMealDB API to let users search recipes by keyword, browse animated recipe cards, and inspect ingredients and cooking instructions in a modal.",
+        "problem_solved": "Simplifies recipe discovery and meal preparation by providing instant keyword search, clean visual cards, and structured ingredient and instruction breakdowns without requiring user accounts or page reloads.",
+        "target_users": "Home cooks, food enthusiasts, and anyone looking for quick recipe ideas and step-by-step cooking instructions."
+      },
+      "tech_stack": {
+        "primary_language": "JavaScript",
+        "languages": [
+          "JavaScript",
+          "HTML5",
+          "CSS3"
+        ],
+        "frameworks_and_libraries": [
+          "Vanilla JavaScript (ES6+)"
+        ],
+        "databases_and_storage": [],
+        "apis_and_services": [
+          "TheMealDB API",
+          "GitHub Pages"
+        ],
+        "tools_and_deployment": [
+          "GitHub Pages",
+          "Live Server",
+          "Git"
+        ]
+      },
+      "key_features": [
+        "Keyword-based recipe search powered by asynchronous integration with TheMealDB API",
+        "Responsive grid of styled recipe cards with smooth CSS hover effects and animations",
+        "Interactive Recipe Details Modal dynamically displaying full ingredient lists, measurements, and step-by-step preparation instructions",
+        "Custom loading animation providing visual feedback during asynchronous API fetch states",
+        "Responsive design optimized across mobile, tablet, and desktop screen sizes"
+      ],
+      "architecture": {
+        "pattern": "Client-Side Single-Page Frontend Application (Vanilla HTML5/CSS3/ES6+ JavaScript consuming external REST API)",
+        "folder_structure": [
+          "index.html (Main application markup, search bar, recipe card grid, and modal container)",
+          "style.css (Responsive layout rules, card hover animations, custom loader styles, and modal styling)",
+          "script.js (ES6+ fetch logic for TheMealDB API, dynamic DOM rendering, search handling, and modal controls)",
+          "images/ (Application screenshots used in documentation)",
+          "README.md (Project overview, live demo link, and local setup instructions)"
+        ],
+        "entry_points": [
+          "index.html",
+          "script.js"
+        ],
+        "database_models_or_schema": [
+          "External REST JSON payload from TheMealDB API (meals objects containing strMeal, strMealThumb, strInstructions, strIngredient1..20, strMeasure1..20)"
+        ]
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Any modern web browser (optional: local HTTP server such as VS Code Live Server)"
+        ],
+        "env_variables": [],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/recipe-app.git",
+          "cd recipe-app"
+        ],
+        "run_commands": [
+          "Open index.html directly in a web browser or serve locally using live-server"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": null,
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 8,
+        "latest_version": null,
+        "last_updated": "2025-08-03"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Handled asynchronous REST API requests and dynamic DOM rendering with custom loading states and interactive modal overlays",
+          "Normalized dynamic ingredient and measurement fields from TheMealDB JSON responses into clean, readable recipe detail views"
+        ],
+        "resume_bullets": [
+          "Built and deployed a responsive Recipe Finder web application using HTML5, CSS3, and ES6+ JavaScript integrated with TheMealDB REST API on GitHub Pages.",
+          "Implemented real-time keyword search, custom API loading animations, smooth CSS card transitions, and dynamic recipe detail modals displaying ingredients and cooking instructions."
+        ]
+      },
+      "portfolio": {
+        "featured": false,
+        "order": 99,
+        "badge": "Project",
+        "category": "web",
+        "language": "JavaScript",
+        "langColor": "#f1e05a",
+        "tags": [
+          "Vanilla JavaScript (ES6+)"
+        ]
+      }
+    },
+    {
+      "name": "weather-app-vanilla-js",
+      "full_name": "asad-ali-sajjad/weather-app-vanilla-js",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": false,
+      "status": "completed",
+      "category": "Frontend Web Application / Utilities & Weather",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/weather-app-vanilla-js",
+        "live_demo_url": "https://asad-ali-sajjad.github.io/weather-app-vanilla-js/",
+        "docs_url": "https://github.com/asad-ali-sajjad/weather-app-vanilla-js#readme"
+      },
+      "overview": {
+        "tagline": "A responsive weather application built with HTML, CSS, and JavaScript featuring real-time, location-based weather data.",
+        "description": "A responsive client-side weather web application built with vanilla HTML5, CSS3, and JavaScript that integrates with the OpenWeather API to fetch and display real-time weather conditions for searched locations with weather-appropriate imagery.",
+        "problem_solved": "Provides instant, accessible real-time weather lookups by city or location name through a lightweight, zero-dependency browser interface.",
+        "target_users": "Everyday users, travelers, and commuters checking real-time local or global weather conditions."
+      },
+      "tech_stack": {
+        "primary_language": "JavaScript",
+        "languages": [
+          "JavaScript",
+          "HTML5",
+          "CSS3"
+        ],
+        "frameworks_and_libraries": [
+          "Vanilla JavaScript"
+        ],
+        "databases_and_storage": [],
+        "apis_and_services": [
+          "OpenWeather API",
+          "GitHub Pages"
+        ],
+        "tools_and_deployment": [
+          "GitHub Pages",
+          "Git"
+        ]
+      },
+      "key_features": [
+        "Real-time weather data retrieval powered by asynchronous OpenWeather API integration",
+        "Location-based weather search allowing users to query current conditions via an interactive search bar",
+        "Dynamic UI displaying weather-appropriate imagery matched to current atmospheric conditions",
+        "Responsive layout engineered with vanilla HTML5 and CSS3 across desktop and mobile screen sizes",
+        "Decoupled API configuration module (config.js) separating settings from core fetch and DOM logic (script.js)"
+      ],
+      "architecture": {
+        "pattern": "Client-Side Single-Page Frontend Application (Vanilla HTML5/CSS3/JavaScript consuming OpenWeather REST API)",
+        "folder_structure": [
+          "index.html (Main application markup, location search bar, and weather display container)",
+          "style.css (Responsive layout styling and weather-themed UI presentation)",
+          "config.js (API configuration and OpenWeather endpoint/key settings)",
+          "script.js (Asynchronous OpenWeather API fetch logic, search handling, and dynamic DOM updates)",
+          "images/ (Weather-appropriate UI assets and README screenshots)",
+          "README.md (Project overview, live demo link, and usage instructions)"
+        ],
+        "entry_points": [
+          "index.html",
+          "config.js",
+          "script.js"
+        ],
+        "database_models_or_schema": [
+          "External REST JSON payload from OpenWeather API (weather conditions, temperature metrics, and location metadata)"
+        ]
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Any modern web browser",
+          "OpenWeather API key (configured in config.js)"
+        ],
+        "env_variables": [
+          "OpenWeather API key (configured in config.js)"
+        ],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/weather-app-vanilla-js.git",
+          "cd weather-app-vanilla-js"
+        ],
+        "run_commands": [
+          "Open index.html directly in a web browser or deploy statically via GitHub Pages"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": null,
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 5,
+        "latest_version": null,
+        "last_updated": "2025-08-03"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Integrated asynchronous OpenWeather REST API requests with dynamic DOM updates and condition-matched visual assets",
+          "Separated API configuration (config.js) from UI and fetch logic (script.js) to keep static GitHub Pages deployments modular and maintainable"
+        ],
+        "resume_bullets": [
+          "Built and deployed a responsive Weather Application using vanilla HTML5, CSS3, and JavaScript integrated with the OpenWeather API on GitHub Pages.",
+          "Implemented real-time location search, dynamic weather-matched UI rendering, and modular API configuration (config.js) with zero external runtime dependencies."
+        ]
+      },
+      "portfolio": {
+        "featured": false,
+        "order": 99,
+        "badge": "Project",
+        "category": "web",
+        "language": "JavaScript",
+        "langColor": "#f1e05a",
+        "tags": [
+          "Vanilla JavaScript"
+        ]
+      }
+    },
+    {
+      "name": "git-guide",
+      "full_name": "asad-ali-sajjad/git-guide",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": false,
+      "status": "completed",
+      "category": "Developer Documentation / Reference Guide / Version Control",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/git-guide",
+        "live_demo_url": null,
+        "docs_url": "https://github.com/asad-ali-sajjad/git-guide#readme"
+      },
+      "overview": {
+        "tagline": "A practical, example-driven Git & GitHub commands reference guide to make version control straightforward.",
+        "description": "A comprehensive Markdown documentation repository covering essential Git commands, syntax, real-world usage scenarios, version-control best practices, and a quick-reference cheat sheet for solo and collaborative software development.",
+        "problem_solved": "Reduces version-control friction and command lookup overhead by organizing everyday, branching, and history-recovery Git workflows with clear explanations and practical examples.",
+        "target_users": "Developers, Computer Science students, and engineering teams learning or referencing Git and GitHub workflows."
+      },
+      "tech_stack": {
+        "primary_language": "Markdown",
+        "languages": [
+          "Markdown"
+        ],
+        "frameworks_and_libraries": [],
+        "databases_and_storage": [],
+        "apis_and_services": [
+          "GitHub"
+        ],
+        "tools_and_deployment": [
+          "Git",
+          "GitHub",
+          "CLI / Bash / PowerShell"
+        ]
+      },
+      "key_features": [
+        "Structured 14-part command reference covering setup (git config), initialization (git init, git clone), status/staging/commits (git status, git add, git commit), and history inspection (git log)",
+        "Branching and remote collaboration workflows detailing git branch, git checkout, git merge, git remote, git push, git pull, and git fetch",
+        "History recovery, stashing, and diffing guides covering git reset (--soft/--hard), git revert, git stash, git diff, git tag, and full repository history resets",
+        "Consistent per-command format featuring Purpose, Usage syntax, concrete CLI Examples, and 'When to Use' real-world scenarios",
+        "Actionable version-control Best Practices checklist and a consolidated Quick Reference cheat-sheet table"
+      ],
+      "architecture": {
+        "pattern": "Structured Markdown Knowledge Base & CLI Reference Repository",
+        "folder_structure": [
+          "README.md (Comprehensive 14-section Git commands guide, best practices, and quick-reference table)",
+          "Git&Github.md (Comprehensive Git & GitHub reference guide)"
+        ],
+        "entry_points": [
+          "README.md",
+          "Git&Github.md"
+        ],
+        "database_models_or_schema": []
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Git CLI installed locally",
+          "Any Markdown viewer or web browser"
+        ],
+        "env_variables": [],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/git-guide.git"
+        ],
+        "run_commands": [
+          "Read README.md or Git&Github.md directly on GitHub or in any Markdown editor"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": null,
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 2,
+        "latest_version": null,
+        "last_updated": "2025-08-02"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Distilled 14 core version-control workflows—from basic staging and branching to safe commit reverts, stashing, and full repository history resets—into an accessible, scenario-backed reference guide"
+        ],
+        "resume_bullets": [
+          "Authored a comprehensive Git & GitHub developer reference guide covering 14 core version-control workflows, branching strategies, history-recovery commands, and team collaboration best practices."
+        ]
+      },
+      "portfolio": {
+        "featured": false,
+        "order": 99,
+        "badge": "Project",
+        "category": "web",
+        "language": "Markdown",
+        "langColor": "#083fa1",
+        "tags": []
+      }
+    },
+    {
+      "name": "docs",
+      "full_name": "asad-ali-sajjad/docs",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": false,
+      "status": "completed",
+      "category": "Developer Documentation / Knowledge Base / Coding Guides",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/docs",
+        "live_demo_url": null,
+        "docs_url": "https://github.com/asad-ali-sajjad/docs#readme"
+      },
+      "overview": {
+        "tagline": "A centralized collection of coding guides and reference materials for quick lookup and workflow streamlining.",
+        "description": "A structured Markdown documentation repository housing step-by-step developer guides across Tailwind CSS project setup, cross-language programming naming conventions, and Git/GitHub/VS Code workflows.",
+        "problem_solved": "Centralizes frequently referenced developer setup instructions, code-style naming standards, and version-control workflows into a single, navigable knowledge base for rapid lookup.",
+        "target_users": "Software developers, Computer Science students, and open-source contributors seeking concise technical reference guides."
+      },
+      "tech_stack": {
+        "primary_language": "Markdown",
+        "languages": [
+          "Markdown"
+        ],
+        "frameworks_and_libraries": [],
+        "databases_and_storage": [],
+        "apis_and_services": [
+          "GitHub"
+        ],
+        "tools_and_deployment": [
+          "Git",
+          "GitHub",
+          "VS Code"
+        ]
+      },
+      "key_features": [
+        "Categorized developer knowledge base organized into modular topic directories (CSS Guides, Naming Conventions, Git Guides)",
+        "Step-by-step Tailwind CSS setup and configuration walkthrough (tailwindcss-setup-guide.md)",
+        "Comprehensive programming naming conventions reference (camelCase, snake_case, etc.) paired with practical multi-language examples",
+        "All-in-one guide covering Git, GitHub, and Visual Studio Code integration (allinonegitguide.md)",
+        "Structured Table of Contents navigation in README.md with clear open-source contribution guidelines"
+      ],
+      "architecture": {
+        "pattern": "Hierarchical Topic-Based Markdown Documentation Repository",
+        "folder_structure": [
+          "README.md (Central index with categorized Table of Contents and contribution guidelines)",
+          "guides/css-guides/tailwindcss-setup-guide.md (Step-by-step Tailwind CSS project setup guide)",
+          "guides/naming-conventions/naming-cases-guide.md (Guide to common programming naming cases such as camelCase and snake_case)",
+          "guides/naming-conventions/naming-cases-guide-examples.md (Practical examples illustrating naming conventions across programming languages)",
+          "guides/git-guides/allinonegitguide.md (Step-by-step guide to Git, GitHub, and VS Code integration)"
+        ],
+        "entry_points": [
+          "README.md"
+        ],
+        "database_models_or_schema": []
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Any Markdown viewer, text editor, or web browser"
+        ],
+        "env_variables": [],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/docs.git"
+        ],
+        "run_commands": [
+          "Browse README.md and the markdown files inside guides/ directly on GitHub or locally"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": null,
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 5,
+        "latest_version": null,
+        "last_updated": "2025-08-02"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Consolidated scattered frontend setup instructions, naming standards, and Git/VS Code workflows into a structured, easily searchable Markdown knowledge base"
+        ],
+        "resume_bullets": [
+          "Curated and structured a centralized developer documentation repository covering Tailwind CSS setup, cross-language naming conventions, and Git/GitHub/VS Code integration workflows."
+        ]
+      },
+      "portfolio": {
+        "featured": false,
+        "order": 99,
+        "badge": "Project",
+        "category": "web",
+        "language": "Markdown",
+        "langColor": "#083fa1",
+        "tags": []
+      }
+    },
+    {
+      "name": "business-nexus-backend",
+      "full_name": "asad-ali-sajjad/business-nexus-backend",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": false,
+      "status": "active",
+      "category": "Backend API / FinTech & Startup Networking / Node.js & MongoDB",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/business-nexus-backend",
+        "live_demo_url": null,
+        "docs_url": "https://github.com/asad-ali-sajjad/business-nexus-backend#readme"
+      },
+      "overview": {
+        "tagline": "Empowering Connections Between Entrepreneurs and Investors — A RESTful API built with Express.js and MongoDB.",
+        "description": "A Node.js and Express.js RESTful backend service leveraging MongoDB (via Mongoose) and Socket.io to manage user profiles, connection requests, and real-time/REST messaging for an entrepreneur-investor matchmaking platform.",
+        "problem_solved": "Provides a decoupled, scalable backend API for managing entrepreneur and investor profiles, role-filtered discovery, networking requests, and messaging with full CRUD support.",
+        "target_users": "Entrepreneurs, startup founders, investors, and frontend web applications."
+      },
+      "tech_stack": {
+        "primary_language": "JavaScript",
+        "languages": [
+          "JavaScript"
+        ],
+        "frameworks_and_libraries": [
+          "Node.js",
+          "Express.js",
+          "Mongoose",
+          "Socket.io",
+          "CORS"
+        ],
+        "databases_and_storage": [
+          "MongoDB (MongoDB Atlas / Local)"
+        ],
+        "apis_and_services": [
+          "RESTful JSON API",
+          "Socket.io WebSockets",
+          "Render"
+        ],
+        "tools_and_deployment": [
+          "Render",
+          "npm",
+          "Git"
+        ]
+      },
+      "key_features": [
+        "Full CRUD User Management API (/users) supporting role-based filtering (investor vs. entrepreneur), email lookup (/users/email/:email), interests, and startup portfolios",
+        "Connection & Proposal Request Management API (/requests) supporting full CRUD lifecycle between entrepreneurs and investors",
+        "Messaging & Real-Time Chat System combining REST endpoints (/messages) with Socket.io WebSocket connections",
+        "Automated MongoDB database seeding script (import-data.js) loading initial sample datasets from data/data.json",
+        "Cross-Origin Resource Sharing (CORS) configured for Vite/React local development (localhost:5173) and Netlify frontend deployments"
+      ],
+      "architecture": {
+        "pattern": "Modular RESTful Backend API (Express.js + Mongoose ODM + Socket.io)",
+        "folder_structure": [
+          "server.js (Main Express & Socket.io server entry point)",
+          "import-data.js (Database seeding script importing data/data.json into MongoDB)",
+          "models/User.js (Mongoose schema for investor and entrepreneur user profiles)",
+          "models/Request.js (Mongoose schema for user connection/funding requests)",
+          "models/Message.js (Mongoose schema for user communication messages)",
+          "routes/users.js (REST CRUD endpoints and role/email queries for users)",
+          "routes/requests.js (REST CRUD endpoints for requests)",
+          "routes/messages.js (REST CRUD endpoints for messages)",
+          "data/data.json (Sample initial dataset for users, requests, and messages)",
+          ".env.example (Environment variable template for MONGODB_URI and PORT)",
+          "package.json (Project dependencies and scripts)",
+          "README.md (API endpoint reference, setup, and Render deployment guide)"
+        ],
+        "entry_points": [
+          "server.js",
+          "import-data.js"
+        ],
+        "database_models_or_schema": [
+          "User: { id, email, password, role ('investor' | 'entrepreneur'), name, bio, interests[], portfolio[] }",
+          "Request: Connection/networking request records between users",
+          "Message: Communication message records supporting REST and Socket.io chat",
+          "REST Routes: /users (GET, GET /:id, GET /email/:email, POST, PUT /:id, DELETE /:id), /requests (GET, POST, PUT /:id, DELETE /:id), /messages (GET, POST, PUT /:id, DELETE /:id)"
+        ]
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Node.js v14.x or higher",
+          "npm",
+          "MongoDB (local instance or MongoDB Atlas cluster)",
+          "Git"
+        ],
+        "env_variables": [
+          "MONGODB_URI",
+          "PORT"
+        ],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/business-nexus-backend.git",
+          "cd business-nexus-backend",
+          "npm install",
+          "node import-data.js"
+        ],
+        "run_commands": [
+          "node server.js"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": null,
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 10,
+        "latest_version": null,
+        "last_updated": "2025-07-25"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Architected a decoupled RESTful API and Socket.io messaging layer enabling seamless matchmaking and real-time chat between entrepreneurs and investors",
+          "Built an automated JSON-to-MongoDB seeding utility (import-data.js) and modular Mongoose route controllers for rapid local testing and Render cloud deployment"
+        ],
+        "resume_bullets": [
+          "Engineered a RESTful backend API using Node.js, Express.js, MongoDB (Mongoose), and Socket.io to power an entrepreneur-investor networking and messaging platform.",
+          "Designed modular CRUD routes and schemas for role-based user discovery (investors and entrepreneurs), connection requests, real-time chat connections, and automated MongoDB data seeding."
+        ]
+      },
+      "portfolio": {
+        "featured": true,
+        "order": 9,
+        "badge": "Backend API",
+        "category": "web",
+        "language": "JavaScript",
+        "langColor": "#f1e05a",
+        "tags": [
+          "Express.js",
+          "MongoDB",
+          "REST API"
+        ]
+      }
+    },
+    {
+      "name": "business-nexus-frontend",
+      "full_name": "asad-ali-sajjad/business-nexus-frontend",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": false,
+      "status": "completed",
+      "category": "Frontend Web Application / FinTech & Startup Networking / React",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/business-nexus-frontend",
+        "live_demo_url": "https://business-nexus-phi.vercel.app",
+        "docs_url": "https://github.com/asad-ali-sajjad/business-nexus-frontend#readme"
+      },
+      "overview": {
+        "tagline": "A networking platform connecting entrepreneurs with investors featuring role-based authentication, dynamic dashboards, and real-time chat.",
+        "description": "A React.js (Vite) and Tailwind CSS web application enabling entrepreneurs to showcase their startups and metrics while allowing investors to discover opportunities, send collaboration requests, and communicate via real-time Socket.IO chat—backed by the Business Nexus Node.js/MongoDB API on Render (with mirror deployment on Netlify).",
+        "problem_solved": "Bridges the discovery and communication gap between startup founders and investors by providing role-tailored dashboards, structured startup profiles, collaboration request workflows, and instant messaging.",
+        "target_users": "Entrepreneurs, startup founders, angel investors, and venture collaborators."
+      },
+      "tech_stack": {
+        "primary_language": "JavaScript",
+        "languages": [
+          "JavaScript",
+          "HTML5",
+          "CSS3"
+        ],
+        "frameworks_and_libraries": [
+          "React.js",
+          "Vite",
+          "Tailwind CSS",
+          "React Router v6",
+          "React Context API",
+          "Axios",
+          "Socket.IO Client"
+        ],
+        "databases_and_storage": [
+          "Business Nexus REST API (MongoDB Atlas via Render)",
+          "JSON Server (local mock API fallback)"
+        ],
+        "apis_and_services": [
+          "Business Nexus Backend API (https://business-nexus-backend.onrender.com)",
+          "Socket.IO WebSockets",
+          "Vercel",
+          "Netlify (mirror deployment: https://business-nexuss.netlify.app)"
+        ],
+        "tools_and_deployment": [
+          "Vite",
+          "Vercel",
+          "Netlify (netlify.toml)",
+          "ESLint",
+          "PostCSS",
+          "JSON Server",
+          "npm",
+          "Git"
+        ]
+      },
+      "key_features": [
+        "Role-based authentication system with form validation, email verification simulation, and React Router v6 ProtectedRoute guards for Investor and Entrepreneur roles",
+        "Investor Dashboard (EntrepreneursList) displaying curated startup listings with industry and funding-stage filtering, quick-connect actions, and links to detailed entrepreneur profiles",
+        "Entrepreneur Dashboard (InvestorsRequests) managing incoming investor collaboration requests with accept/reject workflows, investor analytics, and connection metrics",
+        "Glassmorphism Profile Pages and Profile Editor (PUT /users/:id) supporting avatar URL validation, social links (LinkedIn, Twitter, Website), experience, industry, funding stage, traction, and team size",
+        "Real-time two-panel Socket.IO chat system (ChatList, ChatHeader, ChatMessages, ChatInput) featuring typing indicators, read receipts, auto-scroll, mobile view toggling, and WebSocket error handling",
+        "Reusable component design system, dynamic sidebar navigation (/profile/:role/:id, /chat/:role/:id), and React Error Boundaries"
+      ],
+      "architecture": {
+        "pattern": "Component-Based Single-Page Application (React + Vite + Context API + React Router v6) consuming REST & WebSocket APIs",
+        "folder_structure": [
+          "index.html (Application HTML entry point)",
+          "public/ (Static assets, UI screenshots, and mock-data/db.json)",
+          "src/api/ (Axios HTTP client instance and API service modules)",
+          "src/assets/ (Static frontend assets)",
+          "src/components/auth/ (Login and registration authentication forms)",
+          "src/components/chat/ (Modular real-time chat components: ChatList, ChatHeader, ChatMessages, ChatInput)",
+          "src/components/dashboard/ (Role-specific dashboard widgets: EntrepreneursList, InvestorsRequests)",
+          "src/components/profiles/ (Investor and entrepreneur profile cards and edit forms)",
+          "src/context/ (React Context API global state management)",
+          "src/hooks/ (Custom React hooks)",
+          "src/layouts/ (Responsive dashboard and auth layouts with dynamic sidebar)",
+          "src/pages/ (Route-level page components)",
+          "src/routes/ (React Router v6 routing and ProtectedRoute configuration)",
+          "src/styles/ (Global CSS and Tailwind directives)",
+          "src/utils/ (Helper and validation utilities)",
+          "netlify.toml (Netlify deployment and SPA redirect configuration)",
+          "eslint.config.js (ESLint configuration)",
+          "postcss.config.js (PostCSS configuration)",
+          "package.json (Project dependencies and build scripts)",
+          "README.md (Project documentation, deployment links, and setup guide)"
+        ],
+        "entry_points": [
+          "index.html",
+          "src/main.jsx",
+          "src/App.jsx"
+        ],
+        "database_models_or_schema": [
+          "User Profile Payload: { id, email, password, role ('investor' | 'entrepreneur'), name, bio, avatar, socialLinks, experience, industry, stage, traction, teamSize, interests[], portfolio[] }",
+          "Protected Client Routes: /profile/:role/:id and /chat/:role/:id"
+        ]
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Node.js v18 or higher",
+          "npm v9 or higher",
+          "Optional: json-server (for offline/local mock API mode)"
+        ],
+        "env_variables": [],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/business-nexus-frontend.git",
+          "cd business-nexus-frontend",
+          "npm install"
+        ],
+        "run_commands": [
+          "npm run dev",
+          "json-server --watch public/mock-data/db.json --port 3001"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": null,
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 19,
+        "latest_version": null,
+        "last_updated": "2025-07-25"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Architected a modular real-time Socket.IO chat interface (ChatList, ChatHeader, ChatMessages, ChatInput) with typing indicators, read receipts, auto-scrolling, mobile drawer toggling, and WebSocket error recovery",
+          "Implemented role-isolated routing and dashboards for Investors and Entrepreneurs backed by both a live Render/MongoDB API and a local JSON Server fallback",
+          "Built rich profile editing and glassmorphism UI components with React Error Boundaries and dual cloud deployments across Vercel and Netlify"
+        ],
+        "resume_bullets": [
+          "Developed the frontend for Business Nexus, an entrepreneur-investor networking platform built with React.js (Vite), Tailwind CSS, React Router v6, and Context API, deployed on Vercel and Netlify.",
+          "Engineered a real-time two-panel messaging system using Socket.IO Client with typing indicators, read receipts, mobile responsive toggling, and WebSocket error handling.",
+          "Built role-based dashboards, protected routes, startup discovery filters (industry and funding stage), and full profile-editing workflows integrated with a Node.js/MongoDB REST API."
+        ]
+      },
+      "portfolio": {
+        "featured": true,
+        "order": 8,
+        "badge": "Full-Stack",
+        "category": "web",
+        "language": "JavaScript",
+        "langColor": "#f1e05a",
+        "tags": [
+          "Frontend",
+          "Dashboards",
+          "Real-Time Chat"
+        ]
+      }
+    },
+    {
+      "name": "ecommerce-frontend-design",
+      "full_name": "asad-ali-sajjad/ecommerce-frontend-design",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": false,
+      "status": "completed",
+      "category": "Frontend Web Application / E-Commerce / UI Design",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/ecommerce-frontend-design",
+        "live_demo_url": "https://asad-ali-sajjad.github.io/ecommerce-frontend-design/",
+        "docs_url": "https://github.com/asad-ali-sajjad/ecommerce-frontend-design#readme"
+      },
+      "overview": {
+        "tagline": "Desktop-optimized eCommerce frontend featuring dual-view product listings, interactive shopping cart, and utility pages.",
+        "description": "A multi-page desktop eCommerce storefront frontend built with semantic HTML5, CSS3 (Flexbox/Grid), Vanilla JavaScript (ES6+), and minimal Bootstrap as part of a frontend internship task, featuring Grid/List catalog views, multi-criteria filtering, product detail zoom/spec tabs, and interactive cart management.",
+        "problem_solved": "Delivers a complete, structured online retail user interface—from product discovery and filtering to detailed inspection, cart adjustments, and graceful fallback/404 routing—without backend dependencies.",
+        "target_users": "Online retail shoppers (desktop storefront experience) and frontend engineering evaluators."
+      },
+      "tech_stack": {
+        "primary_language": "JavaScript",
+        "languages": [
+          "JavaScript",
+          "HTML5",
+          "CSS3"
+        ],
+        "frameworks_and_libraries": [
+          "Vanilla JavaScript (ES6+)",
+          "Bootstrap (Minimal layout helpers)"
+        ],
+        "databases_and_storage": [],
+        "apis_and_services": [
+          "GitHub Pages"
+        ],
+        "tools_and_deployment": [
+          "GitHub Pages",
+          "Git"
+        ]
+      },
+      "key_features": [
+        "Desktop storefront header with search bar, dropdown navigation, and structured footer with quick links and contact information",
+        "Dual-view product catalog supporting instant Grid and List view toggling alongside category selection and price-range slider filters",
+        "Product detail pages featuring an interactive image gallery with zoom functionality and tabbed product specifications",
+        "Interactive shopping cart supporting item quantity increment/decrement (+/-) controls and item removal",
+        "Branded utility pages including an under-construction redirect hub with alternative navigation links and a custom 404 error page"
+      ],
+      "architecture": {
+        "pattern": "Multi-Page Static Frontend Web Application (Semantic HTML5 + CSS3 Flexbox/Grid + Vanilla ES6+ JavaScript)",
+        "folder_structure": [
+          "index.html (Main storefront homepage with desktop header, search, dropdown navigation, and footer)",
+          "pages/ (Sub-pages including Grid/List product catalog views, product detail view, shopping cart, under-construction hub, and 404 page)",
+          "css/ (Modular CSS3 Flexbox and Grid stylesheets)",
+          "js/ (Vanilla ES6+ JavaScript for Grid/List view toggling, filtering, image zoom, spec tabs, and cart management)",
+          "images/ (Product imagery and UI screenshots under images/SS/)",
+          "README.md (Project overview, weekly internship timeline, and setup instructions)"
+        ],
+        "entry_points": [
+          "index.html"
+        ],
+        "database_models_or_schema": []
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Any modern desktop web browser"
+        ],
+        "env_variables": [],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/ecommerce-frontend-design.git",
+          "cd ecommerce-frontend-design"
+        ],
+        "run_commands": [
+          "Open index.html directly in a web browser or deploy statically via GitHub Pages"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": null,
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 4,
+        "latest_version": null,
+        "last_updated": "2025-06-24"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Engineered dynamic Grid/List catalog view switching, category and price-range slider filtering, and interactive cart quantity controls in pure ES6+ JavaScript",
+          "Built a cohesive multi-page eCommerce UI complete with product image zoom, specification tabs, and branded 404/under-construction redirect pages"
+        ],
+        "resume_bullets": [
+          "Developed and deployed a multi-page desktop eCommerce storefront frontend using semantic HTML5, CSS3 (Flexbox/Grid), Vanilla JavaScript (ES6+), and Bootstrap on GitHub Pages.",
+          "Implemented Grid/List product view toggling, category and price-range filtering, interactive product detail zoom and spec tabs, dynamic shopping cart management, and custom 404/redirect utility pages."
+        ]
+      },
+      "portfolio": {
+        "featured": false,
+        "order": 99,
+        "badge": "Project",
+        "category": "web",
+        "language": "JavaScript",
+        "langColor": "#f1e05a",
+        "tags": [
+          "Vanilla JavaScript (ES6+)",
+          "Bootstrap (Minimal layout helpers)"
+        ]
+      }
+    },
+    {
+      "name": "todo-app",
+      "full_name": "asad-ali-sajjad/todo-app",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": false,
+      "status": "completed",
+      "category": "Frontend Web Application / Productivity & Task Management",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/todo-app",
+        "live_demo_url": "https://asad-ali-sajjad.github.io/todo-app/",
+        "docs_url": "https://github.com/asad-ali-sajjad/todo-app#readme"
+      },
+      "overview": {
+        "tagline": "A modern, responsive to-do web app with CRUD functionality and localStorage persistence.",
+        "description": "A mobile-first, responsive task management web application built with vanilla HTML5, CSS3 (Flexbox/Grid), and JavaScript that supports full CRUD operations (create, inline edit, toggle completion, delete) with persistent browser localStorage and smooth UI animations.",
+        "problem_solved": "Provides lightweight, offline-capable personal task tracking in the browser with instant inline editing and persistent storage across sessions without requiring user accounts or backend infrastructure.",
+        "target_users": "Everyday users, students, and professionals looking for a fast, distraction-free browser task manager."
+      },
+      "tech_stack": {
+        "primary_language": "JavaScript",
+        "languages": [
+          "JavaScript",
+          "HTML5",
+          "CSS3"
+        ],
+        "frameworks_and_libraries": [
+          "Vanilla JavaScript"
+        ],
+        "databases_and_storage": [
+          "Browser localStorage API"
+        ],
+        "apis_and_services": [
+          "Web Storage API (localStorage)",
+          "GitHub Pages"
+        ],
+        "tools_and_deployment": [
+          "GitHub Pages",
+          "Git"
+        ]
+      },
+      "key_features": [
+        "Full CRUD task management: quickly add tasks, edit tasks inline with a single click, mark tasks complete with visual feedback, and delete tasks",
+        "Persistent client-side storage using the browser localStorage API so tasks survive page reloads and browser restarts",
+        "Mobile-first responsive design adapting across viewports from 320px mobile screens to 4K displays using CSS Flexbox, Grid, and fluid clamp() typography",
+        "Touch-friendly controls and smooth CSS UI animations for intuitive task interaction"
+      ],
+      "architecture": {
+        "pattern": "Client-Side Single-Page Frontend Application (Vanilla HTML5/CSS3/JavaScript with Browser localStorage Persistence)",
+        "folder_structure": [
+          "index.html (Main application markup, task input form, and task list container)",
+          "style.css (Mobile-first responsive styling with Flexbox, CSS Grid, fluid clamp() sizing, and animations)",
+          "script.js (CRUD task logic, inline editing handlers, DOM rendering, and localStorage synchronization)",
+          "images/ (Application screenshots used in documentation)",
+          "README.md (Project overview, live demo link, and quick-start instructions)"
+        ],
+        "entry_points": [
+          "index.html",
+          "script.js"
+        ],
+        "database_models_or_schema": [
+          "Browser localStorage JSON array of task items (task text/title and completion status)"
+        ]
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Any modern desktop or mobile web browser"
+        ],
+        "env_variables": [],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/todo-app.git",
+          "cd todo-app"
+        ],
+        "run_commands": [
+          "Open index.html directly in a web browser or deploy statically via GitHub Pages"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": null,
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 3,
+        "latest_version": null,
+        "last_updated": "2025-06-04"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Implemented full client-side CRUD state management—including single-click inline task editing—synchronized automatically with the browser localStorage API",
+          "Engineered a mobile-first responsive interface scaling smoothly from 320px to 4K screens using CSS Flexbox, Grid, and fluid clamp() typography"
+        ],
+        "resume_bullets": [
+          "Built and deployed a mobile-first To-Do web application using HTML5, CSS3 (Flexbox/Grid), and Vanilla JavaScript with full CRUD functionality and browser localStorage persistence on GitHub Pages.",
+          "Implemented single-click inline task editing, visual completion state toggles, smooth UI animations, and fluid responsive scaling across 320px to 4K viewports."
+        ]
+      },
+      "portfolio": {
+        "featured": false,
+        "order": 99,
+        "badge": "Project",
+        "category": "web",
+        "language": "JavaScript",
+        "langColor": "#f1e05a",
+        "tags": [
+          "Vanilla JavaScript"
+        ]
+      }
+    },
+    {
+      "name": "asad-ali-sajjad.github.io",
+      "full_name": "asad-ali-sajjad/asad-ali-sajjad.github.io",
+      "owner": "asad-ali-sajjad",
+      "visibility": "public",
+      "is_pinned": false,
+      "status": "active",
+      "category": "Personal Portfolio / Frontend Web Application",
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/asad-ali-sajjad.github.io",
+        "live_demo_url": "https://asad-ali-sajjad.me/",
+        "docs_url": "https://github.com/asad-ali-sajjad/asad-ali-sajjad.github.io#readme"
+      },
+      "overview": {
+        "tagline": "Personal developer portfolio website showcasing full-stack web, AI/ML, and database projects.",
+        "description": "A responsive personal developer portfolio website built with HTML5, Tailwind CSS (CDN), and Vanilla JavaScript, hosted on GitHub Pages with automated HTTPS and a custom domain (asad-ali-sajjad.me) to showcase 8 flagship projects across AI/ML, full-stack web, C++, and SQL.",
+        "problem_solved": "Centralizes flagship engineering projects across multiple technical domains into an interactive, filterable portfolio hub with one-click contact actions and direct GitHub source links.",
+        "target_users": "Recruiters, hiring managers, technical collaborators, and freelance clients."
+      },
+      "tech_stack": {
+        "primary_language": "HTML",
+        "languages": [
+          "HTML5",
+          "JavaScript",
+          "CSS3"
+        ],
+        "frameworks_and_libraries": [
+          "Tailwind CSS (CDN)",
+          "Vanilla JavaScript"
+        ],
+        "databases_and_storage": [],
+        "apis_and_services": [
+          "GitHub Pages",
+          "Namecheap Education (Custom DNS/Domain)",
+          "Google Fonts (Inter & JetBrains Mono)",
+          "Browser Clipboard API"
+        ],
+        "tools_and_deployment": [
+          "GitHub Pages (Automated HTTPS)",
+          "Custom Domain (CNAME)",
+          "Git"
+        ]
+      },
+      "key_features": [
+        "Modern dark-mode developer UI built with Tailwind CSS, glassmorphism navigation, Inter & JetBrains Mono typography, and a mobile-first responsive layout",
+        "Interactive project category filtering allowing visitors to dynamically filter featured repositories across AI & ML, Full-Stack Web, and C++ & SQL",
+        "Animated role typewriter cycling through core software engineering roles in real time",
+        "Curated showcase of 8 flagship projects (medai-care, plant-disease-diagnostic-system, cs-mcq-hub, clinic-appointment-system, bank-management-system, library-management-system-sql, glimpse, business-nexus) with tech-stack tags and direct repository links",
+        "One-click email copy button (imasad789@gmail.com) alongside direct GitHub and portfolio navigation links",
+        "Custom domain deployment (asad-ali-sajjad.me) configured via CNAME on GitHub Pages with automated SSL/HTTPS"
+      ],
+      "architecture": {
+        "pattern": "Single-File Static Portfolio Web Application (HTML5 + Tailwind CSS CDN + Embedded Vanilla JavaScript)",
+        "folder_structure": [
+          "index.html (Complete responsive portfolio markup, Tailwind styling, project cards, interactive category filters, typewriter animation, and clipboard scripts)",
+          "CNAME (Custom domain configuration pointing to asad-ali-sajjad.me)",
+          "README.md (Portfolio documentation, live deployment badges, and featured projects table)"
+        ],
+        "entry_points": [
+          "index.html"
+        ],
+        "database_models_or_schema": []
+      },
+      "setup_and_usage": {
+        "prerequisites": [
+          "Any modern desktop or mobile web browser"
+        ],
+        "env_variables": [],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/asad-ali-sajjad.github.io.git",
+          "cd asad-ali-sajjad.github.io"
+        ],
+        "run_commands": [
+          "Open index.html directly in a web browser or serve via GitHub Pages"
+        ]
+      },
+      "github_metadata": {
+        "default_branch": "main",
+        "topics": [],
+        "license": null,
+        "stars": 0,
+        "forks": 0,
+        "commits_count": 4,
+        "latest_version": null,
+        "last_updated": "2026-11-25"
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [
+          "Delivered a zero-build, single-page developer portfolio featuring dynamic multi-domain project filtering, real-time typewriter animations, and one-click clipboard contact actions",
+          "Configured custom domain routing (asad-ali-sajjad.me) with automated SSL/HTTPS via GitHub Pages and CNAME DNS records"
+        ],
+        "resume_bullets": [
+          "Designed and deployed a responsive personal developer portfolio (asad-ali-sajjad.me) using HTML5, Tailwind CSS, and Vanilla JavaScript on GitHub Pages with custom domain SSL/HTTPS.",
+          "Engineered interactive project category filtering (AI & ML, Full-Stack Web, C++ & SQL), glassmorphism navigation, real-time role typewriter animations, and one-click email copy utilities showcasing 8 end-to-end engineering projects."
+        ]
+      },
+      "portfolio": {
+        "featured": false,
+        "order": 99,
+        "badge": "Project",
+        "category": "web",
+        "language": "HTML",
+        "langColor": "#e34c26",
+        "tags": [
+          "Tailwind CSS (CDN)",
+          "Vanilla JavaScript"
+        ]
+      }
+    }
+  ]
+}

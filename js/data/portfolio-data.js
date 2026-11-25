@@ -18,6 +18,7 @@ export const PROJECTS = [
       "A multi-clinic appointment and operations platform built with Next.js and PostgreSQL, extended with a calibrated, human-in-the-loop AI skin lesion screening system and RAG assistant.",
     tags: ["Next.js", "PostgreSQL", "AI Screening", "RAG"],
     repoUrl: "https://github.com/asad-ali-sajjad/medai-care",
+    demoUrl: null,
   },
   {
     title: "plant-disease-diagnostic-system",
@@ -29,6 +30,7 @@ export const PROJECTS = [
       "A deep learning web application built with PyTorch and Streamlit for real-time plant leaf disease detection and actionable agricultural health diagnostics.",
     tags: ["PyTorch", "Streamlit", "Deep Learning", "Computer Vision"],
     repoUrl: "https://github.com/asad-ali-sajjad/plant-disease-diagnostic-system",
+    demoUrl: null,
   },
   {
     title: "cs-mcq-hub",
@@ -40,6 +42,7 @@ export const PROJECTS = [
       "An interactive, browser-based MCQ workspace designed for Computer Science revision, structured study notes, and exam preparation.",
     tags: ["Computer Science", "Interactive Quiz", "Study Guide"],
     repoUrl: "https://github.com/asad-ali-sajjad/cs-mcq-hub",
+    demoUrl: null,
   },
   {
     title: "clinic-appointment-system",
@@ -51,6 +54,7 @@ export const PROJECTS = [
       "Lightweight PHP/MySQL clinic booking and scheduling system engineered to reduce patient no-shows and streamline administrative workflows.",
     tags: ["PHP", "MySQL", "Healthcare", "Booking"],
     repoUrl: "https://github.com/asad-ali-sajjad/clinic-appointment-system",
+    demoUrl: null,
   },
   {
     title: "bank-management-system",
@@ -62,6 +66,7 @@ export const PROJECTS = [
       "A C++ command-line banking application featuring secure role-based access, persistent transaction history, and efficient data structure implementations.",
     tags: ["C++", "Data Structures", "CLI", "RBAC"],
     repoUrl: "https://github.com/asad-ali-sajjad/bank-management-system",
+    demoUrl: null,
   },
   {
     title: "library-management-system-sql",
@@ -73,6 +78,7 @@ export const PROJECTS = [
       "Relational Library Management System built using MS SQL Server, covering normalized tables, views, stored procedures, functions, triggers, and transactions.",
     tags: ["MS SQL Server", "T-SQL", "Triggers", "Stored Procedures"],
     repoUrl: "https://github.com/asad-ali-sajjad/library-management-system-sql",
+    demoUrl: null,
   },
   {
     title: "glimpse",
@@ -84,6 +90,7 @@ export const PROJECTS = [
       "Modern social post-sharing application built with Next.js and Supabase, featuring real-time feeds and responsive UI.",
     tags: ["Next.js", "Supabase", "Social App"],
     repoUrl: "https://github.com/asad-ali-sajjad/glimpse",
+    demoUrl: null,
   },
   {
     title: "business-nexus-frontend",
@@ -95,6 +102,7 @@ export const PROJECTS = [
       "Web application connecting entrepreneurs and investors with role-based authentication, interactive dashboards, and real-time chat.",
     tags: ["Frontend", "Dashboards", "Real-Time Chat"],
     repoUrl: "https://github.com/asad-ali-sajjad/business-nexus-frontend",
+    demoUrl: null,
   },
   {
     title: "business-nexus-backend",
@@ -106,5 +114,6 @@ export const PROJECTS = [
       "RESTful API powering Business Nexus, built with Express.js and leveraging MongoDB for scalable data persistence.",
     tags: ["Express.js", "MongoDB", "REST API"],
     repoUrl: "https://github.com/asad-ali-sajjad/business-nexus-backend",
+    demoUrl: null,
   },
 ];

@@ -13,6 +13,28 @@ body {
   overflow-x: hidden;
 }
 
+/* Subtle Developer Grid Backdrop */
+.bg-grid {
+  background-size: 36px 36px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 20%, #000 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 20%, #000 40%, transparent 100%);
+}
+
+/* Scroll Reveal Transitions */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .cursor-blink {
   animation: blink 1s step-end infinite;
 }
@@ -20,5 +42,27 @@ body {
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+/* Accessibility: Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .project-card,
+  .cursor-blink,
+  .animate-pulse,
+  .animate-ping {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
   }
 }

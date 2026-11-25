@@ -4,6 +4,15 @@ export function initTypewriter() {
   const typedEl = document.getElementById("typed-role");
   if (!typedEl || ROLES.length === 0) return;
 
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (prefersReducedMotion) {
+    typedEl.textContent = ROLES[0];
+    return;
+  }
+
   let roleIdx = 0;
   let charIdx = 0;
   let isDeleting = false;

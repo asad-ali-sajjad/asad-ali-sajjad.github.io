@@ -1,6 +1,13 @@
 import { PROJECTS } from "../data/portfolio-data.js";
 
 function createProjectCard(project) {
+  const demoButton = project.demoUrl
+    ? `<a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center py-2.5 px-3.5 rounded-xl text-xs font-mono font-semibold bg-sky-500/15 hover:bg-sky-400 text-sky-300 hover:text-slate-950 border border-sky-500/30 hover:border-sky-400 transition">
+         Live Demo &nearr;
+       </a>`
+    : "";
+
   return `
     <article class="project-card rounded-2xl p-6 flex flex-col justify-between">
       <div>
@@ -38,10 +45,13 @@ function createProjectCard(project) {
             .join("")}
         </div>
 
-        <a href="${project.repoUrl}" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl text-xs font-mono font-semibold bg-slate-800/80 hover:bg-sky-400 hover:text-slate-950 text-white border border-slate-700 hover:border-sky-400 transition">
-          View Source on GitHub &nearr;
-        </a>
+        <div class="flex items-center gap-2">
+          <a href="${project.repoUrl}" target="_blank" rel="noopener noreferrer"
+             class="flex-1 inline-flex items-center justify-center py-2.5 px-4 rounded-xl text-xs font-mono font-semibold bg-slate-800/80 hover:bg-sky-400 hover:text-slate-950 text-white border border-slate-700 hover:border-sky-400 transition">
+            Source on GitHub &nearr;
+          </a>
+          ${demoButton}
+        </div>
       </div>
     </article>
   `;
@@ -50,25 +60,71 @@ function createProjectCard(project) {
 export function initProjects() {
   const grid = document.getElementById("projects-grid");
   const filterBtns = document.querySelectorAll(".filter-btn");
+  const searchInput = document.getElementById("project-search");
 
   if (!grid) return;
 
-  const render = (filter = "all") => {
-    const filtered =
-      filter === "all"
-        ? PROJECTS
-        : PROJECTS.filter((project) => project.category === filter);
+  let activeCategory = "all";
+  let searchQuery = "";
+
+  // Populate dynamic project counts on filter buttons
+  filterBtns.forEach((btn) => {
+    const category = btn.dataset.filter;
+    const count =
+      category === "all"
+        ? PROJECTS.length
+        : PROJECTS.filter((p) => p.category === category).length;
+    btn.textContent = `${btn.textContent.trim()} (${count})`;
+  });
+
+  const render = () => {
+    const query = searchQuery.trim().toLowerCase();
+
+    const filtered = PROJECTS.filter((project) => {
+      const matchesCategory =
+        activeCategory === "all" || project.category === activeCategory;
+      const matchesSearch =
+        !query ||
+        project.title.toLowerCase().includes(query) ||
+        project.description.toLowerCase().includes(query) ||
+        project.language.toLowerCase().includes(query) ||
+        project.tags.some((tag) => tag.toLowerCase().includes(query));
+
+      return matchesCategory && matchesSearch;
+    });
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `
+        <div class="col-span-full text-center py-12 px-4 rounded-2xl border border-slate-800 bg-slate-900/40">
+          <p class="font-mono text-sm text-slate-400 mb-2">No matching projects found for "${searchQuery}".</p>
+          <p class="text-xs text-slate-500">Try clearing the search box or switching category filters.</p>
+        </div>
+      `;
+      return;
+    }
 
     grid.innerHTML = filtered.map(createProjectCard).join("");
   };
 
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      filterBtns.forEach((b) => b.classList.remove("active"));
+      filterBtns.forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-pressed", "false");
+      });
       btn.classList.add("active");
-      render(btn.dataset.filter);
+      btn.setAttribute("aria-pressed", "true");
+      activeCategory = btn.dataset.filter;
+      render();
     });
   });
+
+  if (searchInput) {
+    searchInput.addEventListener("input", (event) => {
+      searchQuery = event.target.value;
+      render();
+    });
+  }
 
   render();
 }

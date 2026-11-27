@@ -4,23 +4,286 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>404 — Page Not Found | Asad Ali Sajjad</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#090d16" />
+
+  <!-- Inline SVG Favicon (matches index.html) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23090d16'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='bold' font-size='28' fill='%2338bdf8'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
   <style>
-    body { background-color: #090d16; color: #f3f4f6; font-family: 'Inter', sans-serif; }
+    :root {
+      --bg-dark: #090d16;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --text-primary: #f3f4f6;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --accent-primary: #38bdf8;
+      --accent-secondary: #818cf8;
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background-color: var(--bg-dark);
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.15), transparent 58%),
+        radial-gradient(circle at 85% 85%, rgba(129, 140, 248, 0.12), transparent 50%);
+      color: var(--text-primary);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-size: 36px 36px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      mask-image: radial-gradient(ellipse 75% 70% at 50% 45%, #000 35%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 75% 70% at 50% 45%, #000 35%, transparent 100%);
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 30rem;
+      text-align: center;
+      background: linear-gradient(145deg, rgba(17, 24, 39, 0.94), rgba(15, 23, 42, 0.84));
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-subtle);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 25px 50px -12px rgba(0, 0, 0, 0.65);
+      border-radius: 1.5rem;
+      padding: 2.25rem 2rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .brand-dot {
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 999px;
+      background: var(--accent-primary);
+    }
+
+    .brand span.accent {
+      color: var(--accent-primary);
+    }
+
+    .eyebrow {
+      margin: 0 0 0.4rem;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.75rem;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .code-404 {
+      margin: 0 0 0.65rem;
+      font-size: clamp(3.5rem, 10vw, 4.75rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      background: linear-gradient(90deg, #ffffff 20%, var(--accent-primary) 65%, var(--accent-secondary) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      margin: 0 auto 1.25rem;
+      max-width: 36ch;
+      font-size: 0.925rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .terminal-box {
+      margin: 0 0 1.4rem;
+      padding: 0.65rem 0.9rem;
+      border-radius: 0.75rem;
+      background: rgba(6, 9, 17, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.76rem;
+      color: var(--text-dim);
+      word-break: break-all;
+    }
+
+    .terminal-box .path {
+      color: #fda4af;
+    }
+
+    .alias-banner {
+      display: none;
+      margin: 0 0 1.4rem;
+      padding: 0.75rem 0.95rem;
+      border-radius: 0.75rem;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-size: 0.82rem;
+      color: #e0f2fe;
+      line-height: 1.5;
+    }
+
+    .alias-banner a {
+      color: var(--accent-primary);
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      width: 100%;
+      padding: 0.85rem 1.4rem;
+      border-radius: 0.85rem;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #090d16;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      box-shadow: 0 12px 26px -8px rgba(56, 189, 248, 0.35);
+      transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
+    }
+
+    .cta-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .quick-links {
+      margin-top: 1.25rem;
+      padding-top: 1.15rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .quick-links a {
+      padding: 0.4rem 0.75rem;
+      border-radius: 0.6rem;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.73rem;
+      color: var(--text-muted);
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      text-decoration: none;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .quick-links a:hover {
+      color: var(--accent-primary);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent-primary);
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cta-primary {
+        transition: none;
+        transform: none !important;
+      }
+    }
   </style>
 </head>
-<body class="min-h-screen flex items-center justify-center px-5">
-  <div class="max-w-md w-full text-center bg-slate-900/90 border border-slate-800 rounded-3xl p-8 shadow-2xl">
-    <p class="font-mono text-xs text-sky-400 uppercase tracking-widest mb-2">// Error 404</p>
-    <h1 class="text-5xl font-extrabold text-white mb-3">404</h1>
-    <p class="text-sm text-slate-400 mb-6 leading-relaxed">
-      The page you're looking for doesn't exist or has been moved.
-    </p>
-    <a href="/"
-       class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-mono text-xs font-semibold bg-gradient-to-r from-sky-400 to-indigo-500 text-slate-950 hover:opacity-95 transition">
-      &larr; Back to asad-ali-sajjad.me
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <main class="card">
+    <a href="/" class="brand">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span>asad-ali-sajjad<span class="accent">.me</span></span>
     </a>
-  </div>
+
+    <p class="eyebrow">// Error 404 &bull; Route Not Found</p>
+    <h1 class="code-404">404</h1>
+    <p class="subtitle">
+      The page you're looking for doesn't exist, was renamed, or has been moved.
+    </p>
+
+    <div class="terminal-box" aria-label="Requested path">
+      <span>GET </span><span id="missing-path" class="path">/</span><span> &rarr; 404</span>
+    </div>
+
+    <div id="alias-banner" class="alias-banner" role="status">
+      Looking for the renamed project? Visit <a id="alias-link" href="/reviseloop/">/reviseloop/</a>.
+    </div>
+
+    <a href="/" class="cta-primary">
+      <span>&larr;</span>
+      <span>Back to asad-ali-sajjad.me</span>
+    </a>
+
+    <nav class="quick-links" aria-label="Quick navigation">
+      <a href="/#projects">Projects</a>
+      <a href="/#skills">Tech Stack</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://github.com/asad-ali-sajjad" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </main>
+
+  <script>
+    (function () {
+      const path = window.location.pathname || "/";
+      const pathEl = document.getElementById("missing-path");
+      if (pathEl) {
+        pathEl.textContent = path;
+      }
+
+      // Helpful hint if visitor hits an old repository slug
+      const normalized = path.toLowerCase();
+      if (normalized.startsWith("/cs-mcq-hub")) {
+        const banner = document.getElementById("alias-banner");
+        const link = document.getElementById("alias-link");
+        if (banner && link) {
+          link.href = "/reviseloop/";
+          link.textContent = "/reviseloop/";
+          banner.style.display = "block";
+        }
+      }
+    })();
+  </script>
 </body>
 </html>

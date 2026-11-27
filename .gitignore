@@ -1,3 +1,4 @@
-context.json
 data/individual-repos/
 docs/
+.env
+.vscode/

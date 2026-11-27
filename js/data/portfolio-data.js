@@ -2,11 +2,82 @@
 export const CONTACT_EMAIL = "imasad789@gmail.com";
 
 export const PROFILE_META = {
+  "schemaVersion": "2.1.0",
   "username": "asad-ali-sajjad",
+  "bio": "Midnight commits, Python scripts & C++ architecture. Powered by cinema, dark mode & prompt engineering. // JS · React · SQL",
+  "location": "",
+  "followers": 0,
   "publicRepos": 17,
+  "trackedRepos": 17,
   "featuredCount": 9,
+  "activeRepos": 4,
   "totalStars": 0,
+  "totalForks": 0,
   "lastSynced": "2026-11-27"
+};
+
+export const TECH_SUMMARY = {
+  "byCategory": {
+    "ai": 1,
+    "web": 13,
+    "systems": 2
+  },
+  "byLanguage": [
+    {
+      "name": "Jupyter Notebook",
+      "color": "#da5b0b",
+      "bytes": 340378,
+      "pct": 29.2
+    },
+    {
+      "name": "PHP",
+      "color": "#4F5D95",
+      "bytes": 308575,
+      "pct": 26.5
+    },
+    {
+      "name": "JavaScript",
+      "color": "#f1e05a",
+      "bytes": 169647,
+      "pct": 14.6
+    },
+    {
+      "name": "TypeScript",
+      "color": "#3178c6",
+      "bytes": 107879,
+      "pct": 9.3
+    },
+    {
+      "name": "HTML",
+      "color": "#e34c26",
+      "bytes": 96626,
+      "pct": 8.3
+    },
+    {
+      "name": "CSS",
+      "color": "#563d7c",
+      "bytes": 84046,
+      "pct": 7.2
+    },
+    {
+      "name": "Python",
+      "color": "#3572A5",
+      "bytes": 51373,
+      "pct": 4.4
+    },
+    {
+      "name": "PLpgSQL",
+      "color": "#38bdf8",
+      "bytes": 4643,
+      "pct": 0.4
+    },
+    {
+      "name": "Shell",
+      "color": "#38bdf8",
+      "bytes": 781,
+      "pct": 0.1
+    }
+  ]
 };
 
 export const ROLES = [
@@ -18,12 +89,59 @@ export const ROLES = [
 
 export const PROJECTS = [
   {
+    "id": 1445941900,
+    "slug": "mediai-care",
     "title": "mediai-care",
+    "aliases": [],
     "badge": "Pinned",
-    "category": "systems",
+    "projectStatus": "active",
+    "category": "AI",
     "language": "TypeScript",
     "langColor": "#3178c6",
+    "languageBreakdown": {
+      "TypeScript": {
+        "bytes": 107879,
+        "pct": 93.5
+      },
+      "PLpgSQL": {
+        "bytes": 4643,
+        "pct": 4.0
+      },
+      "JavaScript": {
+        "bytes": 1250,
+        "pct": 1.1
+      },
+      "CSS": {
+        "bytes": 807,
+        "pct": 0.7
+      },
+      "Shell": {
+        "bytes": 781,
+        "pct": 0.7
+      }
+    },
+    "tagline": "Enterprise Multi-Clinic & Telemedicine Platform with Calibrated Human-in-the-Loop AI Screening.",
     "description": "A multi-clinic appointment, operations, and clinical decision-support healthcare platform built with Next.js 15 and PostgreSQL, extended with a FastAPI AI sidecar for explainable skin-lesion screening and RAG health assistance.",
+    "problemSolved": "Digitizes traditional medical center workflows—replacing manual phone bookings, walk-in queues, and fragmented doctor schedules—while enforcing strict multi-tenant data isolation and double-booking prevention at the database layer.",
+    "keyFeatures": [
+      "Multi-tenant SaaS architecture with strict database-level clinic isolation (clinicId scoping and appt_tenant_guard trigger)",
+      "Global patient identity portal allowing patients to manage visits across multiple clinics while keeping clinical records isolated",
+      "Database-level security guards (1_db_guards): partial unique index (uniq_active_slot) double-booking shield, immutable append-only AuditLog trigger, E.164 phone & email CHECK constraints, and Row-Level Security (RLS)",
+      "Hardened authentication supporting dual email/phone login, dummy-bcrypt timing-attack protection, brute-force account lockouts (5 failed attempts -> 15-min lock), and Edge middleware RBAC across 5 roles (SUPER_ADMIN, CLINIC_ADMIN, RECEPTIONIST, DOCTOR, PATIENT)",
+      "Dynamic booking slot engine, appointment state transitions, and responsive clinic/doctor dashboards",
+      "Deterministic multi-clinic database seeding (prisma/seed.ts) and automated SQL constraint attack verification suite (scripts/verify-db.ts)",
+      "Monorepo FastAPI AI service architecture designed for calibrated skin-lesion screening (Grad-CAM overlays, abstention gates) and vector-based RAG assistance"
+    ],
+    "challengesSolved": [
+      "Eliminated race-condition double-bookings and cross-tenant data leaks directly at the PostgreSQL engine level using partial unique indexes, triggers, and Row-Level Security",
+      "Mitigated credential-stuffing and timing-enumeration attacks via dummy bcrypt hashing, brute-force account lockouts, and Edge JWT middleware RBAC",
+      "Built an automated security verification harness (verify-db.ts) that simulates SQL constraint attacks against the database to guarantee invariant enforcement"
+    ],
+    "resumeBullets": [
+      "Architected a multi-tenant healthcare appointment and operations platform using Next.js 15, TypeScript, Prisma 6, and PostgreSQL (Supabase), deployed on Vercel.",
+      "Engineered database-level security invariants—including partial unique indexes for double-booking prevention, tenant-isolation triggers, immutable audit logs, and Row-Level Security—validated via an automated attack-simulation test suite.",
+      "Implemented Edge-enforced Role-Based Access Control (Auth.js v5) supporting 5 distinct clinical roles, dual email/E.164-phone authentication, brute-force lockouts, and a FastAPI sidecar architecture for human-in-the-loop AI skin-lesion screening."
+    ],
     "tags": [
       "Next.js 15 (App Router)",
       "React (Server Components & Server Actions)",
@@ -34,15 +152,66 @@ export const PROJECTS = [
     "demoUrl": "https://mediai-care-gamma.vercel.app",
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2026-11-10"
+    "license": "MIT",
+    "latestRelease": null,
+    "createdAt": "2026-11-04",
+    "updatedAt": "2026-11-10",
+    "activityStatus": "active"
   },
   {
+    "id": 1434686994,
+    "slug": "plant-disease-diagnostic-system",
     "title": "plant-disease-diagnostic-system",
+    "aliases": [],
     "badge": "Pinned",
+    "projectStatus": "completed",
     "category": "ai",
     "language": "Jupyter Notebook",
     "langColor": "#da5b0b",
+    "languageBreakdown": {
+      "Jupyter Notebook": {
+        "bytes": 340378,
+        "pct": 75.1
+      },
+      "Python": {
+        "bytes": 51373,
+        "pct": 11.3
+      },
+      "HTML": {
+        "bytes": 49861,
+        "pct": 11.0
+      },
+      "CSS": {
+        "bytes": 10857,
+        "pct": 2.4
+      },
+      "JavaScript": {
+        "bytes": 808,
+        "pct": 0.2
+      }
+    },
+    "tagline": "FloraScan AI — A dual-engine computer vision dashboard that classifies tomato leaf health in seconds, and refuses to guess when it is unsure.",
     "description": "An end-to-end deep learning web application built with PyTorch and Streamlit for real-time tomato leaf disease diagnosis across five classes (Healthy, Bacterial Spot, Early Blight, Late Blight, and Not Leaf), featuring side-by-side model benchmarking, confidence abstention gates, and downloadable diagnostic reports.",
+    "problemSolved": "Provides rapid, accessible plant pathology diagnostics while preventing overconfident false-positive predictions on uncertain or non-leaf images via a 65% confidence safety threshold and synthetic out-of-distribution rejection.",
+    "keyFeatures": [
+      "Multi-engine inference switcher supporting Custom 3-Block CNN (96.53% test accuracy, 724/750) and ResNet-18 transfer learning (94.13% test accuracy, 706/750)",
+      "Dual Benchmark Mode running both models simultaneously on a single leaf image to compare agreement, disagreement, or uncertainty",
+      "Safety confidence threshold (65%) that flags low-confidence predictions as 'Unrecognized' instead of guessing",
+      "Out-of-distribution (OOD) rejection trained on a 1,000-image synthetic 'Not Leaf' class (noise, gradients, checkerboards, shapes)",
+      "Visual confidence gauge and 5-class probability distribution bars with a built-in Disease Library (symptoms, severity, and care plans)",
+      "Session scan history log, built-in sample leaf selector, and downloadable plain-text diagnosis reports",
+      "Cached inference with automatic model hot-reloading whenever .pth checkpoint files are updated"
+    ],
+    "challengesSolved": [
+      "Prevented overconfident false diagnoses on ambiguous or non-leaf uploads by combining a 65% confidence abstention gate with a 1,000-image synthetic 'Not Leaf' OOD class",
+      "Built a side-by-side Dual Benchmark pipeline comparing a custom 3-block CNN (96.53% test accuracy) against a frozen ResNet-18 baseline (94.13% test accuracy) with cached execution and automatic checkpoint hot-reloading",
+      "Managed large PyTorch weight files (196 MB and 42.7 MB) cleanly using Git LFS with a Hugging Face Hub mirror and automated Streamlit uptime via GitHub Actions"
+    ],
+    "resumeBullets": [
+      "Developed FloraScan AI, an end-to-end computer vision web application built with PyTorch and Streamlit achieving 96.53% test accuracy across 5 tomato leaf health classes on a balanced 5,000-image PlantVillage dataset.",
+      "Engineered a dual-engine inference and benchmarking dashboard comparing a custom 3-block CNN against a transfer-learned ResNet-18 model, complete with a 65% confidence abstention threshold and synthetic out-of-distribution rejection.",
+      "Architected a modular, hot-reloadable ML inference pipeline with Git LFS and Hugging Face Hub weight distribution, downloadable diagnostic reports, and an accompanying Vercel showcase site."
+    ],
     "tags": [
       "PyTorch",
       "Streamlit",
@@ -53,33 +222,112 @@ export const PROJECTS = [
     "demoUrl": "https://florascan-ai.vercel.app",
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2026-11-03"
+    "license": "MIT",
+    "latestRelease": null,
+    "createdAt": "2026-10-26",
+    "updatedAt": "2026-11-03",
+    "activityStatus": "active"
   },
   {
+    "id": 1467953458,
+    "slug": "reviseloop",
     "title": "reviseloop",
+    "aliases": [],
     "badge": "Featured",
+    "projectStatus": "active",
     "category": "web",
     "language": "HTML / JS",
     "langColor": "#e34c26",
+    "languageBreakdown": {
+      "JavaScript": {
+        "bytes": 129741,
+        "pct": 52.2
+      },
+      "CSS": {
+        "bytes": 71894,
+        "pct": 28.9
+      },
+      "HTML": {
+        "bytes": 46765,
+        "pct": 18.8
+      }
+    },
+    "tagline": "Study Smarter. Revise Faster. An interactive, offline-friendly MCQ workspace for Computer Science exam preparation.",
     "description": "A fast, zero-backend interactive MCQ practice, mock exam, and mistake-review platform built with vanilla HTML, CSS, and JavaScript, designed to run seamlessly both locally (file://) and on static hosts like GitHub Pages.",
+    "problemSolved": "Eliminates backend and CORS friction in Computer Science exam revision by providing an offline-capable, browser-based testing, mock exam, and mistake-tracking workspace.",
+    "keyFeatures": [
+      "Dynamic URL-driven multi-subject loading (quiz.html?subject=<id>) via classic script injection without CORS errors",
+      "Isolated per-subject localStorage persistence for progress, missed answers, and bookmarked questions",
+      "In-browser custom .json and .js question bank uploader with schema validation, syntax checking, and downloadable starter templates",
+      "Five study and exam modes: Study Bank, Sequential Quiz (with option shuffling and undoable reset), Mock Exam (10/25/50/100 questions, Instant Feedback vs. Exam Mode), Missed/Wrong Review (auto-clearing on retry), and Saved Review",
+      "Automatic difficulty classification (Easy, Medium, Hard) based on computational/structural complexity when explicit tags are omitted",
+      "Structured explanation callouts normalizing exp, explanation, and feedback fields",
+      "Comprehensive keyboard shortcuts (N/J/Down, K/Up, A-D/1-4, T, S, E, /, [, ?, Esc) and mobile floating quick-nav dock",
+      "Responsive collapsible sidebar with live completion/accuracy telemetry and persistent Light/Dark theme switching"
+    ],
+    "challengesSolved": [
+      "Eliminated browser file:// CORS issues without a bundler or server by using classic script injection and a global window.SITE_CONFIG registry",
+      "Prevented cross-course state collisions in browser storage via versioned, per-subject localStorage namespacing",
+      "Built heuristic auto-difficulty tagging to classify untagged MCQ banks into Easy, Medium, and Hard tiers"
+    ],
+    "resumeBullets": [
+      "Engineered a zero-backend, offline-compatible Computer Science MCQ and mock exam web platform using vanilla JavaScript, HTML5, and CSS3, deployed on GitHub Pages.",
+      "Architected a dynamic script-injection loader and schema-validated local file uploader supporting custom .json and .js question banks without CORS dependencies.",
+      "Built five interactive study workflows—including timed mock exams, mistake-tracking review, keyboard-driven navigation, and isolated localStorage persistence—for multi-semester CS coursework."
+    ],
     "tags": [
       "Computer Science",
       "Interactive Quiz",
       "Study Guide"
     ],
     "repoUrl": "https://github.com/asad-ali-sajjad/reviseloop",
-    "demoUrl": "http://asad-ali-sajjad.me/reviseloop/",
+    "demoUrl": "https://asad-ali-sajjad.me/reviseloop/",
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2026-11-27"
+    "license": null,
+    "latestRelease": null,
+    "createdAt": "2026-11-22",
+    "updatedAt": "2026-11-27",
+    "activityStatus": "active"
   },
   {
+    "id": 1100671650,
+    "slug": "clinic-appointment-system",
     "title": "clinic-appointment-system",
+    "aliases": [],
     "badge": "Pinned",
+    "projectStatus": "completed",
     "category": "web",
     "language": "PHP",
     "langColor": "#4F5D95",
+    "languageBreakdown": {
+      "PHP": {
+        "bytes": 308575,
+        "pct": 100.0
+      }
+    },
+    "tagline": "Reduce no-shows and admin time with a lightweight PHP/MySQL clinic booking system.",
     "description": "A multi-role online clinic appointment and management platform built with PHP 8, MySQL 8, and Bootstrap 5 that streamlines real-time slot scheduling, doctor availability and leave management, printable appointment tickets, and automated email notifications.",
+    "problemSolved": "Replaces manual clinic scheduling and reduces patient no-shows through real-time conflict-free slot booking, automated booking/cancellation emails, and scheduled 24-hour appointment reminders.",
+    "keyFeatures": [
+      "Role-based multi-panel dashboards for Patients, Doctors, and Administrators",
+      "Real-time appointment slot availability engine that prevents double-booking against weekly doctor schedules and approved leaves",
+      "Doctor schedule and leave management (doctor/schedule.php, doctor/leaves.php) with appointment completion tracking",
+      "Automated transactional email notifications via PHPMailer for booking confirmations (to both patient and doctor) and cancellations",
+      "Cron-scheduled 24-hour automated appointment reminder workflow (cron/)",
+      "Printable formatted patient appointment tickets (patient/print_ticket.php) and appointment history/cancellation tracking",
+      "SQL injection prevention via MySQLi prepared statements, session-based authentication middleware, and input sanitization"
+    ],
+    "challengesSolved": [
+      "Implemented conflict-free slot calculation that cross-references recurring weekly doctor schedules, approved leave windows, and active appointments to prevent double-bookings",
+      "Built an automated transactional email pipeline using PHPMailer and scheduled cron jobs for instant booking/cancellation alerts and 24-hour patient reminders",
+      "Enforced strict role-based access separation across Patient, Doctor, and Admin panels backed by MySQLi prepared statements"
+    ],
+    "resumeBullets": [
+      "Developed a full-stack Clinic Appointment Management System using PHP 8, MySQL 8, and Bootstrap 5 featuring separate portals for Patients, Doctors, and Administrators.",
+      "Engineered a conflict-free appointment slot engine accounting for weekly doctor schedules, leave periods, and active bookings, paired with printable patient appointment tickets.",
+      "Integrated PHPMailer and automated cron jobs for instant booking/cancellation notifications and 24-hour appointment reminders, securing database operations with MySQLi prepared statements."
+    ],
     "tags": [
       "PHP",
       "MySQL",
@@ -90,15 +338,42 @@ export const PROJECTS = [
     "demoUrl": null,
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2025-12-10"
+    "license": "MIT",
+    "latestRelease": null,
+    "createdAt": "2025-11-20",
+    "updatedAt": "2025-12-10",
+    "activityStatus": "dormant"
   },
   {
+    "id": 1016326857,
+    "slug": "bank-management-system",
     "title": "bank-management-system",
+    "aliases": [],
     "badge": "Pinned",
+    "projectStatus": "completed",
     "category": "systems",
     "language": "C++",
     "langColor": "#f34b7d",
+    "languageBreakdown": {},
+    "tagline": "A modular, role-based banking system with data persistence, built with C++ and data structures.",
     "description": "A C++17 command-line banking application featuring role-based access control (Admin and User), flat-file data persistence, input validation, and custom implementations of Linked Lists, Binary Search Trees (BST), and Stacks.",
+    "problemSolved": "Demonstrates structured financial account management, sorted customer lookups, and chronological transaction tracking in C++ without relying on external database engines.",
+    "keyFeatures": [
+      "Role-based access control separating Admin operations (create/modify/delete accounts, view raw or sorted customer records) from User operations (deposit/withdraw funds, balance inquiries, transaction history)",
+      "Custom Linked List (AccountNode) for dynamic in-memory account management and CRUD operations",
+      "Custom Binary Search Tree (AccountsBST) for alphabetically sorted account display by customer name",
+      "Custom LIFO Stack (TransactionStack) for tracking and displaying user transaction history",
+      "File-based data persistence automatically serializing and loading state from accounts.txt and transactions.txt",
+      "Built-in input validation guarding against invalid password lengths, negative balances/amounts, and malformed menu selections"
+    ],
+    "challengesSolved": [
+      "Designed and integrated three custom data structures—a Linked List, Binary Search Tree, and Stack—into a cohesive multi-file C++17 codebase without external database libraries",
+      "Engineered reliable flat-file serialization and deserialization across accounts.txt and transactions.txt while keeping sensitive runtime data gitignored"
+    ],
+    "resumeBullets": [
+      "Engineered a modular, role-based Bank Management System in C++17 featuring separate Admin and User workflows, input validation, and flat-file data persistence.",
+      "Implemented custom Linked List, Binary Search Tree (BST), and LIFO Stack modules from scratch to manage dynamic account CRUD operations, alphabetical account sorting, and timestamped transaction histories."
+    ],
     "tags": [
       "C++",
       "Data Structures",
@@ -109,15 +384,42 @@ export const PROJECTS = [
     "demoUrl": null,
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2025-07-29"
+    "license": "MIT",
+    "latestRelease": null,
+    "createdAt": "2025-07-08",
+    "updatedAt": "2025-07-29",
+    "activityStatus": "dormant"
   },
   {
+    "id": 1002349350,
+    "slug": "library-management-system-sql",
     "title": "library-management-system-sql",
+    "aliases": [],
     "badge": "Pinned",
+    "projectStatus": "completed",
     "category": "systems",
     "language": "TSQL",
     "langColor": "#e38c00",
+    "languageBreakdown": {},
+    "tagline": "A complete relational Library Management System engineered in MS SQL Server using T-SQL.",
     "description": "An end-to-end relational database design and implementation project built with Microsoft SQL Server and T-SQL, covering normalized schema modeling, DDL & DML operations, reporting views, scalar and table-valued functions, stored procedures, automated triggers, and ACID transactions.",
+    "problemSolved": "Automates core library workflows—including book borrowing, returns, overdue tracking, fine calculations, and audit logging—directly at the database engine level while enforcing strict referential integrity and transactional consistency.",
+    "keyFeatures": [
+      "Normalized multi-table relational schema enforcing data integrity with primary keys, foreign keys, constraints, and identity columns",
+      "Reusable reporting Views (04_Views.sql) for tracking overdue books and category-wise book inventories",
+      "Parameter-based Scalar and Table-Valued Functions (05_Functions.sql) for modular business calculations and queries",
+      "Stored Procedures (06_Procedures.sql) encapsulating core operations such as book borrowing, returns, and book/member registration",
+      "Automated DML Triggers (07_Triggers.sql) handling event-driven workflows such as automatic late-fine calculation and activity logging",
+      "Explicit ACID transaction management (08_Transactions.sql) utilizing BEGIN, COMMIT, and ROLLBACK to guarantee data consistency"
+    ],
+    "challengesSolved": [
+      "Encapsulated complex library circulation rules—borrowing, returns, and overdue fine calculations—inside database-level stored procedures, functions, and triggers",
+      "Guaranteed multi-step data consistency and rollback safety across concurrent circulation operations using explicit T-SQL transaction blocks"
+    ],
+    "resumeBullets": [
+      "Designed and implemented a relational Library Management System in Microsoft SQL Server using T-SQL, structured into an 8-stage modular deployment pipeline.",
+      "Engineered normalized tables with foreign-key constraints, reporting views, scalar/table-valued functions, stored procedures, automated fine-calculation triggers, and ACID-compliant transactions."
+    ],
     "tags": [
       "MS SQL Server",
       "T-SQL",
@@ -128,15 +430,51 @@ export const PROJECTS = [
     "demoUrl": null,
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2025-06-16"
+    "license": null,
+    "latestRelease": null,
+    "createdAt": "2025-06-15",
+    "updatedAt": "2025-06-16",
+    "activityStatus": "dormant"
   },
   {
+    "id": 1351337838,
+    "slug": "glimpse",
     "title": "glimpse",
+    "aliases": [],
     "badge": "Full-Stack",
+    "projectStatus": "wip",
     "category": "web",
     "language": "JavaScript",
     "langColor": "#f1e05a",
+    "languageBreakdown": {
+      "JavaScript": {
+        "bytes": 37848,
+        "pct": 98.7
+      },
+      "CSS": {
+        "bytes": 488,
+        "pct": 1.3
+      }
+    },
+    "tagline": "Modern social post-sharing platform built with Next.js and Supabase.",
     "description": "A full-stack social media web application built with Next.js (App Router), Supabase, and Tailwind CSS that enables users to authenticate, upload multimedia posts (captions, photos, and videos), and browse a chronologically sorted community feed.",
+    "problemSolved": "Provides a lightweight, serverless social media publishing and media-sharing experience with secure Row-Level Security (RLS) and cloud object storage without managing custom backend infrastructure.",
+    "keyFeatures": [
+      "Email/password user registration, login, and logout flows powered by Supabase Auth",
+      "Chronologically sorted public Community Feed displaying user posts in real time",
+      "Multimedia post creation supporting text captions, photos, and videos stored in Supabase Storage Buckets",
+      "Database access protection enforced via PostgreSQL Row-Level Security (RLS) policies",
+      "Responsive UI layout with global navigation bar and active route highlighting",
+      "Planned roadmap features: detailed post views with interactive comment threads, post likes/engagement counters, and user profile pages"
+    ],
+    "challengesSolved": [
+      "Integrated direct client-to-cloud photo and video uploads into Supabase Storage Buckets paired with chronological PostgreSQL feed rendering",
+      "Secured user-generated posts and storage access using Supabase Row-Level Security (RLS) policies and session-aware navigation redirects"
+    ],
+    "resumeBullets": [
+      "Built Glimpse, a full-stack social media post-sharing web application using Next.js (App Router), React, Tailwind CSS, and Supabase, deployed on Vercel.",
+      "Implemented email/password authentication, multimedia post creation (captions, images, and videos) with Supabase Storage Buckets, and Row-Level Security (RLS) policies."
+    ],
     "tags": [
       "Next.js",
       "Supabase",
@@ -146,15 +484,44 @@ export const PROJECTS = [
     "demoUrl": "https://glimpse-tawny.vercel.app",
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2026-08-30"
+    "license": null,
+    "latestRelease": null,
+    "createdAt": "2026-08-30",
+    "updatedAt": "2026-08-30",
+    "activityStatus": "maintained"
   },
   {
+    "id": 1015575583,
+    "slug": "business-nexus-frontend",
     "title": "business-nexus-frontend",
+    "aliases": [],
     "badge": "Full-Stack",
+    "projectStatus": "completed",
     "category": "web",
     "language": "JavaScript",
     "langColor": "#f1e05a",
+    "languageBreakdown": {},
+    "tagline": "A networking platform connecting entrepreneurs with investors featuring role-based authentication, dynamic dashboards, and real-time chat.",
     "description": "A React.js (Vite) and Tailwind CSS web application enabling entrepreneurs to showcase their startups and metrics while allowing investors to discover opportunities, send collaboration requests, and communicate via real-time Socket.IO chat—backed by the Business Nexus Node.js/MongoDB API on Render (with mirror deployment on Netlify).",
+    "problemSolved": "Bridges the discovery and communication gap between startup founders and investors by providing role-tailored dashboards, structured startup profiles, collaboration request workflows, and instant messaging.",
+    "keyFeatures": [
+      "Role-based authentication system with form validation, email verification simulation, and React Router v6 ProtectedRoute guards for Investor and Entrepreneur roles",
+      "Investor Dashboard (EntrepreneursList) displaying curated startup listings with industry and funding-stage filtering, quick-connect actions, and links to detailed entrepreneur profiles",
+      "Entrepreneur Dashboard (InvestorsRequests) managing incoming investor collaboration requests with accept/reject workflows, investor analytics, and connection metrics",
+      "Glassmorphism Profile Pages and Profile Editor (PUT /users/:id) supporting avatar URL validation, social links (LinkedIn, Twitter, Website), experience, industry, funding stage, traction, and team size",
+      "Real-time two-panel Socket.IO chat system (ChatList, ChatHeader, ChatMessages, ChatInput) featuring typing indicators, read receipts, auto-scroll, mobile view toggling, and WebSocket error handling",
+      "Reusable component design system, dynamic sidebar navigation (/profile/:role/:id, /chat/:role/:id), and React Error Boundaries"
+    ],
+    "challengesSolved": [
+      "Architected a modular real-time Socket.IO chat interface (ChatList, ChatHeader, ChatMessages, ChatInput) with typing indicators, read receipts, auto-scrolling, mobile drawer toggling, and WebSocket error recovery",
+      "Implemented role-isolated routing and dashboards for Investors and Entrepreneurs backed by both a live Render/MongoDB API and a local JSON Server fallback",
+      "Built rich profile editing and glassmorphism UI components with React Error Boundaries and dual cloud deployments across Vercel and Netlify"
+    ],
+    "resumeBullets": [
+      "Developed the frontend for Business Nexus, an entrepreneur-investor networking platform built with React.js (Vite), Tailwind CSS, React Router v6, and Context API, deployed on Vercel and Netlify.",
+      "Engineered a real-time two-panel messaging system using Socket.IO Client with typing indicators, read receipts, mobile responsive toggling, and WebSocket error handling.",
+      "Built role-based dashboards, protected routes, startup discovery filters (industry and funding stage), and full profile-editing workflows integrated with a Node.js/MongoDB REST API."
+    ],
     "tags": [
       "Frontend",
       "Dashboards",
@@ -164,15 +531,41 @@ export const PROJECTS = [
     "demoUrl": "https://business-nexus-phi.vercel.app",
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2025-07-25"
+    "license": null,
+    "latestRelease": null,
+    "createdAt": "2025-07-07",
+    "updatedAt": "2025-07-25",
+    "activityStatus": "dormant"
   },
   {
+    "id": 1019414360,
+    "slug": "business-nexus-backend",
     "title": "business-nexus-backend",
+    "aliases": [],
     "badge": "Backend API",
+    "projectStatus": "active",
     "category": "web",
     "language": "JavaScript",
     "langColor": "#f1e05a",
+    "languageBreakdown": {},
+    "tagline": "Empowering Connections Between Entrepreneurs and Investors — A RESTful API built with Express.js and MongoDB.",
     "description": "A Node.js and Express.js RESTful backend service leveraging MongoDB (via Mongoose) and Socket.io to manage user profiles, connection requests, and real-time/REST messaging for an entrepreneur-investor matchmaking platform.",
+    "problemSolved": "Provides a decoupled, scalable backend API for managing entrepreneur and investor profiles, role-filtered discovery, networking requests, and messaging with full CRUD support.",
+    "keyFeatures": [
+      "Full CRUD User Management API (/users) supporting role-based filtering (investor vs. entrepreneur), email lookup (/users/email/:email), interests, and startup portfolios",
+      "Connection & Proposal Request Management API (/requests) supporting full CRUD lifecycle between entrepreneurs and investors",
+      "Messaging & Real-Time Chat System combining REST endpoints (/messages) with Socket.io WebSocket connections",
+      "Automated MongoDB database seeding script (import-data.js) loading initial sample datasets from data/data.json",
+      "Cross-Origin Resource Sharing (CORS) configured for Vite/React local development (localhost:5173) and Netlify frontend deployments"
+    ],
+    "challengesSolved": [
+      "Architected a decoupled RESTful API and Socket.io messaging layer enabling seamless matchmaking and real-time chat between entrepreneurs and investors",
+      "Built an automated JSON-to-MongoDB seeding utility (import-data.js) and modular Mongoose route controllers for rapid local testing and Render cloud deployment"
+    ],
+    "resumeBullets": [
+      "Engineered a RESTful backend API using Node.js, Express.js, MongoDB (Mongoose), and Socket.io to power an entrepreneur-investor networking and messaging platform.",
+      "Designed modular CRUD routes and schemas for role-based user discovery (investors and entrepreneurs), connection requests, real-time chat connections, and automated MongoDB data seeding."
+    ],
     "tags": [
       "Express.js",
       "MongoDB",
@@ -182,6 +575,251 @@ export const PROJECTS = [
     "demoUrl": null,
     "stars": 0,
     "forks": 0,
-    "updatedAt": "2025-07-25"
+    "license": null,
+    "latestRelease": null,
+    "createdAt": "2025-07-14",
+    "updatedAt": "2025-07-25",
+    "activityStatus": "dormant"
+  }
+];
+
+export const ALL_REPOS = [
+  {
+    "slug": "reviseloop",
+    "featured": true,
+    "projectStatus": "active",
+    "category": "web",
+    "language": "JavaScript",
+    "tagline": "Study Smarter. Revise Faster. An interactive, offline-friendly MCQ workspace for Computer Science exam preparation.",
+    "description": "A fast, zero-backend interactive MCQ practice, mock exam, and mistake-review platform built with vanilla HTML, CSS, and JavaScript, designed to run seamlessly both locally (file://) and on static hosts like GitHub Pages.",
+    "stars": 0,
+    "updatedAt": "2026-11-27",
+    "activityStatus": "active",
+    "repoUrl": "https://github.com/asad-ali-sajjad/reviseloop",
+    "demoUrl": "https://asad-ali-sajjad.me/reviseloop/"
+  },
+  {
+    "slug": "asad-ali-sajjad.github.io",
+    "featured": false,
+    "projectStatus": "active",
+    "category": "web",
+    "language": "HTML",
+    "tagline": "Personal developer portfolio website showcasing full-stack web, AI/ML, and database projects.",
+    "description": "A responsive personal developer portfolio website built with HTML5, Tailwind CSS (CDN), and Vanilla JavaScript, hosted on GitHub Pages with automated HTTPS and a custom domain (asad-ali-sajjad.me) to showcase 8 flagship projects across AI/ML, full-stack web, C++, and SQL.",
+    "stars": 0,
+    "updatedAt": "2026-11-27",
+    "activityStatus": "active",
+    "repoUrl": "https://github.com/asad-ali-sajjad/asad-ali-sajjad.github.io",
+    "demoUrl": "https://asad-ali-sajjad.me/"
+  },
+  {
+    "slug": "mediai-care",
+    "featured": true,
+    "projectStatus": "active",
+    "category": "AI",
+    "language": "TypeScript",
+    "tagline": "Enterprise Multi-Clinic & Telemedicine Platform with Calibrated Human-in-the-Loop AI Screening.",
+    "description": "A multi-clinic appointment, operations, and clinical decision-support healthcare platform built with Next.js 15 and PostgreSQL, extended with a FastAPI AI sidecar for explainable skin-lesion screening and RAG health assistance.",
+    "stars": 0,
+    "updatedAt": "2026-11-10",
+    "activityStatus": "active",
+    "repoUrl": "https://github.com/asad-ali-sajjad/mediai-care",
+    "demoUrl": "https://mediai-care-gamma.vercel.app"
+  },
+  {
+    "slug": "plant-disease-diagnostic-system",
+    "featured": true,
+    "projectStatus": "completed",
+    "category": "ai",
+    "language": "Python",
+    "tagline": "FloraScan AI — A dual-engine computer vision dashboard that classifies tomato leaf health in seconds, and refuses to guess when it is unsure.",
+    "description": "An end-to-end deep learning web application built with PyTorch and Streamlit for real-time tomato leaf disease diagnosis across five classes (Healthy, Bacterial Spot, Early Blight, Late Blight, and Not Leaf), featuring side-by-side model benchmarking, confidence abstention gates, and downloadable diagnostic reports.",
+    "stars": 0,
+    "updatedAt": "2026-11-03",
+    "activityStatus": "active",
+    "repoUrl": "https://github.com/asad-ali-sajjad/plant-disease-diagnostic-system",
+    "demoUrl": "https://florascan-ai.vercel.app"
+  },
+  {
+    "slug": "glimpse",
+    "featured": true,
+    "projectStatus": "wip",
+    "category": "web",
+    "language": "JavaScript",
+    "tagline": "Modern social post-sharing platform built with Next.js and Supabase.",
+    "description": "A full-stack social media web application built with Next.js (App Router), Supabase, and Tailwind CSS that enables users to authenticate, upload multimedia posts (captions, photos, and videos), and browse a chronologically sorted community feed.",
+    "stars": 0,
+    "updatedAt": "2026-08-30",
+    "activityStatus": "maintained",
+    "repoUrl": "https://github.com/asad-ali-sajjad/glimpse",
+    "demoUrl": "https://glimpse-tawny.vercel.app"
+  },
+  {
+    "slug": "fittrack-app",
+    "featured": false,
+    "projectStatus": "wip",
+    "category": "web",
+    "language": "Java",
+    "tagline": "",
+    "description": "",
+    "stars": 0,
+    "updatedAt": "2026-06-11",
+    "activityStatus": "maintained",
+    "repoUrl": "https://github.com/asad-ali-sajjad/fittrack-app",
+    "demoUrl": null
+  },
+  {
+    "slug": "clinic-appointment-system",
+    "featured": true,
+    "projectStatus": "completed",
+    "category": "web",
+    "language": "PHP",
+    "tagline": "Reduce no-shows and admin time with a lightweight PHP/MySQL clinic booking system.",
+    "description": "A multi-role online clinic appointment and management platform built with PHP 8, MySQL 8, and Bootstrap 5 that streamlines real-time slot scheduling, doctor availability and leave management, printable appointment tickets, and automated email notifications.",
+    "stars": 0,
+    "updatedAt": "2025-12-10",
+    "activityStatus": "dormant",
+    "repoUrl": "https://github.com/asad-ali-sajjad/clinic-appointment-system",
+    "demoUrl": null
+  },
+  {
+    "slug": "recipe-app",
+    "featured": false,
+    "projectStatus": "completed",
+    "category": "web",
+    "language": "JavaScript",
+    "tagline": "A clean, responsive web application for finding and exploring recipes with smooth animations and detailed views.",
+    "description": "A responsive frontend web application built with HTML5, CSS3, and ES6+ JavaScript that integrates with TheMealDB API to let users search recipes by keyword, browse animated recipe cards, and inspect ingredients and cooking instructions in a modal.",
+    "stars": 0,
+    "updatedAt": "2025-08-03",
+    "activityStatus": "dormant",
+    "repoUrl": "https://github.com/asad-ali-sajjad/recipe-app",
+    "demoUrl": "https://asad-ali-sajjad.github.io/recipe-app/"
+  },
+  {
+    "slug": "weather-app-vanilla-js",
+    "featured": false,
+    "projectStatus": "completed",
+    "category": "web",
+    "language": "JavaScript",
+    "tagline": "A responsive weather application built with HTML, CSS, and JavaScript featuring real-time, location-based weather data.",
+    "description": "A responsive client-side weather web application built with vanilla HTML5, CSS3, and JavaScript that integrates with the OpenWeather API to fetch and display real-time weather conditions for searched locations with weather-appropriate imagery.",
+    "stars": 0,
+    "updatedAt": "2025-08-03",
+    "activityStatus": "dormant",
+    "repoUrl": "https://github.com/asad-ali-sajjad/weather-app-vanilla-js",
+    "demoUrl": "https://asad-ali-sajjad.github.io/weather-app-vanilla-js/"
+  },
+  {
+    "slug": "git-guide",
+    "featured": false,
+    "projectStatus": "completed",
+    "category": "web",
+    "language": "Markdown",
+    "tagline": "A practical, example-driven Git & GitHub commands reference guide to make version control straightforward.",
+    "description": "A comprehensive Markdown documentation repository covering essential Git commands, syntax, real-world usage scenarios, version-control best practices, and a quick-reference cheat sheet for solo and collaborative software development.",
+    "stars": 0,
+    "updatedAt": "2025-08-02",
+    "activityStatus": "dormant",
+    "repoUrl": "https://github.com/asad-ali-sajjad/git-guide",
+    "demoUrl": null
+  },
+  {
+    "slug": "docs",
+    "featured": false,
+    "projectStatus": "completed",
+    "category": "web",
+    "language": "Markdown",
+    "tagline": "A centralized collection of coding guides and reference materials for quick lookup and workflow streamlining.",
+    "description": "A structured Markdown documentation repository housing step-by-step developer guides across Tailwind CSS project setup, cross-language programming naming conventions, and Git/GitHub/VS Code workflows.",
+    "stars": 0,
+    "updatedAt": "2025-08-02",
+    "activityStatus": "dormant",
+    "repoUrl": "https://github.com/asad-ali-sajjad/docs",
+    "demoUrl": null
+  },
+  {
+    "slug": "bank-management-system",
+    "featured": true,
+    "projectStatus": "completed",
+    "category": "systems",
+    "language": "C++",
+    "tagline": "A modular, role-based banking system with data persistence, built with C++ and data structures.",
+    "description": "A C++17 command-line banking application featuring role-based access control (Admin and User), flat-file data persistence, input validation, and custom implementations of Linked Lists, Binary Search Trees (BST), and Stacks.",
+    "stars": 0,
+    "updatedAt": "2025-07-29",
+    "activityStatus": "dormant",
+    "repoUrl": "https://github.com/asad-ali-sajjad/bank-management-system",
+    "demoUrl": null
+  },
+  {
+    "slug": "business-nexus-backend",
+    "featured": true,
+    "projectStatus": "active",
+    "category": "web",
+    "language": "JavaScript",
+    "tagline": "Empowering Connections Between Entrepreneurs and Investors — A RESTful API built with Express.js and MongoDB.",
+    "description": "A Node.js and Express.js RESTful backend service leveraging MongoDB (via Mongoose) and Socket.io to manage user profiles, connection requests, and real-time/REST messaging for an entrepreneur-investor matchmaking platform.",
+    "stars": 0,
+    "updatedAt": "2025-07-25",
+    "activityStatus": "dormant",
+    "repoUrl": "https://github.com/asad-ali-sajjad/business-nexus-backend",
+    "demoUrl": null
+  },
+  {
+    "slug": "business-nexus-frontend",
+    "featured": true,
+    "projectStatus": "completed",
+    "category": "web",
+    "language": "JavaScript",
+    "tagline": "A networking platform connecting entrepreneurs with investors featuring role-based authentication, dynamic dashboards, and real-time chat.",
+    "description": "A React.js (Vite) and Tailwind CSS web application enabling entrepreneurs to showcase their startups and metrics while allowing investors to discover opportunities, send collaboration requests, and communicate via real-time Socket.IO chat—backed by the Business Nexus Node.js/MongoDB API on Render (with mirror deployment on Netlify).",
+    "stars": 0,
+    "updatedAt": "2025-07-25",
+    "activityStatus": "dormant",
+    "repoUrl": "https://github.com/asad-ali-sajjad/business-nexus-frontend",
+    "demoUrl": "https://business-nexus-phi.vercel.app"
+  },
+  {
+    "slug": "ecommerce-frontend-design",
+    "featured": false,
+    "projectStatus": "completed",
+    "category": "web",
+    "language": "JavaScript",
+    "tagline": "Desktop-optimized eCommerce frontend featuring dual-view product listings, interactive shopping cart, and utility pages.",
+    "description": "A multi-page desktop eCommerce storefront frontend built with semantic HTML5, CSS3 (Flexbox/Grid), Vanilla JavaScript (ES6+), and minimal Bootstrap as part of a frontend internship task, featuring Grid/List catalog views, multi-criteria filtering, product detail zoom/spec tabs, and interactive cart management.",
+    "stars": 0,
+    "updatedAt": "2025-06-24",
+    "activityStatus": "dormant",
+    "repoUrl": "https://github.com/asad-ali-sajjad/ecommerce-frontend-design",
+    "demoUrl": "https://asad-ali-sajjad.github.io/ecommerce-frontend-design/"
+  },
+  {
+    "slug": "library-management-system-sql",
+    "featured": true,
+    "projectStatus": "completed",
+    "category": "systems",
+    "language": "T-SQL",
+    "tagline": "A complete relational Library Management System engineered in MS SQL Server using T-SQL.",
+    "description": "An end-to-end relational database design and implementation project built with Microsoft SQL Server and T-SQL, covering normalized schema modeling, DDL & DML operations, reporting views, scalar and table-valued functions, stored procedures, automated triggers, and ACID transactions.",
+    "stars": 0,
+    "updatedAt": "2025-06-16",
+    "activityStatus": "dormant",
+    "repoUrl": "https://github.com/asad-ali-sajjad/library-management-system-sql",
+    "demoUrl": null
+  },
+  {
+    "slug": "todo-app",
+    "featured": false,
+    "projectStatus": "completed",
+    "category": "web",
+    "language": "JavaScript",
+    "tagline": "A modern, responsive to-do web app with CRUD functionality and localStorage persistence.",
+    "description": "A mobile-first, responsive task management web application built with vanilla HTML5, CSS3 (Flexbox/Grid), and JavaScript that supports full CRUD operations (create, inline edit, toggle completion, delete) with persistent browser localStorage and smooth UI animations.",
+    "stars": 0,
+    "updatedAt": "2025-06-04",
+    "activityStatus": "dormant",
+    "repoUrl": "https://github.com/asad-ali-sajjad/todo-app",
+    "demoUrl": "https://asad-ali-sajjad.github.io/todo-app/"
   }
 ];

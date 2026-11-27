@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "2.1.0",
   "last_synced": "2026-11-27",
   "profile": {
     "username": "asad-ali-sajjad",
@@ -14,10 +14,14 @@
     },
     "stats": {
       "total_github_repositories": 21,
-      "extracted_repositories_count": 16,
+      "extracted_repositories_count": 17,
       "profile_stars": 3,
       "contributions_last_year": 100,
-      "public_repos": 17
+      "public_repos": 17,
+      "followers": 0,
+      "following": 0,
+      "total_stars": 0,
+      "total_forks": 0
     },
     "pinned_repositories": [
       "mediai-care",
@@ -42,7 +46,8 @@
       "business-nexus-frontend",
       "ecommerce-frontend-design",
       "todo-app",
-      "asad-ali-sajjad.github.io"
+      "asad-ali-sajjad.github.io",
+      "fittrack-app"
     ],
     "roles": [
       "Full-Stack Web Developer",
@@ -62,14 +67,17 @@
       "category": "EdTech / Web Application / Exam Preparation",
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/reviseloop",
-        "live_demo_url": "http://asad-ali-sajjad.me/reviseloop/",
-        "docs_url": "https://github.com/asad-ali-sajjad/reviseloop#readme"
+        "live_demo_url": "https://asad-ali-sajjad.me/reviseloop/",
+        "docs_url": "https://github.com/asad-ali-sajjad/reviseloop#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/reviseloop.git",
+        "has_pages": true
       },
       "overview": {
         "tagline": "Study Smarter. Revise Faster. An interactive, offline-friendly MCQ workspace for Computer Science exam preparation.",
         "description": "A fast, zero-backend interactive MCQ practice, mock exam, and mistake-review platform built with vanilla HTML, CSS, and JavaScript, designed to run seamlessly both locally (file://) and on static hosts like GitHub Pages.",
         "problem_solved": "Eliminates backend and CORS friction in Computer Science exam revision by providing an offline-capable, browser-based testing, mock exam, and mistake-tracking workspace.",
-        "target_users": "Computer Science students preparing for semester exams and technical assessments."
+        "target_users": "Computer Science students preparing for semester exams and technical assessments.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "JavaScript",
@@ -92,7 +100,21 @@
         "tools_and_deployment": [
           "GitHub Pages",
           "Git"
-        ]
+        ],
+        "language_breakdown": {
+          "JavaScript": {
+            "bytes": 129741,
+            "pct": 52.2
+          },
+          "CSS": {
+            "bytes": 71894,
+            "pct": 28.9
+          },
+          "HTML": {
+            "bytes": 46765,
+            "pct": 18.8
+          }
+        }
       },
       "key_features": [
         "Dynamic URL-driven multi-subject loading (quiz.html?subject=<id>) via classic script injection without CORS errors",
@@ -168,7 +190,15 @@
         "commits_count": 9,
         "latest_version": null,
         "last_updated": "2026-11-27",
-        "github_id": 1467953458
+        "github_id": 1467953458,
+        "aliases": [],
+        "node_id": "R_kgDOV38xMg",
+        "full_name": "asad-ali-sajjad/reviseloop",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 244,
+        "created_at": "2026-11-22",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -193,7 +223,16 @@
           "Computer Science",
           "Interactive Quiz",
           "Study Guide"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 4,
+        "days_since_push": 0,
+        "status": "active"
       }
     },
     {
@@ -207,13 +246,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/mediai-care",
         "live_demo_url": "https://mediai-care-gamma.vercel.app",
-        "docs_url": "https://github.com/asad-ali-sajjad/mediai-care#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/mediai-care#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/mediai-care.git",
+        "has_pages": false
       },
       "overview": {
         "tagline": "Enterprise Multi-Clinic & Telemedicine Platform with Calibrated Human-in-the-Loop AI Screening.",
         "description": "A multi-clinic appointment, operations, and clinical decision-support healthcare platform built with Next.js 15 and PostgreSQL, extended with a FastAPI AI sidecar for explainable skin-lesion screening and RAG health assistance.",
         "problem_solved": "Digitizes traditional medical center workflows—replacing manual phone bookings, walk-in queues, and fragmented doctor schedules—while enforcing strict multi-tenant data isolation and double-booking prevention at the database layer.",
-        "target_users": "Multi-branch clinics, clinic administrators, doctors, receptionists, and patients."
+        "target_users": "Multi-branch clinics, clinic administrators, doctors, receptionists, and patients.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "TypeScript",
@@ -247,7 +289,29 @@
           "Docker (docker-compose)",
           "Git & Git Hooks (.githooks)",
           "tsx"
-        ]
+        ],
+        "language_breakdown": {
+          "TypeScript": {
+            "bytes": 107879,
+            "pct": 93.5
+          },
+          "PLpgSQL": {
+            "bytes": 4643,
+            "pct": 4.0
+          },
+          "JavaScript": {
+            "bytes": 1250,
+            "pct": 1.1
+          },
+          "CSS": {
+            "bytes": 807,
+            "pct": 0.7
+          },
+          "Shell": {
+            "bytes": 781,
+            "pct": 0.7
+          }
+        }
       },
       "key_features": [
         "Multi-tenant SaaS architecture with strict database-level clinic isolation (clinicId scoping and appt_tenant_guard trigger)",
@@ -336,7 +400,15 @@
         "commits_count": 12,
         "latest_version": null,
         "last_updated": "2026-11-10",
-        "github_id": 1445941900
+        "github_id": 1445941900,
+        "aliases": [],
+        "node_id": "R_kgDOVi9SjA",
+        "full_name": "asad-ali-sajjad/mediai-care",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 153,
+        "created_at": "2026-11-04",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -354,7 +426,7 @@
         "featured": true,
         "order": 1,
         "badge": "Pinned",
-        "category": "systems",
+        "category": "AI",
         "language": "TypeScript",
         "langColor": "#3178c6",
         "tags": [
@@ -362,7 +434,16 @@
           "React (Server Components & Server Actions)",
           "Tailwind CSS",
           "Prisma 6"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 23,
+        "days_since_push": 17,
+        "status": "active"
       }
     },
     {
@@ -376,13 +457,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/plant-disease-diagnostic-system",
         "live_demo_url": "https://florascan-ai.vercel.app",
-        "docs_url": "https://florascan-ai.vercel.app/"
+        "docs_url": "https://florascan-ai.vercel.app/",
+        "clone_url": "https://github.com/asad-ali-sajjad/plant-disease-diagnostic-system.git",
+        "has_pages": false
       },
       "overview": {
         "tagline": "FloraScan AI — A dual-engine computer vision dashboard that classifies tomato leaf health in seconds, and refuses to guess when it is unsure.",
         "description": "An end-to-end deep learning web application built with PyTorch and Streamlit for real-time tomato leaf disease diagnosis across five classes (Healthy, Bacterial Spot, Early Blight, Late Blight, and Not Leaf), featuring side-by-side model benchmarking, confidence abstention gates, and downloadable diagnostic reports.",
         "problem_solved": "Provides rapid, accessible plant pathology diagnostics while preventing overconfident false-positive predictions on uncertain or non-leaf images via a 65% confidence safety threshold and synthetic out-of-distribution rejection.",
-        "target_users": "Farmers, agronomists, agricultural researchers, and home gardeners."
+        "target_users": "Farmers, agronomists, agricultural researchers, and home gardeners.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "Python",
@@ -411,7 +495,29 @@
           "Git & Git LFS",
           "GitHub Actions (keep_alive.yml)",
           "Dev Containers (.devcontainer)"
-        ]
+        ],
+        "language_breakdown": {
+          "Jupyter Notebook": {
+            "bytes": 340378,
+            "pct": 75.1
+          },
+          "Python": {
+            "bytes": 51373,
+            "pct": 11.3
+          },
+          "HTML": {
+            "bytes": 49861,
+            "pct": 11.0
+          },
+          "CSS": {
+            "bytes": 10857,
+            "pct": 2.4
+          },
+          "JavaScript": {
+            "bytes": 808,
+            "pct": 0.2
+          }
+        }
       },
       "key_features": [
         "Multi-engine inference switcher supporting Custom 3-Block CNN (96.53% test accuracy, 724/750) and ResNet-18 transfer learning (94.13% test accuracy, 706/750)",
@@ -482,7 +588,15 @@
         "commits_count": 37,
         "latest_version": null,
         "last_updated": "2026-11-03",
-        "github_id": 1434686994
+        "github_id": 1434686994,
+        "aliases": [],
+        "node_id": "R_kgDOVYOWEg",
+        "full_name": "asad-ali-sajjad/plant-disease-diagnostic-system",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 100383,
+        "created_at": "2026-10-26",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -508,7 +622,16 @@
           "Streamlit",
           "Deep Learning",
           "Computer Vision"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 32,
+        "days_since_push": 23,
+        "status": "active"
       }
     },
     {
@@ -522,13 +645,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/clinic-appointment-system",
         "live_demo_url": null,
-        "docs_url": "https://github.com/asad-ali-sajjad/clinic-appointment-system#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/clinic-appointment-system#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/clinic-appointment-system.git",
+        "has_pages": false
       },
       "overview": {
         "tagline": "Reduce no-shows and admin time with a lightweight PHP/MySQL clinic booking system.",
         "description": "A multi-role online clinic appointment and management platform built with PHP 8, MySQL 8, and Bootstrap 5 that streamlines real-time slot scheduling, doctor availability and leave management, printable appointment tickets, and automated email notifications.",
         "problem_solved": "Replaces manual clinic scheduling and reduces patient no-shows through real-time conflict-free slot booking, automated booking/cancellation emails, and scheduled 24-hour appointment reminders.",
-        "target_users": "Healthcare clinics, clinic administrators, doctors, and patients."
+        "target_users": "Healthcare clinics, clinic administrators, doctors, and patients.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "PHP",
@@ -555,7 +681,13 @@
           "Apache / Nginx / PHP Built-in Server",
           "Cron (scheduled 24-hour reminder jobs)",
           "Git"
-        ]
+        ],
+        "language_breakdown": {
+          "PHP": {
+            "bytes": 308575,
+            "pct": 100.0
+          }
+        }
       },
       "key_features": [
         "Role-based multi-panel dashboards for Patients, Doctors, and Administrators",
@@ -649,7 +781,15 @@
         "commits_count": 16,
         "latest_version": null,
         "last_updated": "2025-12-10",
-        "github_id": 1100671650
+        "github_id": 1100671650,
+        "aliases": [],
+        "node_id": "R_kgDOQZrqog",
+        "full_name": "asad-ali-sajjad/clinic-appointment-system",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 2823,
+        "created_at": "2025-11-20",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -675,7 +815,16 @@
           "MySQL",
           "Healthcare",
           "Booking"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 372,
+        "days_since_push": 351,
+        "status": "dormant"
       }
     },
     {
@@ -689,13 +838,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/glimpse",
         "live_demo_url": "https://glimpse-tawny.vercel.app",
-        "docs_url": "https://github.com/asad-ali-sajjad/glimpse#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/glimpse#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/glimpse.git",
+        "has_pages": false
       },
       "overview": {
         "tagline": "Modern social post-sharing platform built with Next.js and Supabase.",
         "description": "A full-stack social media web application built with Next.js (App Router), Supabase, and Tailwind CSS that enables users to authenticate, upload multimedia posts (captions, photos, and videos), and browse a chronologically sorted community feed.",
         "problem_solved": "Provides a lightweight, serverless social media publishing and media-sharing experience with secure Row-Level Security (RLS) and cloud object storage without managing custom backend infrastructure.",
-        "target_users": "Everyday social media users and online communities sharing photos, videos, and status updates."
+        "target_users": "Everyday social media users and online communities sharing photos, videos, and status updates.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "JavaScript",
@@ -726,7 +878,17 @@
           "PostCSS",
           "npm",
           "Git"
-        ]
+        ],
+        "language_breakdown": {
+          "JavaScript": {
+            "bytes": 37848,
+            "pct": 98.7
+          },
+          "CSS": {
+            "bytes": 488,
+            "pct": 1.3
+          }
+        }
       },
       "key_features": [
         "Email/password user registration, login, and logout flows powered by Supabase Auth",
@@ -795,7 +957,15 @@
         "commits_count": 10,
         "latest_version": null,
         "last_updated": "2026-08-30",
-        "github_id": 1351337838
+        "github_id": 1351337838,
+        "aliases": [],
+        "node_id": "R_kgDOUIvHbg",
+        "full_name": "asad-ali-sajjad/glimpse",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 82,
+        "created_at": "2026-08-30",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -818,7 +988,16 @@
           "Next.js",
           "Supabase",
           "Social App"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 89,
+        "days_since_push": 88,
+        "status": "maintained"
       }
     },
     {
@@ -832,13 +1011,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/bank-management-system",
         "live_demo_url": null,
-        "docs_url": "https://github.com/asad-ali-sajjad/bank-management-system#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/bank-management-system#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/bank-management-system.git",
+        "has_pages": false
       },
       "overview": {
         "tagline": "A modular, role-based banking system with data persistence, built with C++ and data structures.",
         "description": "A C++17 command-line banking application featuring role-based access control (Admin and User), flat-file data persistence, input validation, and custom implementations of Linked Lists, Binary Search Trees (BST), and Stacks.",
         "problem_solved": "Demonstrates structured financial account management, sorted customer lookups, and chronological transaction tracking in C++ without relying on external database engines.",
-        "target_users": "Computer Science students, instructors, and developers studying applied C++ data structures and modular CLI software design."
+        "target_users": "Computer Science students, instructors, and developers studying applied C++ data structures and modular CLI software design.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "C++",
@@ -855,7 +1037,8 @@
         "tools_and_deployment": [
           "g++ / MinGW (C++17 Compiler)",
           "Git"
-        ]
+        ],
+        "language_breakdown": {}
       },
       "key_features": [
         "Role-based access control separating Admin operations (create/modify/delete accounts, view raw or sorted customer records) from User operations (deposit/withdraw funds, balance inquiries, transaction history)",
@@ -917,7 +1100,15 @@
         "commits_count": 3,
         "latest_version": null,
         "last_updated": "2025-07-29",
-        "github_id": 1016326857
+        "github_id": 1016326857,
+        "aliases": [],
+        "node_id": "R_kgDOPJPqyQ",
+        "full_name": "asad-ali-sajjad/bank-management-system",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 15,
+        "created_at": "2025-07-08",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -941,7 +1132,16 @@
           "Data Structures",
           "CLI",
           "RBAC"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 506,
+        "days_since_push": 486,
+        "status": "dormant"
       }
     },
     {
@@ -955,13 +1155,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/library-management-system-sql",
         "live_demo_url": null,
-        "docs_url": "https://github.com/asad-ali-sajjad/library-management-system-sql#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/library-management-system-sql#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/library-management-system-sql.git",
+        "has_pages": false
       },
       "overview": {
         "tagline": "A complete relational Library Management System engineered in MS SQL Server using T-SQL.",
         "description": "An end-to-end relational database design and implementation project built with Microsoft SQL Server and T-SQL, covering normalized schema modeling, DDL & DML operations, reporting views, scalar and table-valued functions, stored procedures, automated triggers, and ACID transactions.",
         "problem_solved": "Automates core library workflows—including book borrowing, returns, overdue tracking, fine calculations, and audit logging—directly at the database engine level while enforcing strict referential integrity and transactional consistency.",
-        "target_users": "Database administrators, backend engineers, and Computer Science students studying enterprise T-SQL and MS SQL Server database design."
+        "target_users": "Database administrators, backend engineers, and Computer Science students studying enterprise T-SQL and MS SQL Server database design.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "T-SQL",
@@ -977,7 +1180,8 @@
         "tools_and_deployment": [
           "SQL Server Management Studio (SSMS)",
           "Git"
-        ]
+        ],
+        "language_breakdown": {}
       },
       "key_features": [
         "Normalized multi-table relational schema enforcing data integrity with primary keys, foreign keys, constraints, and identity columns",
@@ -1032,7 +1236,15 @@
         "commits_count": 1,
         "latest_version": null,
         "last_updated": "2025-06-16",
-        "github_id": 1002349350
+        "github_id": 1002349350,
+        "aliases": [],
+        "node_id": "R_kgDOO76jJg",
+        "full_name": "asad-ali-sajjad/library-management-system-sql",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 162,
+        "created_at": "2025-06-15",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1056,7 +1268,16 @@
           "T-SQL",
           "Triggers",
           "Stored Procedures"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 530,
+        "days_since_push": 529,
+        "status": "dormant"
       }
     },
     {
@@ -1070,13 +1291,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/recipe-app",
         "live_demo_url": "https://asad-ali-sajjad.github.io/recipe-app/",
-        "docs_url": "https://github.com/asad-ali-sajjad/recipe-app#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/recipe-app#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/recipe-app.git",
+        "has_pages": true
       },
       "overview": {
         "tagline": "A clean, responsive web application for finding and exploring recipes with smooth animations and detailed views.",
         "description": "A responsive frontend web application built with HTML5, CSS3, and ES6+ JavaScript that integrates with TheMealDB API to let users search recipes by keyword, browse animated recipe cards, and inspect ingredients and cooking instructions in a modal.",
         "problem_solved": "Simplifies recipe discovery and meal preparation by providing instant keyword search, clean visual cards, and structured ingredient and instruction breakdowns without requiring user accounts or page reloads.",
-        "target_users": "Home cooks, food enthusiasts, and anyone looking for quick recipe ideas and step-by-step cooking instructions."
+        "target_users": "Home cooks, food enthusiasts, and anyone looking for quick recipe ideas and step-by-step cooking instructions.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "JavaScript",
@@ -1097,7 +1321,8 @@
           "GitHub Pages",
           "Live Server",
           "Git"
-        ]
+        ],
+        "language_breakdown": {}
       },
       "key_features": [
         "Keyword-based recipe search powered by asynchronous integration with TheMealDB API",
@@ -1145,7 +1370,15 @@
         "commits_count": 8,
         "latest_version": null,
         "last_updated": "2025-08-03",
-        "github_id": 994891340
+        "github_id": 994891340,
+        "aliases": [],
+        "node_id": "R_kgDOO0zWTA",
+        "full_name": "asad-ali-sajjad/recipe-app",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 719,
+        "created_at": "2025-06-02",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1166,7 +1399,16 @@
         "langColor": "#f1e05a",
         "tags": [
           "Vanilla JavaScript (ES6+)"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 543,
+        "days_since_push": 480,
+        "status": "dormant"
       }
     },
     {
@@ -1180,13 +1422,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/weather-app-vanilla-js",
         "live_demo_url": "https://asad-ali-sajjad.github.io/weather-app-vanilla-js/",
-        "docs_url": "https://github.com/asad-ali-sajjad/weather-app-vanilla-js#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/weather-app-vanilla-js#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/weather-app-vanilla-js.git",
+        "has_pages": true
       },
       "overview": {
         "tagline": "A responsive weather application built with HTML, CSS, and JavaScript featuring real-time, location-based weather data.",
         "description": "A responsive client-side weather web application built with vanilla HTML5, CSS3, and JavaScript that integrates with the OpenWeather API to fetch and display real-time weather conditions for searched locations with weather-appropriate imagery.",
         "problem_solved": "Provides instant, accessible real-time weather lookups by city or location name through a lightweight, zero-dependency browser interface.",
-        "target_users": "Everyday users, travelers, and commuters checking real-time local or global weather conditions."
+        "target_users": "Everyday users, travelers, and commuters checking real-time local or global weather conditions.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "JavaScript",
@@ -1206,7 +1451,8 @@
         "tools_and_deployment": [
           "GitHub Pages",
           "Git"
-        ]
+        ],
+        "language_breakdown": {}
       },
       "key_features": [
         "Real-time weather data retrieval powered by asynchronous OpenWeather API integration",
@@ -1259,7 +1505,15 @@
         "commits_count": 5,
         "latest_version": null,
         "last_updated": "2025-08-03",
-        "github_id": 979504947
+        "github_id": 979504947,
+        "aliases": [],
+        "node_id": "R_kgDOOmIPMw",
+        "full_name": "asad-ali-sajjad/weather-app-vanilla-js",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 5042,
+        "created_at": "2025-05-07",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1280,7 +1534,16 @@
         "langColor": "#f1e05a",
         "tags": [
           "Vanilla JavaScript"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 569,
+        "days_since_push": 481,
+        "status": "dormant"
       }
     },
     {
@@ -1294,13 +1557,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/git-guide",
         "live_demo_url": null,
-        "docs_url": "https://github.com/asad-ali-sajjad/git-guide#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/git-guide#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/git-guide.git",
+        "has_pages": false
       },
       "overview": {
         "tagline": "A practical, example-driven Git & GitHub commands reference guide to make version control straightforward.",
         "description": "A comprehensive Markdown documentation repository covering essential Git commands, syntax, real-world usage scenarios, version-control best practices, and a quick-reference cheat sheet for solo and collaborative software development.",
         "problem_solved": "Reduces version-control friction and command lookup overhead by organizing everyday, branching, and history-recovery Git workflows with clear explanations and practical examples.",
-        "target_users": "Developers, Computer Science students, and engineering teams learning or referencing Git and GitHub workflows."
+        "target_users": "Developers, Computer Science students, and engineering teams learning or referencing Git and GitHub workflows.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "Markdown",
@@ -1316,7 +1582,8 @@
           "Git",
           "GitHub",
           "CLI / Bash / PowerShell"
-        ]
+        ],
+        "language_breakdown": {}
       },
       "key_features": [
         "Structured 14-part command reference covering setup (git config), initialization (git init, git clone), status/staging/commits (git status, git add, git commit), and history inspection (git log)",
@@ -1359,7 +1626,15 @@
         "commits_count": 2,
         "latest_version": null,
         "last_updated": "2025-08-02",
-        "github_id": 1029631361
+        "github_id": 1029631361,
+        "aliases": [],
+        "node_id": "R_kgDOPV7tgQ",
+        "full_name": "asad-ali-sajjad/git-guide",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 7,
+        "created_at": "2025-07-31",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1376,7 +1651,16 @@
         "category": "web",
         "language": "Markdown",
         "langColor": "#083fa1",
-        "tags": []
+        "tags": [],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 484,
+        "days_since_push": 481,
+        "status": "dormant"
       }
     },
     {
@@ -1390,13 +1674,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/docs",
         "live_demo_url": null,
-        "docs_url": "https://github.com/asad-ali-sajjad/docs#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/docs#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/docs.git",
+        "has_pages": false
       },
       "overview": {
         "tagline": "A centralized collection of coding guides and reference materials for quick lookup and workflow streamlining.",
         "description": "A structured Markdown documentation repository housing step-by-step developer guides across Tailwind CSS project setup, cross-language programming naming conventions, and Git/GitHub/VS Code workflows.",
         "problem_solved": "Centralizes frequently referenced developer setup instructions, code-style naming standards, and version-control workflows into a single, navigable knowledge base for rapid lookup.",
-        "target_users": "Software developers, Computer Science students, and open-source contributors seeking concise technical reference guides."
+        "target_users": "Software developers, Computer Science students, and open-source contributors seeking concise technical reference guides.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "Markdown",
@@ -1412,7 +1699,8 @@
           "Git",
           "GitHub",
           "VS Code"
-        ]
+        ],
+        "language_breakdown": {}
       },
       "key_features": [
         "Categorized developer knowledge base organized into modular topic directories (CSS Guides, Naming Conventions, Git Guides)",
@@ -1456,7 +1744,15 @@
         "commits_count": 5,
         "latest_version": null,
         "last_updated": "2025-08-02",
-        "github_id": 1029842811
+        "github_id": 1029842811,
+        "aliases": [],
+        "node_id": "R_kgDOPWInew",
+        "full_name": "asad-ali-sajjad/docs",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 15,
+        "created_at": "2025-07-31",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1473,7 +1769,16 @@
         "category": "web",
         "language": "Markdown",
         "langColor": "#083fa1",
-        "tags": []
+        "tags": [],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 484,
+        "days_since_push": 482,
+        "status": "dormant"
       }
     },
     {
@@ -1487,13 +1792,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/business-nexus-backend",
         "live_demo_url": null,
-        "docs_url": "https://github.com/asad-ali-sajjad/business-nexus-backend#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/business-nexus-backend#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/business-nexus-backend.git",
+        "has_pages": false
       },
       "overview": {
         "tagline": "Empowering Connections Between Entrepreneurs and Investors — A RESTful API built with Express.js and MongoDB.",
         "description": "A Node.js and Express.js RESTful backend service leveraging MongoDB (via Mongoose) and Socket.io to manage user profiles, connection requests, and real-time/REST messaging for an entrepreneur-investor matchmaking platform.",
         "problem_solved": "Provides a decoupled, scalable backend API for managing entrepreneur and investor profiles, role-filtered discovery, networking requests, and messaging with full CRUD support.",
-        "target_users": "Entrepreneurs, startup founders, investors, and frontend web applications."
+        "target_users": "Entrepreneurs, startup founders, investors, and frontend web applications.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "JavaScript",
@@ -1519,7 +1827,8 @@
           "Render",
           "npm",
           "Git"
-        ]
+        ],
+        "language_breakdown": {}
       },
       "key_features": [
         "Full CRUD User Management API (/users) supporting role-based filtering (investor vs. entrepreneur), email lookup (/users/email/:email), interests, and startup portfolios",
@@ -1585,7 +1894,15 @@
         "commits_count": 10,
         "latest_version": null,
         "last_updated": "2025-07-25",
-        "github_id": 1019414360
+        "github_id": 1019414360,
+        "aliases": [],
+        "node_id": "R_kgDOPMMHWA",
+        "full_name": "asad-ali-sajjad/business-nexus-backend",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 30,
+        "created_at": "2025-07-14",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1608,7 +1925,16 @@
           "Express.js",
           "MongoDB",
           "REST API"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 501,
+        "days_since_push": 489,
+        "status": "dormant"
       }
     },
     {
@@ -1622,13 +1948,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/business-nexus-frontend",
         "live_demo_url": "https://business-nexus-phi.vercel.app",
-        "docs_url": "https://github.com/asad-ali-sajjad/business-nexus-frontend#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/business-nexus-frontend#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/business-nexus-frontend.git",
+        "has_pages": false
       },
       "overview": {
         "tagline": "A networking platform connecting entrepreneurs with investors featuring role-based authentication, dynamic dashboards, and real-time chat.",
         "description": "A React.js (Vite) and Tailwind CSS web application enabling entrepreneurs to showcase their startups and metrics while allowing investors to discover opportunities, send collaboration requests, and communicate via real-time Socket.IO chat—backed by the Business Nexus Node.js/MongoDB API on Render (with mirror deployment on Netlify).",
         "problem_solved": "Bridges the discovery and communication gap between startup founders and investors by providing role-tailored dashboards, structured startup profiles, collaboration request workflows, and instant messaging.",
-        "target_users": "Entrepreneurs, startup founders, angel investors, and venture collaborators."
+        "target_users": "Entrepreneurs, startup founders, angel investors, and venture collaborators.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "JavaScript",
@@ -1665,7 +1994,8 @@
           "JSON Server",
           "npm",
           "Git"
-        ]
+        ],
+        "language_breakdown": {}
       },
       "key_features": [
         "Role-based authentication system with form validation, email verification simulation, and React Router v6 ProtectedRoute guards for Investor and Entrepreneur roles",
@@ -1735,7 +2065,15 @@
         "commits_count": 19,
         "latest_version": null,
         "last_updated": "2025-07-25",
-        "github_id": 1015575583
+        "github_id": 1015575583,
+        "aliases": [],
+        "node_id": "R_kgDOPIh0Hw",
+        "full_name": "asad-ali-sajjad/business-nexus-frontend",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 3907,
+        "created_at": "2025-07-07",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1760,7 +2098,16 @@
           "Frontend",
           "Dashboards",
           "Real-Time Chat"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 507,
+        "days_since_push": 490,
+        "status": "dormant"
       }
     },
     {
@@ -1774,13 +2121,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/ecommerce-frontend-design",
         "live_demo_url": "https://asad-ali-sajjad.github.io/ecommerce-frontend-design/",
-        "docs_url": "https://github.com/asad-ali-sajjad/ecommerce-frontend-design#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/ecommerce-frontend-design#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/ecommerce-frontend-design.git",
+        "has_pages": true
       },
       "overview": {
         "tagline": "Desktop-optimized eCommerce frontend featuring dual-view product listings, interactive shopping cart, and utility pages.",
         "description": "A multi-page desktop eCommerce storefront frontend built with semantic HTML5, CSS3 (Flexbox/Grid), Vanilla JavaScript (ES6+), and minimal Bootstrap as part of a frontend internship task, featuring Grid/List catalog views, multi-criteria filtering, product detail zoom/spec tabs, and interactive cart management.",
         "problem_solved": "Delivers a complete, structured online retail user interface—from product discovery and filtering to detailed inspection, cart adjustments, and graceful fallback/404 routing—without backend dependencies.",
-        "target_users": "Online retail shoppers (desktop storefront experience) and frontend engineering evaluators."
+        "target_users": "Online retail shoppers (desktop storefront experience) and frontend engineering evaluators.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "JavaScript",
@@ -1800,7 +2150,8 @@
         "tools_and_deployment": [
           "GitHub Pages",
           "Git"
-        ]
+        ],
+        "language_breakdown": {}
       },
       "key_features": [
         "Desktop storefront header with search bar, dropdown navigation, and structured footer with quick links and contact information",
@@ -1846,7 +2197,15 @@
         "commits_count": 4,
         "latest_version": null,
         "last_updated": "2025-06-24",
-        "github_id": 999061871
+        "github_id": 999061871,
+        "aliases": [],
+        "node_id": "R_kgDOO4x5bw",
+        "full_name": "asad-ali-sajjad/ecommerce-frontend-design",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 11126,
+        "created_at": "2025-06-09",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1868,7 +2227,16 @@
         "tags": [
           "Vanilla JavaScript (ES6+)",
           "Bootstrap (Minimal layout helpers)"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 536,
+        "days_since_push": 520,
+        "status": "dormant"
       }
     },
     {
@@ -1882,13 +2250,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/todo-app",
         "live_demo_url": "https://asad-ali-sajjad.github.io/todo-app/",
-        "docs_url": "https://github.com/asad-ali-sajjad/todo-app#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/todo-app#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/todo-app.git",
+        "has_pages": true
       },
       "overview": {
         "tagline": "A modern, responsive to-do web app with CRUD functionality and localStorage persistence.",
         "description": "A mobile-first, responsive task management web application built with vanilla HTML5, CSS3 (Flexbox/Grid), and JavaScript that supports full CRUD operations (create, inline edit, toggle completion, delete) with persistent browser localStorage and smooth UI animations.",
         "problem_solved": "Provides lightweight, offline-capable personal task tracking in the browser with instant inline editing and persistent storage across sessions without requiring user accounts or backend infrastructure.",
-        "target_users": "Everyday users, students, and professionals looking for a fast, distraction-free browser task manager."
+        "target_users": "Everyday users, students, and professionals looking for a fast, distraction-free browser task manager.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "JavaScript",
@@ -1910,7 +2281,8 @@
         "tools_and_deployment": [
           "GitHub Pages",
           "Git"
-        ]
+        ],
+        "language_breakdown": {}
       },
       "key_features": [
         "Full CRUD task management: quickly add tasks, edit tasks inline with a single click, mark tasks complete with visual feedback, and delete tasks",
@@ -1957,7 +2329,15 @@
         "commits_count": 3,
         "latest_version": null,
         "last_updated": "2025-06-04",
-        "github_id": 989206284
+        "github_id": 989206284,
+        "aliases": [],
+        "node_id": "R_kgDOOvYXDA",
+        "full_name": "asad-ali-sajjad/todo-app",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 407,
+        "created_at": "2025-05-23",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1978,7 +2358,16 @@
         "langColor": "#f1e05a",
         "tags": [
           "Vanilla JavaScript"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 552,
+        "days_since_push": 540,
+        "status": "dormant"
       }
     },
     {
@@ -1992,13 +2381,16 @@
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/asad-ali-sajjad.github.io",
         "live_demo_url": "https://asad-ali-sajjad.me/",
-        "docs_url": "https://github.com/asad-ali-sajjad/asad-ali-sajjad.github.io#readme"
+        "docs_url": "https://github.com/asad-ali-sajjad/asad-ali-sajjad.github.io#readme",
+        "clone_url": "https://github.com/asad-ali-sajjad/asad-ali-sajjad.github.io.git",
+        "has_pages": true
       },
       "overview": {
         "tagline": "Personal developer portfolio website showcasing full-stack web, AI/ML, and database projects.",
         "description": "A responsive personal developer portfolio website built with HTML5, Tailwind CSS (CDN), and Vanilla JavaScript, hosted on GitHub Pages with automated HTTPS and a custom domain (asad-ali-sajjad.me) to showcase 8 flagship projects across AI/ML, full-stack web, C++, and SQL.",
         "problem_solved": "Centralizes flagship engineering projects across multiple technical domains into an interactive, filterable portfolio hub with one-click contact actions and direct GitHub source links.",
-        "target_users": "Recruiters, hiring managers, technical collaborators, and freelance clients."
+        "target_users": "Recruiters, hiring managers, technical collaborators, and freelance clients.",
+        "highlights": []
       },
       "tech_stack": {
         "primary_language": "HTML",
@@ -2022,7 +2414,8 @@
           "GitHub Pages (Automated HTTPS)",
           "Custom Domain (CNAME)",
           "Git"
-        ]
+        ],
+        "language_breakdown": {}
       },
       "key_features": [
         "Modern dark-mode developer UI built with Tailwind CSS, glassmorphism navigation, Inter & JetBrains Mono typography, and a mobile-first responsive layout",
@@ -2066,7 +2459,15 @@
         "commits_count": 4,
         "latest_version": null,
         "last_updated": "2026-11-27",
-        "github_id": 1468493960
+        "github_id": 1468493960,
+        "aliases": [],
+        "node_id": "R_kgDOV4dwiA",
+        "full_name": "asad-ali-sajjad/asad-ali-sajjad.github.io",
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 57,
+        "created_at": "2026-11-23",
+        "latest_release": null
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -2088,8 +2489,205 @@
         "tags": [
           "Tailwind CSS (CDN)",
           "Vanilla JavaScript"
-        ]
+        ],
+        "highlights": []
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 4,
+        "days_since_push": 0,
+        "status": "active"
       }
+    },
+    {
+      "name": "fittrack-app",
+      "visibility": "public",
+      "is_pinned": false,
+      "category": "Java",
+      "overview": {
+        "tagline": "",
+        "description": "",
+        "highlights": [],
+        "problem_solved": "",
+        "target_users": ""
+      },
+      "tech_stack": {
+        "primary_language": "Java",
+        "language_breakdown": {},
+        "frameworks_and_libraries": [],
+        "languages": [
+          "Java"
+        ],
+        "databases_and_storage": [],
+        "apis_and_services": [],
+        "tools_and_deployment": [
+          "Git"
+        ]
+      },
+      "links": {
+        "repo_url": "https://github.com/asad-ali-sajjad/fittrack-app",
+        "live_demo_url": null,
+        "clone_url": "https://github.com/asad-ali-sajjad/fittrack-app.git",
+        "has_pages": false,
+        "docs_url": "https://github.com/asad-ali-sajjad/fittrack-app#readme"
+      },
+      "github_metadata": {
+        "github_id": 1260620808,
+        "node_id": "R_kgDOSyOMCA",
+        "full_name": "asad-ali-sajjad/fittrack-app",
+        "aliases": [],
+        "default_branch": "main",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "open_issues": 0,
+        "size_kb": 109,
+        "license": null,
+        "latest_release": null,
+        "created_at": "2026-06-05",
+        "last_updated": "2026-06-11"
+      },
+      "lifecycle": {
+        "is_fork": false,
+        "is_archived": false,
+        "is_template": false,
+        "age_days": 174,
+        "days_since_push": 168,
+        "status": "maintained"
+      },
+      "portfolio": {
+        "featured": false,
+        "order": 99,
+        "badge": "Project",
+        "category": "web",
+        "language": "Java",
+        "langColor": "#b07219",
+        "tags": [],
+        "highlights": []
+      },
+      "full_name": "asad-ali-sajjad/fittrack-app",
+      "owner": "asad-ali-sajjad",
+      "status": "wip",
+      "key_features": [],
+      "architecture": {
+        "pattern": "",
+        "folder_structure": [],
+        "entry_points": [],
+        "database_models_or_schema": []
+      },
+      "setup_and_usage": {
+        "prerequisites": [],
+        "env_variables": [],
+        "install_commands": [
+          "git clone https://github.com/asad-ali-sajjad/fittrack-app.git"
+        ],
+        "run_commands": []
+      },
+      "portfolio_highlights": {
+        "challenges_solved": [],
+        "resume_bullets": []
+      }
+    }
+  ],
+  "sync_history": [
+    {
+      "date": "2026-11-27",
+      "mode": "offline",
+      "auth": "offline",
+      "tracked_repos": 17,
+      "total_stars": 0,
+      "star_delta": 0,
+      "added": [],
+      "renamed": []
+    },
+    {
+      "date": "2026-11-27",
+      "mode": "offline",
+      "auth": "offline",
+      "tracked_repos": 17,
+      "total_stars": 0,
+      "star_delta": 0,
+      "added": [],
+      "renamed": []
+    },
+    {
+      "date": "2026-11-27",
+      "mode": "offline",
+      "auth": "offline",
+      "tracked_repos": 17,
+      "total_stars": 0,
+      "star_delta": 0,
+      "added": [],
+      "renamed": []
+    },
+    {
+      "date": "2026-11-27",
+      "mode": "offline",
+      "auth": "offline",
+      "tracked_repos": 17,
+      "total_stars": 0,
+      "star_delta": 0,
+      "added": [],
+      "renamed": []
+    },
+    {
+      "date": "2026-11-27",
+      "mode": "offline",
+      "auth": "GITHUB_TOKEN",
+      "tracked_repos": 17,
+      "total_stars": 0,
+      "star_delta": 0,
+      "added": [],
+      "renamed": []
+    },
+    {
+      "date": "2026-11-27",
+      "mode": "offline",
+      "auth": "GITHUB_TOKEN",
+      "tracked_repos": 17,
+      "total_stars": 0,
+      "star_delta": 0,
+      "added": [],
+      "renamed": []
+    },
+    {
+      "date": "2026-11-27",
+      "mode": "offline",
+      "tracked_repos": 17,
+      "total_stars": 0,
+      "star_delta": 0,
+      "added": [],
+      "renamed": []
+    },
+    {
+      "date": "2026-11-27",
+      "mode": "offline",
+      "tracked_repos": 17,
+      "total_stars": 0,
+      "star_delta": 0,
+      "added": [],
+      "renamed": []
+    },
+    {
+      "date": "2026-11-27",
+      "mode": "standard",
+      "tracked_repos": 17,
+      "total_stars": 0,
+      "star_delta": 0,
+      "added": [],
+      "renamed": []
+    },
+    {
+      "date": "2026-11-27",
+      "mode": "standard",
+      "tracked_repos": 17,
+      "total_stars": 0,
+      "star_delta": 0,
+      "added": [],
+      "renamed": []
     }
   ]
 }

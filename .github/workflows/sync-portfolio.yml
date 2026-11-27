@@ -28,7 +28,7 @@ jobs:
       - name: Run GitHub sync script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/sync_github.py
+        run: python scripts/sync_github.py --deep
 
       - name: Commit updated portfolio data
         run: |

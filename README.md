@@ -27,7 +27,7 @@
 | :--- | :--- | :--- |
 | **[medai-care](https://github.com/asad-ali-sajjad/medai-care)** | AI & Healthcare | `Next.js` `PostgreSQL` `RAG` `AI Screening` |
 | **[plant-disease-diagnostic-system](https://github.com/asad-ali-sajjad/plant-disease-diagnostic-system)** | Deep Learning | `PyTorch` `Streamlit` `Computer Vision` |
-| **[cs-mcq-hub](https://github.com/asad-ali-sajjad/cs-mcq-hub)** | EdTech Web App | `HTML5` `CSS3` `JavaScript` |
+| **[reviseloop](https://github.com/asad-ali-sajjad/reviseloop)** | EdTech Web App | `HTML5` `CSS3` `JavaScript` |
 | **[clinic-appointment-system](https://github.com/asad-ali-sajjad/clinic-appointment-system)** | Full-Stack Web | `PHP` `MySQL` |
 | **[bank-management-system](https://github.com/asad-ali-sajjad/bank-management-system)** | Systems & CLI | `C++` `Data Structures` `RBAC` |
 | **[library-management-system-sql](https://github.com/asad-ali-sajjad/library-management-system-sql)** | Database Engineering | `MS SQL Server` `T-SQL` `Triggers` |

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_synced": "2026-11-26",
+  "last_synced": "2026-11-27",
   "profile": {
     "username": "asad-ali-sajjad",
     "display_name": "Asad Ali Sajjad",
@@ -16,7 +16,8 @@
       "total_github_repositories": 21,
       "extracted_repositories_count": 16,
       "profile_stars": 3,
-      "contributions_last_year": 100
+      "contributions_last_year": 100,
+      "public_repos": 17
     },
     "pinned_repositories": [
       "mediai-care",
@@ -26,7 +27,7 @@
       "library-management-system-sql"
     ],
     "repository_index": [
-      "cs-mcq-hub",
+      "reviseloop",
       "mediai-care",
       "plant-disease-diagnostic-system",
       "clinic-appointment-system",
@@ -52,17 +53,17 @@
   },
   "repositories": [
     {
-      "name": "cs-mcq-hub",
-      "full_name": "asad-ali-sajjad/cs-mcq-hub",
+      "name": "reviseloop",
+      "full_name": "asad-ali-sajjad/reviseloop",
       "owner": "asad-ali-sajjad",
       "visibility": "public",
       "is_pinned": false,
       "status": "active",
       "category": "EdTech / Web Application / Exam Preparation",
       "links": {
-        "repo_url": "https://github.com/asad-ali-sajjad/cs-mcq-hub",
-        "live_demo_url": "https://asad-ali-sajjad.github.io/cs-mcq-hub/",
-        "docs_url": "https://github.com/asad-ali-sajjad/cs-mcq-hub#readme"
+        "repo_url": "https://github.com/asad-ali-sajjad/reviseloop",
+        "live_demo_url": "http://asad-ali-sajjad.me/reviseloop/",
+        "docs_url": "https://github.com/asad-ali-sajjad/reviseloop#readme"
       },
       "overview": {
         "tagline": "Study Smarter. Revise Faster. An interactive, offline-friendly MCQ workspace for Computer Science exam preparation.",
@@ -141,7 +142,7 @@
         ],
         "env_variables": [],
         "install_commands": [
-          "git clone https://github.com/asad-ali-sajjad/cs-mcq-hub.git"
+          "git clone https://github.com/asad-ali-sajjad/reviseloop.git"
         ],
         "run_commands": [
           "Open index.html directly in a browser (file://) or host statically via GitHub Pages"
@@ -166,7 +167,8 @@
         "forks": 0,
         "commits_count": 9,
         "latest_version": null,
-        "last_updated": "2026-11-25"
+        "last_updated": "2026-11-27",
+        "github_id": 1467953458
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -333,7 +335,8 @@
         "forks": 0,
         "commits_count": 12,
         "latest_version": null,
-        "last_updated": "2026-11-10"
+        "last_updated": "2026-11-10",
+        "github_id": 1445941900
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -478,7 +481,8 @@
         "forks": 0,
         "commits_count": 37,
         "latest_version": null,
-        "last_updated": "2026-11-03"
+        "last_updated": "2026-11-03",
+        "github_id": 1434686994
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -644,7 +648,8 @@
         "forks": 0,
         "commits_count": 16,
         "latest_version": null,
-        "last_updated": "2025-12-10"
+        "last_updated": "2025-12-10",
+        "github_id": 1100671650
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -789,7 +794,8 @@
         "forks": 0,
         "commits_count": 10,
         "latest_version": null,
-        "last_updated": "2026-08-30"
+        "last_updated": "2026-08-30",
+        "github_id": 1351337838
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -910,7 +916,8 @@
         "forks": 0,
         "commits_count": 3,
         "latest_version": null,
-        "last_updated": "2025-07-29"
+        "last_updated": "2025-07-29",
+        "github_id": 1016326857
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1024,7 +1031,8 @@
         "forks": 0,
         "commits_count": 1,
         "latest_version": null,
-        "last_updated": "2025-06-16"
+        "last_updated": "2025-06-16",
+        "github_id": 1002349350
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1136,7 +1144,8 @@
         "forks": 0,
         "commits_count": 8,
         "latest_version": null,
-        "last_updated": "2025-08-03"
+        "last_updated": "2025-08-03",
+        "github_id": 994891340
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1249,7 +1258,8 @@
         "forks": 0,
         "commits_count": 5,
         "latest_version": null,
-        "last_updated": "2025-08-03"
+        "last_updated": "2025-08-03",
+        "github_id": 979504947
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1348,7 +1358,8 @@
         "forks": 0,
         "commits_count": 2,
         "latest_version": null,
-        "last_updated": "2025-08-02"
+        "last_updated": "2025-08-02",
+        "github_id": 1029631361
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1444,7 +1455,8 @@
         "forks": 0,
         "commits_count": 5,
         "latest_version": null,
-        "last_updated": "2025-08-02"
+        "last_updated": "2025-08-02",
+        "github_id": 1029842811
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1572,7 +1584,8 @@
         "forks": 0,
         "commits_count": 10,
         "latest_version": null,
-        "last_updated": "2025-07-25"
+        "last_updated": "2025-07-25",
+        "github_id": 1019414360
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1721,7 +1734,8 @@
         "forks": 0,
         "commits_count": 19,
         "latest_version": null,
-        "last_updated": "2025-07-25"
+        "last_updated": "2025-07-25",
+        "github_id": 1015575583
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1831,7 +1845,8 @@
         "forks": 0,
         "commits_count": 4,
         "latest_version": null,
-        "last_updated": "2025-06-24"
+        "last_updated": "2025-06-24",
+        "github_id": 999061871
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -1941,7 +1956,8 @@
         "forks": 0,
         "commits_count": 3,
         "latest_version": null,
-        "last_updated": "2025-06-04"
+        "last_updated": "2025-06-04",
+        "github_id": 989206284
       },
       "portfolio_highlights": {
         "challenges_solved": [
@@ -2012,7 +2028,7 @@
         "Modern dark-mode developer UI built with Tailwind CSS, glassmorphism navigation, Inter & JetBrains Mono typography, and a mobile-first responsive layout",
         "Interactive project category filtering allowing visitors to dynamically filter featured repositories across AI & ML, Full-Stack Web, and C++ & SQL",
         "Animated role typewriter cycling through core software engineering roles in real time",
-        "Curated showcase of 8 flagship projects (medai-care, plant-disease-diagnostic-system, cs-mcq-hub, clinic-appointment-system, bank-management-system, library-management-system-sql, glimpse, business-nexus) with tech-stack tags and direct repository links",
+        "Curated showcase of 8 flagship projects (medai-care, plant-disease-diagnostic-system, reviseloop, clinic-appointment-system, bank-management-system, library-management-system-sql, glimpse, business-nexus) with tech-stack tags and direct repository links",
         "One-click email copy button (imasad789@gmail.com) alongside direct GitHub and portfolio navigation links",
         "Custom domain deployment (asad-ali-sajjad.me) configured via CNAME on GitHub Pages with automated SSL/HTTPS"
       ],
@@ -2049,7 +2065,8 @@
         "forks": 0,
         "commits_count": 4,
         "latest_version": null,
-        "last_updated": "2026-11-25"
+        "last_updated": "2026-11-25",
+        "github_id": 1468493960
       },
       "portfolio_highlights": {
         "challenges_solved": [

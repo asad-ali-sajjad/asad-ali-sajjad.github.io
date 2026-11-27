@@ -1,0 +1,41 @@
+name: Sync GitHub Portfolio Data
+
+on:
+  schedule:
+    - cron: "0 0 * * 0" # Every Sunday at 00:00 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/github-profile.json"
+      - "scripts/sync_github.py"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run GitHub sync script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/sync_github.py
+
+      - name: Commit updated portfolio data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ js/data/portfolio-data.js
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(data): auto-sync GitHub portfolio metadata"
+            git push
+          fi

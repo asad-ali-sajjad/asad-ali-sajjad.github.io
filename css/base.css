@@ -5,12 +5,43 @@
   --text-primary: #f3f4f6;
   --accent-primary: #38bdf8;
   --accent-secondary: #818cf8;
+  color-scheme: dark;
 }
 
 body {
   background-color: var(--bg-dark);
   color: var(--text-primary);
   overflow-x: hidden;
+}
+
+/* Offset anchor jumps beneath the fixed top navbar */
+section[id] {
+  scroll-margin-top: 5.25rem;
+}
+
+/* Accessible keyboard focus ring */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Dark Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 999px;
+  border: 2px solid var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
 }
 
 /* Subtle Developer Grid Backdrop */
@@ -27,7 +58,7 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.is-visible {
@@ -57,7 +88,9 @@ body {
     transition: none;
   }
 
+  .scroll-progress,
   .project-card,
+  .cta-primary-btn,
   .cursor-blink,
   .animate-pulse,
   .animate-ping {

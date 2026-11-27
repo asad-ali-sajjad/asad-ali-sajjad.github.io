@@ -67,7 +67,7 @@
       "category": "EdTech / Web Application / Exam Preparation",
       "links": {
         "repo_url": "https://github.com/asad-ali-sajjad/reviseloop",
-        "live_demo_url": "https://asad-ali-sajjad.me/reviseloop/",
+        "live_demo_url": "http://asad-ali-sajjad.me/reviseloop/",
         "docs_url": "https://github.com/asad-ali-sajjad/reviseloop#readme",
         "clone_url": "https://github.com/asad-ali-sajjad/reviseloop.git",
         "has_pages": true
@@ -823,7 +823,7 @@
         "is_archived": false,
         "is_template": false,
         "age_days": 372,
-        "days_since_push": 351,
+        "days_since_push": 352,
         "status": "dormant"
       }
     },
@@ -1038,7 +1038,12 @@
           "g++ / MinGW (C++17 Compiler)",
           "Git"
         ],
-        "language_breakdown": {}
+        "language_breakdown": {
+          "C++": {
+            "bytes": 56106,
+            "pct": 100.0
+          }
+        }
       },
       "key_features": [
         "Role-based access control separating Admin operations (create/modify/delete accounts, view raw or sorted customer records) from User operations (deposit/withdraw funds, balance inquiries, transaction history)",
@@ -1181,7 +1186,12 @@
           "SQL Server Management Studio (SSMS)",
           "Git"
         ],
-        "language_breakdown": {}
+        "language_breakdown": {
+          "TSQL": {
+            "bytes": 9068,
+            "pct": 100.0
+          }
+        }
       },
       "key_features": [
         "Normalized multi-table relational schema enforcing data integrity with primary keys, foreign keys, constraints, and identity columns",
@@ -1322,7 +1332,20 @@
           "Live Server",
           "Git"
         ],
-        "language_breakdown": {}
+        "language_breakdown": {
+          "CSS": {
+            "bytes": 4760,
+            "pct": 38.2
+          },
+          "JavaScript": {
+            "bytes": 4687,
+            "pct": 37.6
+          },
+          "HTML": {
+            "bytes": 3009,
+            "pct": 24.2
+          }
+        }
       },
       "key_features": [
         "Keyword-based recipe search powered by asynchronous integration with TheMealDB API",
@@ -1452,7 +1475,20 @@
           "GitHub Pages",
           "Git"
         ],
-        "language_breakdown": {}
+        "language_breakdown": {
+          "CSS": {
+            "bytes": 4738,
+            "pct": 45.2
+          },
+          "JavaScript": {
+            "bytes": 3377,
+            "pct": 32.2
+          },
+          "HTML": {
+            "bytes": 2360,
+            "pct": 22.5
+          }
+        }
       },
       "key_features": [
         "Real-time weather data retrieval powered by asynchronous OpenWeather API integration",
@@ -1659,7 +1695,7 @@
         "is_archived": false,
         "is_template": false,
         "age_days": 484,
-        "days_since_push": 481,
+        "days_since_push": 482,
         "status": "dormant"
       }
     },
@@ -1828,7 +1864,12 @@
           "npm",
           "Git"
         ],
-        "language_breakdown": {}
+        "language_breakdown": {
+          "JavaScript": {
+            "bytes": 32475,
+            "pct": 100.0
+          }
+        }
       },
       "key_features": [
         "Full CRUD User Management API (/users) supporting role-based filtering (investor vs. entrepreneur), email lookup (/users/email/:email), interests, and startup portfolios",
@@ -1995,7 +2036,20 @@
           "npm",
           "Git"
         ],
-        "language_breakdown": {}
+        "language_breakdown": {
+          "JavaScript": {
+            "bytes": 148933,
+            "pct": 97.3
+          },
+          "CSS": {
+            "bytes": 3834,
+            "pct": 2.5
+          },
+          "HTML": {
+            "bytes": 373,
+            "pct": 0.2
+          }
+        }
       },
       "key_features": [
         "Role-based authentication system with form validation, email verification simulation, and React Router v6 ProtectedRoute guards for Investor and Entrepreneur roles",
@@ -2105,7 +2159,7 @@
         "is_fork": false,
         "is_archived": false,
         "is_template": false,
-        "age_days": 507,
+        "age_days": 508,
         "days_since_push": 490,
         "status": "dormant"
       }
@@ -2151,7 +2205,20 @@
           "GitHub Pages",
           "Git"
         ],
-        "language_breakdown": {}
+        "language_breakdown": {
+          "HTML": {
+            "bytes": 175715,
+            "pct": 71.6
+          },
+          "CSS": {
+            "bytes": 45577,
+            "pct": 18.6
+          },
+          "JavaScript": {
+            "bytes": 24104,
+            "pct": 9.8
+          }
+        }
       },
       "key_features": [
         "Desktop storefront header with search bar, dropdown navigation, and structured footer with quick links and contact information",
@@ -2282,7 +2349,20 @@
           "GitHub Pages",
           "Git"
         ],
-        "language_breakdown": {}
+        "language_breakdown": {
+          "CSS": {
+            "bytes": 3151,
+            "pct": 46.2
+          },
+          "JavaScript": {
+            "bytes": 2314,
+            "pct": 34.0
+          },
+          "HTML": {
+            "bytes": 1349,
+            "pct": 19.8
+          }
+        }
       },
       "key_features": [
         "Full CRUD task management: quickly add tasks, edit tasks inline with a single click, mark tasks complete with visual feedback, and delete tasks",
@@ -2365,8 +2445,8 @@
         "is_fork": false,
         "is_archived": false,
         "is_template": false,
-        "age_days": 552,
-        "days_since_push": 540,
+        "age_days": 553,
+        "days_since_push": 541,
         "status": "dormant"
       }
     },
@@ -2415,7 +2495,24 @@
           "Custom Domain (CNAME)",
           "Git"
         ],
-        "language_breakdown": {}
+        "language_breakdown": {
+          "HTML": {
+            "bytes": 30112,
+            "pct": 45.8
+          },
+          "JavaScript": {
+            "bytes": 17690,
+            "pct": 26.9
+          },
+          "Python": {
+            "bytes": 12533,
+            "pct": 19.1
+          },
+          "CSS": {
+            "bytes": 5365,
+            "pct": 8.2
+          }
+        }
       },
       "key_features": [
         "Modern dark-mode developer UI built with Tailwind CSS, glassmorphism navigation, Inter & JetBrains Mono typography, and a mobile-first responsive layout",
@@ -2465,7 +2562,7 @@
         "full_name": "asad-ali-sajjad/asad-ali-sajjad.github.io",
         "watchers": 0,
         "open_issues": 0,
-        "size_kb": 57,
+        "size_kb": 72,
         "created_at": "2026-11-23",
         "latest_release": null
       },
@@ -2515,7 +2612,12 @@
       },
       "tech_stack": {
         "primary_language": "Java",
-        "language_breakdown": {},
+        "language_breakdown": {
+          "Java": {
+            "bytes": 49119,
+            "pct": 100.0
+          }
+        },
         "frameworks_and_libraries": [],
         "languages": [
           "Java"
@@ -2554,8 +2656,8 @@
         "is_fork": false,
         "is_archived": false,
         "is_template": false,
-        "age_days": 174,
-        "days_since_push": 168,
+        "age_days": 175,
+        "days_since_push": 169,
         "status": "maintained"
       },
       "portfolio": {
@@ -2595,6 +2697,16 @@
   "sync_history": [
     {
       "date": "2026-11-27",
+      "mode": "deep",
+      "auth": "GITHUB_TOKEN",
+      "tracked_repos": 17,
+      "total_stars": 0,
+      "star_delta": 0,
+      "added": [],
+      "renamed": []
+    },
+    {
+      "date": "2026-11-27",
       "mode": "offline",
       "auth": "offline",
       "tracked_repos": 17,
@@ -2665,15 +2777,6 @@
     {
       "date": "2026-11-27",
       "mode": "offline",
-      "tracked_repos": 17,
-      "total_stars": 0,
-      "star_delta": 0,
-      "added": [],
-      "renamed": []
-    },
-    {
-      "date": "2026-11-27",
-      "mode": "standard",
       "tracked_repos": 17,
       "total_stars": 0,
       "star_delta": 0,

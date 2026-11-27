@@ -24,58 +24,76 @@ export const TECH_SUMMARY = {
   },
   "byLanguage": [
     {
+      "name": "JavaScript",
+      "color": "#f1e05a",
+      "bytes": 403227,
+      "pct": 22.3
+    },
+    {
       "name": "Jupyter Notebook",
       "color": "#da5b0b",
       "bytes": 340378,
-      "pct": 29.2
+      "pct": 18.9
+    },
+    {
+      "name": "HTML",
+      "color": "#e34c26",
+      "bytes": 309544,
+      "pct": 17.2
     },
     {
       "name": "PHP",
       "color": "#4F5D95",
       "bytes": 308575,
-      "pct": 26.5
+      "pct": 17.1
     },
     {
-      "name": "JavaScript",
-      "color": "#f1e05a",
-      "bytes": 169647,
-      "pct": 14.6
+      "name": "CSS",
+      "color": "#563d7c",
+      "bytes": 151471,
+      "pct": 8.4
     },
     {
       "name": "TypeScript",
       "color": "#3178c6",
       "bytes": 107879,
-      "pct": 9.3
-    },
-    {
-      "name": "HTML",
-      "color": "#e34c26",
-      "bytes": 96626,
-      "pct": 8.3
-    },
-    {
-      "name": "CSS",
-      "color": "#563d7c",
-      "bytes": 84046,
-      "pct": 7.2
+      "pct": 6.0
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "bytes": 51373,
-      "pct": 4.4
+      "bytes": 63906,
+      "pct": 3.5
+    },
+    {
+      "name": "C++",
+      "color": "#f34b7d",
+      "bytes": 56106,
+      "pct": 3.1
+    },
+    {
+      "name": "Java",
+      "color": "#b07219",
+      "bytes": 49119,
+      "pct": 2.7
+    },
+    {
+      "name": "TSQL",
+      "color": "#e38c00",
+      "bytes": 9068,
+      "pct": 0.5
     },
     {
       "name": "PLpgSQL",
       "color": "#38bdf8",
       "bytes": 4643,
-      "pct": 0.4
+      "pct": 0.3
     },
     {
       "name": "Shell",
       "color": "#38bdf8",
       "bytes": 781,
-      "pct": 0.1
+      "pct": 0.0
     }
   ]
 };
@@ -281,7 +299,7 @@ export const PROJECTS = [
       "Study Guide"
     ],
     "repoUrl": "https://github.com/asad-ali-sajjad/reviseloop",
-    "demoUrl": "https://asad-ali-sajjad.me/reviseloop/",
+    "demoUrl": "http://asad-ali-sajjad.me/reviseloop/",
     "stars": 0,
     "forks": 0,
     "license": null,
@@ -354,7 +372,12 @@ export const PROJECTS = [
     "category": "systems",
     "language": "C++",
     "langColor": "#f34b7d",
-    "languageBreakdown": {},
+    "languageBreakdown": {
+      "C++": {
+        "bytes": 56106,
+        "pct": 100.0
+      }
+    },
     "tagline": "A modular, role-based banking system with data persistence, built with C++ and data structures.",
     "description": "A C++17 command-line banking application featuring role-based access control (Admin and User), flat-file data persistence, input validation, and custom implementations of Linked Lists, Binary Search Trees (BST), and Stacks.",
     "problemSolved": "Demonstrates structured financial account management, sorted customer lookups, and chronological transaction tracking in C++ without relying on external database engines.",
@@ -400,7 +423,12 @@ export const PROJECTS = [
     "category": "systems",
     "language": "TSQL",
     "langColor": "#e38c00",
-    "languageBreakdown": {},
+    "languageBreakdown": {
+      "TSQL": {
+        "bytes": 9068,
+        "pct": 100.0
+      }
+    },
     "tagline": "A complete relational Library Management System engineered in MS SQL Server using T-SQL.",
     "description": "An end-to-end relational database design and implementation project built with Microsoft SQL Server and T-SQL, covering normalized schema modeling, DDL & DML operations, reporting views, scalar and table-valued functions, stored procedures, automated triggers, and ACID transactions.",
     "problemSolved": "Automates core library workflows—including book borrowing, returns, overdue tracking, fine calculations, and audit logging—directly at the database engine level while enforcing strict referential integrity and transactional consistency.",
@@ -500,7 +528,20 @@ export const PROJECTS = [
     "category": "web",
     "language": "JavaScript",
     "langColor": "#f1e05a",
-    "languageBreakdown": {},
+    "languageBreakdown": {
+      "JavaScript": {
+        "bytes": 148933,
+        "pct": 97.3
+      },
+      "CSS": {
+        "bytes": 3834,
+        "pct": 2.5
+      },
+      "HTML": {
+        "bytes": 373,
+        "pct": 0.2
+      }
+    },
     "tagline": "A networking platform connecting entrepreneurs with investors featuring role-based authentication, dynamic dashboards, and real-time chat.",
     "description": "A React.js (Vite) and Tailwind CSS web application enabling entrepreneurs to showcase their startups and metrics while allowing investors to discover opportunities, send collaboration requests, and communicate via real-time Socket.IO chat—backed by the Business Nexus Node.js/MongoDB API on Render (with mirror deployment on Netlify).",
     "problemSolved": "Bridges the discovery and communication gap between startup founders and investors by providing role-tailored dashboards, structured startup profiles, collaboration request workflows, and instant messaging.",
@@ -547,7 +588,12 @@ export const PROJECTS = [
     "category": "web",
     "language": "JavaScript",
     "langColor": "#f1e05a",
-    "languageBreakdown": {},
+    "languageBreakdown": {
+      "JavaScript": {
+        "bytes": 32475,
+        "pct": 100.0
+      }
+    },
     "tagline": "Empowering Connections Between Entrepreneurs and Investors — A RESTful API built with Express.js and MongoDB.",
     "description": "A Node.js and Express.js RESTful backend service leveraging MongoDB (via Mongoose) and Socket.io to manage user profiles, connection requests, and real-time/REST messaging for an entrepreneur-investor matchmaking platform.",
     "problemSolved": "Provides a decoupled, scalable backend API for managing entrepreneur and investor profiles, role-filtered discovery, networking requests, and messaging with full CRUD support.",
@@ -596,7 +642,7 @@ export const ALL_REPOS = [
     "updatedAt": "2026-11-27",
     "activityStatus": "active",
     "repoUrl": "https://github.com/asad-ali-sajjad/reviseloop",
-    "demoUrl": "https://asad-ali-sajjad.me/reviseloop/"
+    "demoUrl": "http://asad-ali-sajjad.me/reviseloop/"
   },
   {
     "slug": "asad-ali-sajjad.github.io",

@@ -2,13 +2,8 @@ name: Sync GitHub Portfolio Data
 
 on:
   schedule:
-    - cron: "0 0 * * 0" # Every Sunday at 00:00 UTC
-  workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "data/github-profile.json"
-      - "scripts/sync_github.py"
+    - cron: "0 0 1 1,7 *" # Twice a year (Jan 1 & Jul 1 at 00:00 UTC)
+  workflow_dispatch:       # Manual trigger anytime from the GitHub Actions tab
 
 permissions:
   contents: write
